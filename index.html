@@ -3,41 +3,75 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="توضیح کوتاه درباره صفحه">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Your Name">
+    <title>عنوان صفحه</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="نام سایت">
+    <meta property="og:title" content="عنوان سایت">
+    <meta property="og:description" content="توضیح کوتاه سایت">
+    <meta property="og:url" content="https://example.com/">
+    <meta property="og:image" content="https://example.com/images/cover.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <!-- <meta property="og:locale" content="fa_IR"> -->
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#0d6efd">
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- PWA -->
+    <meta name="theme-color" content="#0d6efd">
+    <meta name="background-color" content="#ffffff">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="My App">
+
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.webmanifest">
+
+    <!-- Icons -->
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icons/icon-512.png">
+    <link rel="apple-touch-icon" href="/icons/icon-192.png">
+
     <script src="./assets/lib/tailwindcss.js"></script>
     <script src="./assets/lib/alpinejs.min.js"></script>
+    <link rel="manifest" href="./manifest.webmanifest">
 </head>
 
 <body class="">
-    <header>
-        <h1 class="text-slate-800">عنوان سایت</h1>
-    </header>
-    
-    <nav class="bg-blue-600">
-        <!-- منو -->
-         menu
-    </nav>
-    
-    <main>
-        <section>
-            <h2>بخش اول</h2>
-            <p>محتوا...</p>
-        </section>
-    
-        <article>
-            <h2>مقاله</h2>
-            <p>متن مقاله...</p>
-            <a href="./az.html" class="text-slate-800">AZZZZZZZ</a>
-        </article>
-    
-        <!-- <aside>
-            <!-- محتوای جانبی -->
-        </aside> -->
-    </main>
-    
-    <footer>
-        <p>&copy; 2026</p>
-    </footer>
+    <div class="min-h-screen bg-gray-900 flex flex-col items-center justify-center">
+        <h1 class="text-5xl text-white font-bold mb-8 animate-pulse">
+            Coming Soon
+        </h1>
+        <p class="text-white text-lg mb-8">
+            We're working hard to bring you something amazing. Stay tuned!
+        </p>
+    </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', async () => {
+                try {
+                    await navigator.serviceWorker.register('./sw.js');
+                    console.log('Service Worker registered');
+                } catch (err) {
+                    console.error('Service Worker registration failed:', err);
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
