@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="235" viewBox="0 0 1000 235">
+  <defs>
+    <filter id="Rectangle_4" x="3" y="8" width="989" height="227" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-experiencesModal">
+      <rect width="1000" height="235"/>
+    </clipPath>
+  </defs>
+  <g id="experiencesModal" clip-path="url(#clip-experiencesModal)">
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_4)">
+      <rect id="Rectangle_4-2" data-name="Rectangle 4" width="971" height="209" rx="8" transform="translate(12 14)" fill="#fff"/>
+    </g>
+    <g id="header">
+      <text id="Database_Adminstration" data-name="Database Adminstration" transform="translate(30 53)" fill="#1d293d" font-size="30" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">Database Adminstration</tspan></text>
+      <line id="Line_2" data-name="Line 2" x2="967" transform="translate(12.5 75.5)" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+      <g id="xmark" transform="translate(948.505 34)">
+        <path id="Path_10" data-name="Path 10" fill="#1d293d" opacity="0.4"/>
+        <path id="Path_11" data-name="Path 11" d="M.707,65.543a.874.874,0,0,1,1.236-1.236l5.5,5.5,5.5-5.5a.874.874,0,0,1,1.236,1.236l-5.5,5.5,5.5,5.5a.874.874,0,0,1-1.236,1.236l-5.5-5.5-5.5,5.5A.874.874,0,0,1,.707,76.55l5.5-5.5Z" transform="translate(-0.434 -61.715)" fill="#1d293d"/>
+      </g>
+    </g>
+    <g id="Senior" transform="translate(-612 -687.919)">
+      <image id="stealth_startup_51_logo" width="37" height="37" transform="translate(645 839.919)" xlink:href="../ui-ux_data/stealth_startup_51_logo.jpeg"/>
+      <text id="Senior_Backend_Software_Enginner_Technical_Team_Lead_Database_Administrator_DBA_as:_Stealth_Startup" data-name="Senior Backend Software Enginner | Technical Team Lead | Database Administrator (DBA) as: Stealth Startup" transform="translate(692 865.919)" fill="#45556c" font-size="20" font-family="Calibri"><tspan x="0" y="0">Senior Backend Software Enginner | Technical Team Lead | Database Administrator (DBA) as: Stealth Startup</tspan></text>
+    </g>
+    <g id="Funder" transform="translate(-612 -744.919)">
+      <image id="saas_stealth_logo" width="37" height="37" transform="translate(645 839.919)" xlink:href="experiencesModal-image.jpg"/>
+      <text id="Funder_Lead_Software_Enginner_at_SaaS_Stealth_Startup" data-name="Funder &amp; Lead Software Enginner at SaaS Stealth Startup" transform="translate(692 865.919)" fill="#45556c" font-size="20" font-family="Calibri"><tspan x="0" y="0">Funder &amp; Lead Software Enginner at SaaS Stealth Startup</tspan></text>
+    </g>
+  </g>
+</svg>

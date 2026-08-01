@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="131" height="161" viewBox="0 0 131 161">
+  <defs>
+    <filter id="Rectangle_3" x="-7" y="-3" width="143" height="173" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-langDropdown">
+      <rect width="131" height="161"/>
+    </clipPath>
+  </defs>
+  <g id="langDropdown" clip-path="url(#clip-langDropdown)">
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_3)">
+      <rect id="Rectangle_3-2" data-name="Rectangle 3" width="125" height="155" rx="6" transform="translate(2 3)" fill="#fff"/>
+    </g>
+    <g id="Group_6" data-name="Group 6" transform="translate(-1 1)">
+      <g id="Component_8_1" data-name="Component 8 – 1" transform="translate(5 5)">
+        <text id="English" transform="translate(0 14)" fill="#1d293d" font-size="15" font-family="Calibri"><tspan x="0" y="0">English</tspan></text>
+      </g>
+      <g id="Component_9_1" data-name="Component 9 – 1" transform="translate(5 31)">
+        <text id="Azerbaijan_Latin_" data-name="Azerbaijan (Latin)" transform="translate(0 14)" fill="#1d293d" font-size="15" font-family="Calibri"><tspan x="0" y="0">Azerbaijan (Latin)</tspan></text>
+      </g>
+      <g id="Component_10_1" data-name="Component 10 – 1" transform="translate(5 57)">
+        <text id="Azerbaijan_Cyrillic_" data-name="Azerbaijan (Cyrillic)" transform="translate(0 14)" fill="#1d293d" font-size="15" font-family="Calibri"><tspan x="0" y="0">Azerbaijan (Cyrillic)</tspan></text>
+      </g>
+      <g id="Component_12_1" data-name="Component 12 – 1" transform="translate(5 109)">
+        <text id="Türkçe_Turkish_" data-name="Türkçe (Turkish)" transform="translate(0 14)" fill="#1d293d" font-size="15" font-family="Calibri"><tspan x="0" y="0">Türkçe (Turkish)</tspan></text>
+      </g>
+      <g id="Component_13_1" data-name="Component 13 – 1" transform="translate(5 134)">
+        <text id="Persian_فارسی_" data-name="Persian (فارسی)" transform="translate(0 16)" fill="#1d293d" font-size="15" font-family="Aptos"><tspan x="0" y="0">Persian (</tspan><tspan y="0" font-family="SegoeUI, Segoe UI">فارسی</tspan><tspan y="0">)</tspan></text>
+      </g>
+      <g id="Component_11_1" data-name="Component 11 – 1" transform="translate(5 81)">
+        <text id="Azerbaijan_تورکجه_" data-name="Azerbaijan (تورکجه)" transform="translate(0 16)" fill="#1d293d" font-size="15" font-family="Aptos"><tspan x="0" y="0">Azerbaijan (</tspan><tspan y="0" font-family="SegoeUI, Segoe UI">تورکجه</tspan><tspan y="0">)</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

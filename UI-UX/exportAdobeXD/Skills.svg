@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="2673" viewBox="0 0 1920 2673">
+  <defs>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 1883 835">
+      <image width="1883" height="835" xlink:href="Skills-image2.png"/>
+    </pattern>
+    <filter id="Hamid_Heidarinia" x="68" y="914" width="453" height="91" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-Skills">
+      <rect width="1920" height="2673"/>
+    </clipPath>
+    <image id="image" width="37" height="37" xlink:href="Skills-image.jpg"/>
+  </defs>
+  <g id="Skills" clip-path="url(#clip-Skills)">
+    <rect width="1920" height="2673" fill="#fff"/>
+    <g id="mariaDB" transform="translate(40 1308)">
+      <text id="SQL_Database_Administration" data-name="SQL Database Administration" transform="translate(33 117)" fill="#1d293d" font-size="35" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">SQL Database Administration</tspan></text>
+      <g id="Experience" transform="translate(-612 -704.919)">
+        <image id="stealth_startup_51_logo" width="37" height="37" transform="translate(645 838.919)" xlink:href="../ui-ux_data/stealth_startup_51_logo.jpeg"/>
+        <text id="Senior_Backend_Software_Enginner_Technical_Team_Lead_Database_Administrator_DBA_as:_Stealth_Startup" data-name="Senior Backend Software Enginner | Technical Team Lead | Database Administrator (DBA) as: Stealth Startup" transform="translate(692 867.919)" fill="#45556c" font-size="30" font-family="Calibri"><tspan x="0" y="0">Senior Backend Software Enginner | Technical Team Lead | Database Administrator (DBA) as: Stealth Startup</tspan></text>
+      </g>
+      <line id="Line_3" data-name="Line 3" x2="1760" transform="translate(33.5 207.5)" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+    </g>
+    <g id="Database_Adminstration" data-name="Database Adminstration" transform="translate(40 1200)">
+      <text id="Database_Adminstration-2" data-name="Database Adminstration" transform="translate(33 117)" fill="#1d293d" font-size="35" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">Database Adminstration</tspan></text>
+      <g id="Experience-2" data-name="Experience" transform="translate(-612 -704.919)">
+        <use id="saas_stealth_logo" transform="translate(645 838.919)" xlink:href="#image"/>
+        <text id="_2_experiences_at_SaaS_Stealth_and_1_other_company" data-name="2 experiences at SaaS Stealth and 1 other company" transform="translate(692 867.919)" fill="#45556c" font-size="30" font-family="Calibri"><tspan x="0" y="0">2 experiences at SaaS Stealth and 1 other company</tspan></text>
+      </g>
+      <line id="Line_3-2" data-name="Line 3" x2="1754" y2="1" transform="translate(33.5 186.5)" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+    </g>
+    <g id="backLink">
+      <text id="Skills_34_" data-name="Skills (34)" transform="translate(107 1250)" fill="#1d293d" font-size="35" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">Skills (34)</tspan></text>
+      <g id="arrow-right" transform="translate(97.062 1248.043) rotate(180)">
+        <path id="Path_20" data-name="Path 20" fill="#1d293d" opacity="0.4"/>
+        <path id="Path_21" data-name="Path 21" d="M23.73,73.773a1.123,1.123,0,0,0,0-1.593l-7.894-7.9a1.126,1.126,0,0,0-1.593,1.593l5.968,5.968H1.128a1.128,1.128,0,1,0,0,2.256H20.211l-5.968,5.968a1.126,1.126,0,0,0,1.593,1.593Z" transform="translate(0 -60.945)" fill="#1d293d"/>
+      </g>
+    </g>
+    <g id="header" transform="translate(0 0.081)">
+      <g id="headeImg">
+        <path id="HamidHeidarinia-Header-page" d="M10,0H1910a10,10,0,0,1,10,10V851a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V10A10,10,0,0,1,10,0Z" transform="translate(0 -69)" fill="url(#pattern)"/>
+      </g>
+      <g id="profileImg" transform="translate(-443 37.579)">
+        <circle id="Ellipse_1" data-name="Ellipse 1" cx="175" cy="175" r="175" transform="translate(520 522.421)" fill="#fff"/>
+        <image id="icon-512" width="334" height="334" transform="translate(528 530.421)" xlink:href="Skills-image3.png"/>
+      </g>
+      <g id="headerTitle">
+        <g id="left" transform="translate(-34 -70)">
+          <g id="Group_7" data-name="Group 7" transform="translate(0 10)">
+            <text id="Iran" transform="translate(111 1116.919)" fill="#314158" font-size="30" font-family="Calibri"><tspan x="0" y="0">Iran</tspan></text>
+            <text id="Contact_info" data-name="Contact info" transform="translate(186 1116.919)" fill="#155dfc" font-size="30" font-family="Calibri"><tspan x="0" y="0">Contact info</tspan></text>
+            <path id="circle" d="M56,59a3,3,0,1,1,3,3A3,3,0,0,1,56,59Z" transform="translate(116 1050.919)" fill="#d1d5dc"/>
+          </g>
+          <text id="Software_Engineer_Database_Administartor_DBA_" data-name="Software Engineer | Database Administartor (DBA)" transform="translate(111 1090.919)" fill="#314158" font-size="30" font-family="Calibri"><tspan x="0" y="0">Software Engineer | Database Administartor (DBA)</tspan></text>
+          <g transform="matrix(1, 0, 0, 1, 34, 69.92)" filter="url(#Hamid_Heidarinia)">
+            <text id="Hamid_Heidarinia-2" data-name="Hamid Heidarinia" transform="translate(77 977)" fill="#1d293d" font-size="60" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">Hamid Heidarinia</tspan></text>
+          </g>
+        </g>
+        <g id="right" transform="translate(10 -40)">
+          <g id="Experience-3" data-name="Experience" transform="translate(-1)">
+            <use id="saas_stealth_logo-2" data-name="saas_stealth_logo" transform="translate(1080 957) scale(2.162)" xlink:href="#image"/>
+            <g id="Component_5_3" data-name="Component 5 – 3" transform="translate(1182 979)">
+              <text id="SaaS_Stealth_Startup" data-name="SaaS Stealth Startup" transform="translate(0 29)" fill="#1d293d" font-size="30" font-family="Calibri"><tspan x="0" y="0">SaaS Stealth Startup</tspan></text>
+            </g>
+          </g>
+          <g id="Education" transform="translate(-3 -12)">
+            <g id="Component_4_2" data-name="Component 4 – 2" transform="translate(1182 1078)">
+              <text id="Islamic_Azad_University_of_Marand" data-name="Islamic Azad University of Marand" transform="translate(0 29)" fill="#1d293d" font-size="30" font-family="Calibri"><tspan x="0" y="0">Islamic Azad University of Marand</tspan></text>
+            </g>
+            <path id="graduation-cap-solid-full" d="M38.667,117.937l29.056,11.531a11.608,11.608,0,0,0,8.556,0L109.944,116.1a3.159,3.159,0,0,0,0-5.92L76.278,96.817a11.608,11.608,0,0,0-8.556,0L34.056,110.183A3.193,3.193,0,0,0,32,113.143v39.643a3.336,3.336,0,0,0,6.667,0Zm6.667,9.6v15.6C45.333,150.241,57.278,156,72,156s26.667-5.759,26.667-12.857V127.527l-19.847,7.888a18.548,18.548,0,0,1-13.639,0l-19.847-7.888Z" transform="translate(1050 970)" fill="#1d293d"/>
+          </g>
+          <g id="github" transform="translate(0 -30)">
+            <path id="github-brands-solid-full" d="M97.828,115.165c-10.312-1.129-17.578-7.834-17.578-16.514A15.122,15.122,0,0,1,84,88.771c-1.016-2.329-.859-7.269.313-9.316a14.869,14.869,0,0,1,9.844,3.176,35.208,35.208,0,0,1,9.922-1.27,36.075,36.075,0,0,1,9.766,1.2,15.055,15.055,0,0,1,9.844-3.105c1.094,1.905,1.25,6.846.234,9.245a14.6,14.6,0,0,1,3.828,9.951c0,8.68-7.266,15.244-17.734,16.444,2.656,1.553,4.453,4.94,4.453,8.822v7.34c0,2.117,1.953,3.317,4.3,2.47C132.906,128.857,144,116.083,144,100.275,144,80.3,126.031,64,103.922,64S64,80.3,64,100.275c0,15.667,11.016,28.653,25.859,33.522,2.109.706,4.141-.565,4.141-2.47v-5.646a10.987,10.987,0,0,1-3.75.706c-5.156,0-8.2-2.541-10.391-7.269-.859-1.905-1.8-3.035-3.594-3.246-.937-.071-1.25-.423-1.25-.847,0-.847,1.563-1.482,3.125-1.482,2.266,0,4.219,1.27,6.25,3.882,1.563,2.047,3.2,2.964,5.156,2.964s3.2-.635,5-2.258C95.875,116.93,96.891,115.871,97.828,115.165Z" transform="translate(1015 1096.919)" fill="#1d293d"/>
+            <g id="Component_5_4" data-name="Component 5 – 4" transform="translate(1181 1177.919)">
+              <text id="Github-2" data-name="Github" transform="translate(0 29)" fill="#1d293d" font-size="30" font-family="Calibri"><tspan x="0" y="0">Github</tspan></text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="languages" transform="translate(1714 804.839)">
+        <g id="Rectangle_1" data-name="Rectangle 1" transform="translate(0 0.081)" fill="#fff" stroke="#1d293d" stroke-width="1">
+          <path d="M6,0H85a0,0,0,0,1,0,0V36a0,0,0,0,1,0,0H6a6,6,0,0,1-6-6V6A6,6,0,0,1,6,0Z" stroke="none"/>
+          <path d="M6,.5H84.5a0,0,0,0,1,0,0v35a0,0,0,0,1,0,0H6A5.5,5.5,0,0,1,.5,30V6A5.5,5.5,0,0,1,6,.5Z" fill="none"/>
+        </g>
+        <g id="Rectangle_2" data-name="Rectangle 2" transform="translate(84 0.081)" fill="#fff" stroke="#1d293d" stroke-width="1">
+          <path d="M0,0H30a6,6,0,0,1,6,6V30a6,6,0,0,1-6,6H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" stroke="none"/>
+          <path d="M.5.5H30A5.5,5.5,0,0,1,35.5,6V30A5.5,5.5,0,0,1,30,35.5H.5a0,0,0,0,1,0,0V.5A0,0,0,0,1,.5.5Z" fill="none"/>
+        </g>
+        <text id="EN" transform="translate(30 25.081)" fill="#1d293d" font-size="20" font-family="Calibri"><tspan x="0" y="0">EN</tspan></text>
+        <g id="angle-down" transform="translate(95 11.081)">
+          <path id="Path_22" data-name="Path 22" opacity="0.4"/>
+          <path id="Path_23" data-name="Path 23" d="M22.414,184.878a.545.545,0,0,0,.874,0l6.184-7.544a.88.88,0,0,0,0-1.066.545.545,0,0,0-.874,0l-5.747,7.011L17.1,176.269a.545.545,0,0,0-.874,0,.88.88,0,0,0,0,1.066Z" transform="translate(-15.293 -170.74)"/>
+        </g>
+      </g>
+      <g id="Join_to_view_profile" data-name="Join to view profile" transform="translate(-2)">
+        <rect id="Rectangle_5" data-name="Rectangle 5" width="250" height="60" rx="30" transform="translate(79 1093.919)" fill="#155dfc"/>
+        <text id="Join_to_view_profile-2" data-name="Join to view profile" transform="translate(108 1132.919)" fill="#fff" font-size="25" font-family="Calibri"><tspan x="0" y="0">Join to view profile</tspan></text>
+      </g>
+      <g id="downloadCV" transform="translate(-60)">
+        <g id="Rectangle_6" data-name="Rectangle 6" transform="translate(407 1093.919)" fill="#fff" stroke="#155dfc" stroke-width="1">
+          <rect width="200" height="60" rx="30" stroke="none"/>
+          <rect x="0.5" y="0.5" width="199" height="59" rx="29.5" fill="none"/>
+        </g>
+        <text id="Download_CV" data-name="Download CV" transform="translate(439 1132.919)" fill="#155dfc" font-size="25" font-family="Calibri" text-decoration="underline"><tspan x="0" y="0">Download CV</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

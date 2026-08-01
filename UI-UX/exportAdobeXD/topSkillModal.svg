@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1296" height="756" viewBox="0 0 1296 756">
+  <defs>
+    <filter id="Rectangle_8" x="-2" y="5" width="1299" height="753" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-topSkillModal">
+      <rect width="1296" height="756"/>
+    </clipPath>
+    <image id="image" width="37" height="37" xlink:href="topSkillModal-image.jpg"/>
+  </defs>
+  <g id="topSkillModal" clip-path="url(#clip-topSkillModal)">
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_8)">
+      <rect id="Rectangle_8-2" data-name="Rectangle 8" width="1281" height="735" rx="8" transform="translate(7 11)" fill="#fff"/>
+    </g>
+    <g id="footer">
+      <line id="Line_4" data-name="Line 4" x2="1275.5" transform="translate(12.5 685.5)" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+      <g id="link">
+        <text id="Show_all" data-name="Show all" transform="translate(608 724)" fill="#45556c" font-size="25" font-family="Calibri"><tspan x="0" y="0">Show all</tspan></text>
+        <g id="arrow-right" transform="translate(698.254 709)">
+          <path id="Path_18" data-name="Path 18" opacity="0.4"/>
+          <path id="Path_19" data-name="Path 19" d="M15.579,70.4a.737.737,0,0,0,0-1.046L10.4,64.167A.739.739,0,0,0,9.35,65.213l3.918,3.918H.74a.74.74,0,1,0,0,1.481H13.268L9.35,74.53A.739.739,0,0,0,10.4,75.575Z" transform="translate(0 -61.977)"/>
+        </g>
+      </g>
+    </g>
+    <g id="header">
+      <text id="Hamid_s_top_skills" data-name="Hamid&apos;s top skills" transform="translate(30 53)" fill="#1d293d" font-size="30" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">Hamid&apos;s top skills</tspan></text>
+      <line id="Line_2" data-name="Line 2" x2="1273.325" transform="translate(12.5 75.5)" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+      <g id="xmark" transform="translate(1249.325 34)">
+        <path id="Path_10" data-name="Path 10" fill="#1d293d" opacity="0.4"/>
+        <path id="Path_11" data-name="Path 11" d="M.707,65.543a.874.874,0,0,1,1.236-1.236l5.5,5.5,5.5-5.5a.874.874,0,0,1,1.236,1.236l-5.5,5.5,5.5,5.5a.874.874,0,0,1-1.236,1.236l-5.5-5.5-5.5,5.5A.874.874,0,0,1,.707,76.55l5.5-5.5Z" transform="translate(-0.434 -61.715)" fill="#1d293d"/>
+      </g>
+    </g>
+    <g id="mariaDB">
+      <text id="MariaDB-2" data-name="MariaDB" transform="translate(33 117)" fill="#1d293d" font-size="30" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">MariaDB</tspan></text>
+      <g id="angle-up" transform="translate(1203.461 96)">
+        <path id="Path_12" data-name="Path 12" opacity="0.4"/>
+        <path id="Path_13" data-name="Path 13" d="M26.561,144.347a1.025,1.025,0,0,1,1.443,0l10.214,10.214A1.02,1.02,0,0,1,36.775,156l-9.493-9.493L17.79,156a1.02,1.02,0,0,1-1.443-1.443Z" transform="translate(-15.025 -134.854)"/>
+      </g>
+      <g id="Experience" transform="translate(-612 -684.919)">
+        <use id="saas_stealth_logo" transform="translate(645 839.919)" xlink:href="#image"/>
+        <text id="Funder_Lead_Software_Enginner_at_SaaS_Stealth_Startup" data-name="Funder &amp; Lead Software Enginner at SaaS Stealth Startup" transform="translate(692 866.919)" fill="#45556c" font-size="25" font-family="Calibri"><tspan x="0" y="0">Funder &amp; Lead Software Enginner at SaaS Stealth Startup</tspan></text>
+      </g>
+      <line id="Line_3" data-name="Line 3" x2="1204" transform="translate(33.5 207.5)" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+    </g>
+    <g id="MySQL" transform="translate(0 145)">
+      <text id="MySQL-2" data-name="MySQL" transform="translate(33 117)" fill="#1d293d" font-size="30" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">MySQL</tspan></text>
+      <g id="angle-up-2" data-name="angle-up" transform="translate(1203.461 96)">
+        <path id="Path_12-2" data-name="Path 12" opacity="0.4"/>
+        <path id="Path_13-2" data-name="Path 13" d="M26.561,144.347a1.025,1.025,0,0,1,1.443,0l10.214,10.214A1.02,1.02,0,0,1,36.775,156l-9.493-9.493L17.79,156a1.02,1.02,0,0,1-1.443-1.443Z" transform="translate(-15.025 -134.854)"/>
+      </g>
+      <g id="Experience-2" data-name="Experience" transform="translate(-612 -684.919)">
+        <g id="aajlclc14rr2scznz5qm2rj9u" transform="translate(645 836.919)">
+          <path id="Path_14" data-name="Path 14" d="M0,0H37V37H0Z" fill="#e7e2dc"/>
+          <path id="Path_15" data-name="Path 15" d="M48,16H66.934V48.266H48Z" transform="translate(-34.668 -11.266)" fill="#9db3c8"/>
+          <path id="Path_16" data-name="Path 16" d="M16,80h9.467V94.2H16Z" transform="translate(-11.266 -57.201)" fill="#788fa5"/>
+          <path id="Path_17" data-name="Path 17" d="M48,80h9.467V94.2H48Z" transform="translate(-34.234 -57.201)" fill="#56687a"/>
+        </g>
+        <text id="Full-Stack_Web_Developer_at_Independent_and_personal_projects" data-name="Full-Stack Web Developer at Independent and personal projects" transform="translate(692 863.919)" fill="#45556c" font-size="25" font-family="Calibri"><tspan x="0" y="0">Full-Stack Web Developer at Independent and personal projects</tspan></text>
+      </g>
+      <line id="Line_3-2" data-name="Line 3" x2="1204" transform="translate(33.5 207.5)" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+    </g>
+    <g id="SqlServer" transform="translate(0 289)">
+      <text id="Microsoft_SQL_Server" data-name="Microsoft SQL Server" transform="translate(33 117)" fill="#1d293d" font-size="30" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">Microsoft SQL Server</tspan></text>
+      <g id="angle-up-3" data-name="angle-up" transform="translate(1203.461 96)">
+        <path id="Path_12-3" data-name="Path 12" opacity="0.4"/>
+        <path id="Path_13-3" data-name="Path 13" d="M26.561,144.347a1.025,1.025,0,0,1,1.443,0l10.214,10.214A1.02,1.02,0,0,1,36.775,156l-9.493-9.493L17.79,156a1.02,1.02,0,0,1-1.443-1.443Z" transform="translate(-15.025 -134.854)"/>
+      </g>
+      <g id="Experience-3" data-name="Experience" transform="translate(-612 -684.919)">
+        <image id="stealth_startup_51_logo" width="37" height="37" transform="translate(645 839.919)" xlink:href="../ui-ux_data/stealth_startup_51_logo.jpeg"/>
+        <text id="Senior_Backend_Software_Enginner_Technical_Team_Lead_Database_Administrator_DBA_as:_Stealth_Startup" data-name="Senior Backend Software Enginner | Technical Team Lead | Database Administrator (DBA) as: Stealth Startup" transform="translate(692 866.919)" fill="#45556c" font-size="25" font-family="Calibri"><tspan x="0" y="0">Senior Backend Software Enginner | Technical Team Lead | Database Administrator (DBA) as: Stealth Startup</tspan></text>
+      </g>
+      <line id="Line_3-3" data-name="Line 3" x2="1204" transform="translate(33.5 207.5)" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+    </g>
+    <g id="postgreSql" transform="translate(0 434)">
+      <text id="PostgreSQL-2" data-name="PostgreSQL" transform="translate(33 117)" fill="#1d293d" font-size="30" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">PostgreSQL</tspan></text>
+      <g id="angle-up-4" data-name="angle-up" transform="translate(1203.461 96)">
+        <path id="Path_12-4" data-name="Path 12" opacity="0.4"/>
+        <path id="Path_13-4" data-name="Path 13" d="M26.561,144.347a1.025,1.025,0,0,1,1.443,0l10.214,10.214A1.02,1.02,0,0,1,36.775,156l-9.493-9.493L17.79,156a1.02,1.02,0,0,1-1.443-1.443Z" transform="translate(-15.025 -134.854)"/>
+      </g>
+      <g id="Experience-4" data-name="Experience" transform="translate(-612 -684.919)">
+        <use id="saas_stealth_logo-2" data-name="saas_stealth_logo" transform="translate(645 839.919)" xlink:href="#image"/>
+        <text id="Funder_Lead_Software_Enginner_at_SaaS_Stealth_Startup-2" data-name="Funder &amp; Lead Software Enginner at SaaS Stealth Startup" transform="translate(692 866.919)" fill="#45556c" font-size="25" font-family="Calibri"><tspan x="0" y="0">Funder &amp; Lead Software Enginner at SaaS Stealth Startup</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

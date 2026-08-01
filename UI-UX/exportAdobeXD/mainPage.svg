@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="3228" viewBox="0 0 1920 3228">
+  <defs>
+    <filter id="Languages" x="68" y="2630" width="213" height="73" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Education" x="68" y="2430" width="223" height="73" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Experience" x="68" y="1755" width="223" height="73" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Aboute" x="68" y="1193" width="156" height="73" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-4"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 1883 835">
+      <image width="1883" height="835" xlink:href="mainPage-image2.png"/>
+    </pattern>
+    <filter id="Hamid_Heidarinia" x="68" y="923" width="453" height="91" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-5"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-mainPage">
+      <rect width="1920" height="3228"/>
+    </clipPath>
+  </defs>
+  <g id="mainPage" clip-path="url(#clip-mainPage)">
+    <rect width="1920" height="3228" fill="#fff"/>
+    <g id="Languages-2" data-name="Languages" transform="translate(71.5 2636)">
+      <g id="lng" transform="translate(-53.357 69)">
+        <text id="Native_or_bilingual_proficiency" data-name="Native or bilingual proficiency" transform="translate(58.857 53)" fill="#314158" font-size="25" font-family="Calibri"><tspan x="0" y="0">Native or bilingual proficiency</tspan></text>
+        <text id="Azerbaijan" transform="translate(58.857 19)" fill="#1d293d" font-size="25" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">Azerbaijan</tspan></text>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -71.5, -2636)" filter="url(#Languages)">
+        <text id="Languages-3" data-name="Languages" transform="translate(77 2679)" fill="#1d293d" font-size="45" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">Languages</tspan></text>
+      </g>
+    </g>
+    <g id="Education-2" data-name="Education" transform="translate(71.5 2436)">
+      <line id="Line_5" data-name="Line 5" x2="1770" transform="translate(0 194.5)" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+      <g id="jonExperience" transform="translate(12.643 69)">
+        <path id="graduation-cap" d="M36.071,109.894l17.745,7.3a6.854,6.854,0,0,0,5.225,0L79.6,108.732a2.027,2.027,0,0,0,0-3.749L59.041,96.517a6.854,6.854,0,0,0-5.225,0l-20.561,8.465A2.021,2.021,0,0,0,32,106.857v25.107a2.036,2.036,0,0,0,4.071,0Zm4.071,6.082v9.882c0,4.5,7.295,8.143,16.286,8.143s16.286-3.647,16.286-8.143v-9.89l-12.121,5a10.952,10.952,0,0,1-8.329,0l-12.121-5Z" transform="translate(-32 -86)" fill="#1d293d"/>
+        <g id="title" transform="translate(58.857)">
+          <text id="_2011-2013" data-name="2011-2013" transform="translate(0 85)" fill="#45556c" font-size="18" font-family="Calibri-Light, Calibri" font-weight="300"><tspan x="0" y="0">2011-2013</tspan></text>
+          <text id="Bachelor_s_degree_Computer_Engineering_software_Technology_" data-name="Bachelor&apos;s degree Computer Engineering (software Technology)" transform="translate(0 53)" fill="#314158" font-size="20" font-family="Calibri"><tspan x="0" y="0">Bachelor&apos;s degree Computer Engineering (software Technology)</tspan></text>
+          <text id="Islamic_Azad_University_of_Marand" data-name="Islamic Azad University of Marand" transform="translate(0 19)" fill="#1d293d" font-size="20" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">Islamic Azad University of Marand</tspan></text>
+        </g>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -71.5, -2436)" filter="url(#Education)">
+        <text id="Education-3" data-name="Education" transform="translate(77 2479)" fill="#1d293d" font-size="45" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">Experience</tspan></text>
+      </g>
+    </g>
+    <g id="Experience-2" data-name="Experience" transform="translate(71.5 1761)">
+      <line id="Line_5-2" data-name="Line 5" x2="1770" transform="translate(0 654.5)" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+      <g id="showMoreBtn" transform="translate(69.5 581)">
+        <g id="Rectangle_5" data-name="Rectangle 5" transform="translate(0 0)" fill="#fff" stroke="#45556c" stroke-width="1">
+          <rect width="193" height="46" rx="23" stroke="none"/>
+          <rect x="0.5" y="0.5" width="192" height="45" rx="22.5" fill="none"/>
+        </g>
+        <g id="Group_12" data-name="Group 12" transform="translate(29 8)">
+          <text id="Show_More" data-name="Show More" transform="translate(0 24)" fill="#1d293d" font-size="25" font-family="Calibri"><tspan x="0" y="0">Show More</tspan></text>
+          <g id="angle-down" transform="translate(122.375 9)">
+            <path id="Path_22" data-name="Path 22" opacity="0.4"/>
+            <path id="Path_23" data-name="Path 23" d="M21.646,183.813a.479.479,0,0,0,.768,0l5.438-6.633a.773.773,0,0,0,0-.937.479.479,0,0,0-.768,0l-5.054,6.165-5.054-6.165a.479.479,0,0,0-.768,0,.773.773,0,0,0,0,.937Z" transform="translate(-15.385 -171.381)"/>
+          </g>
+        </g>
+      </g>
+      <g id="jonExperience-2" data-name="jonExperience" transform="translate(11.5 69)">
+        <text id="Lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_sed_do_eiusmod_tempor_incididunt_ut_labore_et_dolore_magna_aliqua._Ut_enim_ad_minim_veniam_quis_nostrud_exercitation_ullamco_laboris_nisi_ut_aliquip_ex_ea_commodo_consequat._Duis_aute_irure_dolor_in" data-name="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in" transform="translate(60 112)" fill="#1d293d" font-size="25" font-family="Calibri"><tspan x="0" y="24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </tspan><tspan x="0" y="64">exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </tspan><tspan x="0" y="104">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</tspan><tspan x="0" y="144">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </tspan><tspan x="0" y="184">exercitation ullamco laboris</tspan><tspan x="0" y="224" xml:space="preserve"> nisi ut  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat </tspan><tspan x="0" y="264">cupidatat non proident, sunt in culpa qui </tspan><tspan x="0" y="304">officia deserunt mollit anim id est laborum.</tspan><tspan x="0" y="344"></tspan><tspan x="0" y="384">Lorem ipsum dolor... </tspan></text>
+        <image id="saas_stealth_logo" width="50" height="50" transform="translate(0 5)" xlink:href="../ui-ux_data/saas_stealth_logo.jpeg"/>
+        <text id="East_Azerbaijan_Province_Iran" data-name="East Azerbaijan Province, Iran" transform="translate(60 97)" fill="#45556c" font-size="18" font-family="Calibri-Light, Calibri" font-weight="300"><tspan x="0" y="0">East Azerbaijan Province, Iran</tspan></text>
+        <g id="title-2" data-name="title" transform="translate(60)">
+          <g id="date" transform="translate(0 48)">
+            <text id="Jan_2022_-_Present_" data-name="Jan 2022 - Present " transform="translate(0 17)" fill="#45556c" font-size="18" font-family="Calibri-Light, Calibri" font-weight="300"><tspan x="0" y="0">Jan 2022 - Present </tspan></text>
+            <path id="circle" d="M56,59a3,3,0,1,1,3,3A3,3,0,0,1,56,59Z" transform="translate(87 -48)" fill="#45556c"/>
+            <text id="_4_years_7_months" data-name="4 years 7 months" transform="translate(159 17)" fill="#45556c" font-size="18" font-family="Calibri-Light, Calibri" font-weight="300"><tspan x="0" y="0">4 years 7 months</tspan></text>
+          </g>
+          <text id="Sass_Stealth_Startup" data-name="Sass Stealth Startup" transform="translate(0 43)" fill="#314158" font-size="20" font-family="Calibri"><tspan x="0" y="0">Sass Stealth Startup</tspan></text>
+          <text id="Founder_Lead_Software_Engineer" data-name="Founder &amp; Lead Software Engineer" transform="translate(0 19)" fill="#1d293d" font-size="20" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">Founder &amp; Lead Software Engineer</tspan></text>
+        </g>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -71.5, -1761)" filter="url(#Experience)">
+        <text id="Experience-3" data-name="Experience" transform="translate(77 1804)" fill="#1d293d" font-size="45" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">Experience</tspan></text>
+      </g>
+    </g>
+    <g id="aboute-2" data-name="aboute" transform="translate(75 1198.588)">
+      <line id="Line_2" data-name="Line 2" x2="1770" transform="translate(0.5 549.5)" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+      <g id="TopSkills" transform="translate(1 385)">
+        <g id="Rectangle_7" data-name="Rectangle 7" transform="translate(0 0.412)" fill="#fff" stroke="#1d293d" stroke-width="1">
+          <rect width="1770" height="128" rx="8" stroke="none"/>
+          <rect x="0.5" y="0.5" width="1769" height="127" rx="7.5" fill="none"/>
+        </g>
+        <g id="Group_11" data-name="Group 11" transform="translate(15 31)">
+          <text id="Top_skills" data-name="Top skills" transform="translate(70 29.412)" fill="#1d293d" font-size="30" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">Top skills</tspan></text>
+          <image id="diamond_002" width="60" height="60" transform="translate(0 0.412)" xlink:href="mainPage-image.png"/>
+          <g id="Group_10" data-name="Group 10" transform="translate(70 36)">
+            <text id="MariaDB_MySQL_Microsift_SQL_Server_PostgreSQL" data-name="MariaDB   MySQL   Microsift SQL Server   PostgreSQL" transform="translate(0 24.412)" fill="#45556c" font-size="25" font-family="Calibri"><tspan x="0" y="0" xml:space="preserve">MariaDB   MySQL   Microsift SQL Server   PostgreSQL</tspan></text>
+            <g id="circles" transform="translate(93 14)">
+              <path id="circle-2" data-name="circle" d="M56,59a3,3,0,1,1,3,3A3,3,0,0,1,56,59Z" transform="translate(-56 -56)" fill="#45556c"/>
+              <path id="circle-3" data-name="circle" d="M56,59a3,3,0,1,1,3,3A3,3,0,0,1,56,59Z" transform="translate(35 -56)" fill="#45556c"/>
+              <path id="circle-4" data-name="circle" d="M56,59a3,3,0,1,1,3,3A3,3,0,0,1,56,59Z" transform="translate(255 -56)" fill="#45556c"/>
+            </g>
+          </g>
+        </g>
+        <g id="arrow-right" transform="translate(1696.672 50.412)">
+          <path id="Path_8" data-name="Path 8" fill="#1d293d" opacity="0.4"/>
+          <path id="Path_9" data-name="Path 9" d="M32.632,77.458a1.544,1.544,0,0,0,0-2.191L21.776,64.406A1.549,1.549,0,1,0,19.585,66.6L27.792,74.8H1.551a1.551,1.551,0,1,0,0,3.1H27.792L19.585,86.11A1.549,1.549,0,1,0,21.776,88.3Z" transform="translate(0 -59.818)" fill="#1d293d"/>
+        </g>
+      </g>
+      <g id="content">
+        <text id="Lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_sed_do_eiusmod_tempor_incididunt_ut_labore_et_dolore_magna_aliqua._Ut_enim_ad_minim_veniam_quis_nostrud_exercitation_ullamco_laboris_nisi_ut_aliquip_ex_ea_commodo_consequat._Duis_aute_irure_dolor_i" data-name="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i" transform="translate(0 72.412)" fill="#1d293d" font-size="25" font-family="Calibri"><tspan x="0" y="24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </tspan><tspan x="0" y="64">nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu </tspan><tspan x="0" y="104">fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</tspan><tspan x="0" y="144">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </tspan><tspan x="0" y="184" xml:space="preserve">nostrud exercitation ullamco laboris nisi ut  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu </tspan><tspan x="0" y="224">fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui </tspan><tspan x="0" y="264">officia deserunt mollit anim id est laborum.</tspan></text>
+        <g transform="matrix(1, 0, 0, 1, -75, -1198.59)" filter="url(#Aboute)">
+          <text id="Aboute-3" data-name="Aboute" transform="translate(77 1242)" fill="#1d293d" font-size="45" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">Aboute</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g id="header" transform="translate(0 -60)">
+      <line id="Line_1" data-name="Line 1" x2="1770" transform="translate(75.5 1241.648)" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+      <g id="headeImg">
+        <path id="HamidHeidarinia-Header-page" d="M10,0H1910a10,10,0,0,1,10,10V851a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V10A10,10,0,0,1,10,0Z" fill="url(#pattern)"/>
+      </g>
+      <g id="profileImg" transform="translate(77 629)">
+        <circle id="Ellipse_1" data-name="Ellipse 1" cx="175" cy="175" r="175" fill="#fff"/>
+        <image id="icon-512" width="334" height="334" transform="translate(8 8)" xlink:href="mainPage-image3.png"/>
+      </g>
+      <g id="headerTitle" transform="translate(77 986)">
+        <g id="left" transform="translate(0 2.919)">
+          <g id="Group_7" data-name="Group 7" transform="translate(0 108)">
+            <text id="Iran" transform="translate(0 29.081)" fill="#314158" font-size="30" font-family="Calibri"><tspan x="0" y="0">Iran</tspan></text>
+            <text id="Contact_info" data-name="Contact info" transform="translate(75 29.081)" fill="#155dfc" font-size="30" font-family="Calibri"><tspan x="0" y="0">Contact info</tspan></text>
+            <path id="circle-5" data-name="circle" d="M56,59a3,3,0,1,1,3,3A3,3,0,0,1,56,59Z" transform="translate(5 -37)" fill="#d1d5dc"/>
+          </g>
+          <text id="Software_Engineer_Database_Administartor_DBA_" data-name="Software Engineer | Database Administartor (DBA)" transform="translate(0 101.081)" fill="#314158" font-size="30" font-family="Calibri"><tspan x="0" y="0">Software Engineer | Database Administartor (DBA)</tspan></text>
+          <g transform="matrix(1, 0, 0, 1, -77, -928.92)" filter="url(#Hamid_Heidarinia)">
+            <text id="Hamid_Heidarinia-2" data-name="Hamid Heidarinia" transform="translate(77 986)" fill="#1d293d" font-size="60" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">Hamid Heidarinia</tspan></text>
+          </g>
+        </g>
+        <g id="right" transform="translate(1011.182)">
+          <g id="Experience-4" data-name="Experience" transform="translate(0.818)">
+            <image id="saas_stealth_logo-2" data-name="saas_stealth_logo" width="80" height="80" xlink:href="mainPage-image4.jpg"/>
+            <g id="Component_5_1" data-name="Component 5 – 1" transform="translate(102 22)">
+              <text id="SaaS_Stealth_Startup" data-name="SaaS Stealth Startup" transform="translate(0 29)" fill="#1d293d" font-size="30" font-family="Calibri"><tspan x="0" y="0">SaaS Stealth Startup</tspan></text>
+            </g>
+          </g>
+          <g id="Education-4" data-name="Education" transform="translate(0 95.919)">
+            <g id="Component_4_1" data-name="Component 4 – 1" transform="translate(100.818 13.081)">
+              <text id="Islamic_Azad_University_of_Marand-2" data-name="Islamic Azad University of Marand" transform="translate(0 29)" fill="#1d293d" font-size="30" font-family="Calibri"><tspan x="0" y="0">Islamic Azad University of Marand</tspan></text>
+            </g>
+            <path id="graduation-cap-2" data-name="graduation-cap" d="M38.652,118.7l28.989,11.931a11.2,11.2,0,0,0,8.536,0l33.59-13.83a3.312,3.312,0,0,0,0-6.125l-33.59-13.83a11.2,11.2,0,0,0-8.536,0l-33.59,13.83A3.3,3.3,0,0,0,32,113.737v41.018a3.326,3.326,0,0,0,6.652,0Zm6.652,9.936v16.144c0,7.344,11.917,13.3,26.606,13.3s26.606-5.959,26.606-13.3V128.62l-19.8,8.162a17.892,17.892,0,0,1-13.608,0L45.3,128.62Z" transform="translate(-32 -96)" fill="#1d293d"/>
+          </g>
+          <g id="github" transform="translate(0.818 173.919)">
+            <path id="github-brands-solid-full" d="M97.828,115.165c-10.312-1.129-17.578-7.834-17.578-16.514A15.122,15.122,0,0,1,84,88.771c-1.016-2.329-.859-7.269.313-9.316a14.869,14.869,0,0,1,9.844,3.176,35.208,35.208,0,0,1,9.922-1.27,36.075,36.075,0,0,1,9.766,1.2,15.055,15.055,0,0,1,9.844-3.105c1.094,1.905,1.25,6.846.234,9.245a14.6,14.6,0,0,1,3.828,9.951c0,8.68-7.266,15.244-17.734,16.444,2.656,1.553,4.453,4.94,4.453,8.822v7.34c0,2.117,1.953,3.317,4.3,2.47C132.906,128.857,144,116.083,144,100.275,144,80.3,126.031,64,103.922,64S64,80.3,64,100.275c0,15.667,11.016,28.653,25.859,33.522,2.109.706,4.141-.565,4.141-2.47v-5.646a10.987,10.987,0,0,1-3.75.706c-5.156,0-8.2-2.541-10.391-7.269-.859-1.905-1.8-3.035-3.594-3.246-.937-.071-1.25-.423-1.25-.847,0-.847,1.563-1.482,3.125-1.482,2.266,0,4.219,1.27,6.25,3.882,1.563,2.047,3.2,2.964,5.156,2.964s3.2-.635,5-2.258C95.875,116.93,96.891,115.871,97.828,115.165Z" transform="translate(-64 -64)" fill="#1d293d"/>
+            <g id="Component_5_2" data-name="Component 5 – 2" transform="translate(102 17.081)">
+              <text id="Github-2" data-name="Github" transform="translate(0 29)" fill="#1d293d" font-size="30" font-family="Calibri"><tspan x="0" y="0">Github</tspan></text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="languages-4" data-name="languages" transform="translate(1714 864.919)">
+        <g id="Rectangle_1" data-name="Rectangle 1" transform="translate(0 0.081)" fill="#fff" stroke="#1d293d" stroke-width="1">
+          <path d="M6,0H85a0,0,0,0,1,0,0V36a0,0,0,0,1,0,0H6a6,6,0,0,1-6-6V6A6,6,0,0,1,6,0Z" stroke="none"/>
+          <path d="M6,.5H84.5a0,0,0,0,1,0,0v35a0,0,0,0,1,0,0H6A5.5,5.5,0,0,1,.5,30V6A5.5,5.5,0,0,1,6,.5Z" fill="none"/>
+        </g>
+        <g id="Rectangle_2" data-name="Rectangle 2" transform="translate(84 0.081)" fill="#fff" stroke="#1d293d" stroke-width="1">
+          <path d="M0,0H30a6,6,0,0,1,6,6V30a6,6,0,0,1-6,6H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" stroke="none"/>
+          <path d="M.5.5H30A5.5,5.5,0,0,1,35.5,6V30A5.5,5.5,0,0,1,30,35.5H.5a0,0,0,0,1,0,0V.5A0,0,0,0,1,.5.5Z" fill="none"/>
+        </g>
+        <text id="EN" transform="translate(30 25.081)" fill="#1d293d" font-size="20" font-family="Calibri"><tspan x="0" y="0">EN</tspan></text>
+        <g id="angle-down-2" data-name="angle-down" transform="translate(95 11.081)">
+          <path id="Path_22-2" data-name="Path 22" opacity="0.4"/>
+          <path id="Path_23-2" data-name="Path 23" d="M22.414,184.878a.545.545,0,0,0,.874,0l6.184-7.544a.88.88,0,0,0,0-1.066.545.545,0,0,0-.874,0l-5.747,7.011L17.1,176.269a.545.545,0,0,0-.874,0,.88.88,0,0,0,0,1.066Z" transform="translate(-15.293 -170.74)"/>
+        </g>
+      </g>
+      <g id="Join_to_view_profile" data-name="Join to view profile" transform="translate(77 1162.919)">
+        <rect id="Rectangle_5-2" data-name="Rectangle 5" width="250" height="60" rx="30" transform="translate(0 0.081)" fill="#155dfc"/>
+        <text id="Join_to_view_profile-2" data-name="Join to view profile" transform="translate(29 39.081)" fill="#fff" font-size="25" font-family="Calibri"><tspan x="0" y="0">Join to view profile</tspan></text>
+      </g>
+      <g id="downloadCV" transform="translate(347 1162.919)">
+        <g id="Rectangle_6" data-name="Rectangle 6" transform="translate(0 0.081)" fill="#fff" stroke="#155dfc" stroke-width="1">
+          <rect width="200" height="60" rx="30" stroke="none"/>
+          <rect x="0.5" y="0.5" width="199" height="59" rx="29.5" fill="none"/>
+        </g>
+        <text id="Download_CV" data-name="Download CV" transform="translate(32 39.081)" fill="#155dfc" font-size="25" font-family="Calibri" text-decoration="underline"><tspan x="0" y="0">Download CV</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
