@@ -3,8 +3,8 @@ self.addEventListener('install', (event) => {
         caches.open('v1').then((cache) => {
             return cache.addAll([
                 '/',
-                '/css/app.css',
-                '/js/app.js',
+                '/assets/css/app.css',
+                '/assets/js/app.js',
                 '/offline.html',
             ]);
         })
