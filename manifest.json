@@ -1,33 +1,22 @@
 {
     "name": "Hamid Heidarinia | CV",
-    "short_name": "StoreMaker",
+    "short_name": "Hamid CV",
     "categories": [
-        " Hamid ",
-        " Heidarinia ",
-        " CV ",
-        " Resume ",
-        " Software Engineer ",
-        " Database Administrator (DBA) ",
-        " Laravel ",
-        " Python/Django",
-        " ASP.NET MVC ",
-        " Islamic Azad University of Marand ",
-        ""
+        "business",
+        "education",
+        "productivity"
     ],
-    "description": "Software Engineer & Database Administrator (DBA) with 10+ years of experience in designing, developing, and maintaining scalable software systems and database solutions. ",
-    "display": "fullscreen",
+    "description": "Software Engineer & Database Administrator (DBA) with 10+ years of experience in designing, developing, and maintaining scalable software systems and database solutions.",
+    "display": "standalone",
     "theme_color": "#05B4F9",
     "background_color": "#05B4F9",
-    "id": "Hamid Heidarinia?version=1&mode=tria",
+    "id": "/?source=pwa",
     "orientation": "natural",
-    "prefer_related_applications": true,
+    "prefer_related_applications": false,
     "scope": "/",
     "start_url": "/",
     "lang": "en",
     "dir": "ltr",
-    "version": "0.1",
-    "manifest_version": "3",
-    "author": "Hamid Heidarinia",
     "icons": [
         {
             "src": "./assets/icons/android/hamidHeidarinia-72x72.webp",
@@ -45,19 +34,21 @@
             "type": "image/webp"
         },
         {
-            "src": "./assets/icons/android/hamidHeidarinia-512x512.webp",
+            "src": "./assets/icons/ios/hamidHeidarinia-152x152.webp",
             "sizes": "152x152",
             "type": "image/webp"
         },
         {
-            "src": "./assets/icons/android/hamidHeidarinia-192x192.webp",
+            "src": "./assets/icons/android-chrome-hamidHeidarinia-192x192.webp",
             "sizes": "192x192",
-            "type": "image/webp"
+            "type": "image/webp",
+            "purpose": "any"
         },
         {
-            "src": "./assets/icons/android/hamidHeidarinia-512x512.webp",
-            "sizes": "any",
-            "type": "image/webp"
+            "src": "./assets/icons/android-chrome-hamidHeidarinia-512x512.webp",
+            "sizes": "512x512",
+            "type": "image/webp",
+            "purpose": "any maskable"
         }
     ],
     "screenshots": [
