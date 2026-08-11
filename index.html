@@ -7,7 +7,7 @@
     <meta name="description" content="توضیح کوتاه درباره صفحه">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Your Name">
-    <title>عنوان صفحه</title>
+    <title>Hamid Heidarinia | CV</title>
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -23,8 +23,6 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="theme-color" content="#0d6efd">
-
-    <link rel="icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <!-- PWA -->
@@ -38,13 +36,14 @@
     <meta name="apple-mobile-web-app-title" content="My App">
 
     <!-- Manifest -->
-    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="manifest" href="./manifest.json">
 
-    <!-- Icons -->
-    <link rel="icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/icons/icon-512.png">
-    <link rel="apple-touch-icon" href="/icons/icon-192.png">
+    <!-- icons -->
+    <link rel="icon" href="./assets/icons/favicon-hamidHeidarinia.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon-hamidHeidarinia.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-hamidHeidarinia-32x32.webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-hamidHeidarinia--16x16.webp">
+    <link rel="manifest" href="/site.webmanifest">
 
     <script src="./assets/lib/tailwindcss.js"></script>
     <script src="./assets/lib/alpinejs.min.js"></script>
@@ -52,25 +51,45 @@
 </head>
 
 <body class="">
-    <div class="min-h-screen bg-gray-900 flex flex-col items-center justify-center">
-        <h1 class="text-5xl text-white font-bold mb-8 animate-pulse">
-            Coming Soon
-        </h1>
-        <p class="text-white text-lg mb-8">
-            We're working hard to bring you something amazing. Stay tuned!
-        </p>
-    </div>
     <script>
         if ('serviceWorker' in navigator) {
-            window.addEventListener('load', async () => {
-                try {
-                    await navigator.serviceWorker.register('./sw.js');
-                    console.log('Service Worker registered');
-                } catch (err) {
-                    console.error('Service Worker registration failed:', err);
-                }
-            });
+            navigator.serviceWorker.register('./serviceworker.js')
+                .then(() =>
+                    console.log('Service Worker registered successfully.')
+                ).catch((error) =>
+                    console.error('Service Worker registration failed:', error)
+                );
         }
+
+        let deferredPrompt;
+        let div = document.querySelector('.add-to');
+        let buttonInstall = document.querySelector('.add-to-btn');
+        div.style.display = 'none';
+        window.addEventListener('beforeinstallprompt', (e) => {
+            // Prevent the mini-infobar from appearing on mobile
+            e.preventDefault();
+            // Stash the event so it can be triggered later.
+            deferredPrompt = e;
+            // Update UI notify the user they can install the PWA
+            //showInstallPromotion();
+            div.style.display = 'flex';
+            buttonInstall.addEventListener('click', (e) => {
+                // Hide the app provided install promotion
+                //hideMyInstallPromotion();
+                div.style.display = 'none';
+
+                // Show the install prompt
+                deferredPrompt.prompt();
+                // Wait for the user to respond to the prompt
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('User accepted the install prompt');
+                    } else {
+                        console.log('User dismissed the install prompt');
+                    }
+                });
+            });
+        });
     </script>
 </body>
 
