@@ -386,7 +386,7 @@
                     <!-- modal conten -->
                     <div x-show="topSkillsModal" x-cloak tabindex="0"
                     class="z-50 inset-0 w-full h-full py-6 fixed flex justify-center items-center">
-                        <div @click.away="topSkillsModal = false" class="z-50 relative p-3 mx-auto my-0 w-11/12 md:w-1/2"
+                        <div @click.away="topSkillsModal = false" class="z-50 relative p-3 mx-auto my-0 w-11/12 md:w-[60%]"
                             x-show="topSkillsModal" x-transition:enter="transition duration-500"
                             x-transition:enter-start="transform opacity-0 -translate-y-4"
                             x-transition:enter-end="transform opacity-100 translate-y-0" x-transition:leave="transition -translate-y-4"
@@ -489,7 +489,7 @@
                                                 </svg>
                                             </div>
                                             <div class="flex items-center gap-2" x-show="!open">
-                                                <svg class="w-9 h-9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                                                <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                                                     <circle cx="50" cy="50" r="50" fill="" />
                                                     <g stroke-linejoin="round">
                                                         <polygon points="44,28 37,36.9 37.9,61.9 49.9,39" fill="#969696" stroke="#969696" stroke-width="0.6" />
