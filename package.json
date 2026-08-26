@@ -1,0 +1,47 @@
+{
+  "name": "hamidheidarinia.github.io",
+  "version": "1.0.0",
+  "description": "Software Engineer & Database Administrator (DBA) with 10+ years of experience in designing, developing, and maintaining scalable software systems and database solutions.",
+  "keywords": [
+    "Database",
+    "Administrator",
+    "Backend",
+    "Developer",
+    "Database",
+    "Design",
+    "Development",
+    "SQL",
+    "MariaDB",
+    "PostgreSQL",
+    "MySQL",
+    "SQL"
+  ],
+  "homepage": "https://github.com/hamidHeidarinia/hamidHeidarinia.github.io",
+  "bugs": {
+    "url": "https://github.com/hamidHeidarinia/hamidHeidarinia.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamidHeidarinia/hamidHeidarinia.github.io.git"
+  },
+  "license": "MIT",
+  "author": "Hamid Heidarinia",
+  "type": "app.js",
+  "main": "serviceworker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "alpinejs": "^3.16.3",
+    "astro": "^7.2.6",
+    "moment": "^2.30.1",
+    "moment-jalaali": "^0.10.5",
+    "tailwindcss": "^4.3.3"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3"
+  }
+}
