@@ -2,11 +2,11 @@ import moment from 'moment';
 
 import momentJalaali from 'moment-jalaali';
 
-import Alpine from 'alpinejs'
+// import Alpine from 'alpinejs'
 
-window.Alpine = Alpine
+// window.Alpine = Alpine
 
-Alpine.start()
+// Alpine.start()
 
 function formatDateRange(startDate, endDate = null) {
     const start = moment(startDate);
