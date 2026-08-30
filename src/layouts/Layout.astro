@@ -1,0 +1,26 @@
+---
+import "../styles/app.css";
+import Head from "../components/head.astro";
+import Footer from "../components/footer.astro";
+---
+
+<!doctype html>
+<html lang="en">
+    <Head />
+
+    <body
+        class="bg-slate-100 dark:bg-slate-950 text-slate-800 dark:text-slate-200 antialiased transition-colors duration-300"
+        x-data="{ dark: document.documentElement.classList.contains('dark') }"
+        x-cloak
+        x-effect="document.documentElement.classList.toggle('dark', dark); localStorage.setItem('theme', dark ? 'dark' : 'light')"
+    >
+        <div class="min-h-screen sm:py-6 lg:py-10">
+            <div
+                class="max-w-5xl mx-auto bg-white dark:bg-slate-900 rounded-none lg:rounded-2xl sm:shadow-sm sm:border sm:border-slate-200 dark:sm:border-slate-800 overflow-hidden transition-colors duration-300"
+            >
+                <!-- Page Contents -->
+            </div>
+        </div>
+        <Footer />
+    </body>
+</html>
