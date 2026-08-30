@@ -1,0 +1,114 @@
+---
+// Component Script (JavaScript)
+import { Font } from "astro:assets";
+import "../styles/app.css";
+---
+
+<head>
+    <meta charset="UTF-8" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+        name="description"
+        content="Software Engineer & Database Administrator (DBA) with 10+ years of experience in designing, developing, and maintaining scalable software systems and database solutions."
+    />
+    <meta
+        name="keywords"
+        content="Database Administrator & Backend Developer, Database Design & Development, SQL, MariaDB, PostgreSQL, MySQL, SQL Server, Laravel, ASP.NET MVC, Python, Django, REST APIs"
+    />
+    <meta name="author" content="Hamid Heidarinia" />
+    <title>Hamid Heidarinia — Profile</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="hamid.heidarinia.github.io" />
+    <meta property="og:title" content="Hamid Heidarinia — Profile" />
+    <meta
+        property="og:description"
+        content="Software Engineer & Database Administrator (DBA) with 10+ years of experience in designing, developing, and maintaining scalable software systems and database solutions."
+    />
+    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:image" content="https://example.com/images/cover.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <!-- <meta property="og:locale" content="fa_IR"> -->
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0d6efd" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- PWA -->
+    <meta name="theme-color" content="#0d6efd" />
+    <meta name="background-color" content="#ffffff" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Hamid Heidarinia" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="./manifest.json" />
+
+    <!-- icons -->
+    <link rel="icon" href="./assets/icons/favicon.ico" />
+    <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/assets/icons/apple-touch-icon-hamidHeidarinia.webp"
+    />
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/assets/icons/favicon-hamidHeidarinia-32x32.webp"
+    />
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/assets/icons/favicon-hamidHeidarinia--16x16.webp"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- <script src="./assets/lib/tailwindcss.js"></script> -->
+    <script
+        defer
+        src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <!-- <link
+        rel="preload"
+        href="./assets/fonts/IRANSans/IRANSANSWEB.woff2"
+        as="font"
+        type="font/woff2"
+        crossorigin
+    />
+    <link
+        rel="preload"
+        href="./assets/fonts/Calibri/calibri-regular.woff2"
+        as="font"
+        type="font/woff2"
+        crossorigin
+    /> -->
+    <Font cssVariable="--font-calibri" />
+
+    <!-- <link rel="stylesheet" href="./assets/css/app.css" /> -->
+    <style type="text/tailwindcss">
+        @custom-variant dark (&:where(.dark, .dark *));
+    </style>
+    <script>
+        // set theme before paint to avoid flash
+        if (
+            localStorage.getItem("theme") === "dark" ||
+            (!("theme" in localStorage) &&
+                window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+            document.documentElement.classList.add("dark");
+        }
+    </script>
+</head>
