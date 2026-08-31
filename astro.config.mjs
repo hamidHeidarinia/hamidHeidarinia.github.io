@@ -6,8 +6,6 @@ import {
 import tailwindcss from "@tailwindcss/vite";
 
 import alpinejs from "@astrojs/alpinejs";
-import moment from 'moment';
-import momentJalaali from 'moment-jalaali';
 
 // https://astro.build/config
 export default defineConfig({
@@ -35,8 +33,7 @@ export default defineConfig({
             // fallbackType: "rewrite"
         }
     },
-    fonts: [
-        {
+    fonts: [{
             provider: fontProviders.local(),
             name: "Calibri",
             cssVariable: "--font-calibri",
