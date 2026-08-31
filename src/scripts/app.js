@@ -1,6 +1,6 @@
-// import moment from 'moment';
+import moment from 'moment';
 
-// import momentJalaali from 'moment-jalaali';
+import momentJalaali from 'moment-jalaali';
 
 // import Alpine from 'alpinejs'
 
