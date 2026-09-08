@@ -1,6 +1,6 @@
 hamidheidarinia.github.io@1.0.0
 ├─┬ https://opencollective.com/astrodotbuild
-│ │ └── astro@7.2.9
+│ │ └── astro@7.3.1
 │ ├── https://github.com/sponsors/sibiraj-s
 │ │   └── ci-info@4.4.0
 │ ├── https://opencollective.com/express
@@ -14,7 +14,7 @@ hamidheidarinia.github.io@1.0.0
 │ ├── https://github.com/sponsors/sxzz
 │ │   └── obug@2.1.4
 │ ├── https://github.com/sponsors/sindresorhus
-│ │   └── p-limit@7.3.1, yocto-queue@1.2.2, p-queue@9.3.3, p-timeout@7.0.1, is-plain-obj@4.1.0, is-docker@4.0.0
+│ │   └── p-limit@7.3.2, yocto-queue@1.2.2, p-queue@9.3.3, p-timeout@7.0.1, is-plain-obj@4.1.0, is-docker@4.0.0
 │ ├── https://github.com/sponsors/cyyynthia
 │ │   └── smol-toml@1.8.0
 │ ├─┬ https://opencollective.com/svgo
@@ -48,13 +48,13 @@ hamidheidarinia.github.io@1.0.0
 │ ├── https://opencollective.com/parcel
 │ │   └── lightningcss@1.33.0, lightningcss-linux-x64-gnu@1.33.0, lightningcss@1.32.0, lightningcss-linux-x64-gnu@1.32.0
 │ ├─┬ https://opencollective.com/postcss/
-│ │ │ └── postcss@8.5.26
+│ │ │ └── postcss@8.5.28
 │ │ └── https://github.com/sponsors/ai
 │ │     └── nanoid@3.3.18
 │ ├── https://github.com/sponsors/SuperchupuDev
 │ │   └── tinyglobby@0.2.17
-│ └── https://github.com/sponsors/Boshen
-│     └── @oxc-project/types@0.147.0
+│ └── https://github.com/sponsors/oxc-project
+│     └── @oxc-project/types@0.148.0
 └── https://opencollective.com/webpack
     └── tapable@2.3.3
 
