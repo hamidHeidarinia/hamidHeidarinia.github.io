@@ -49,7 +49,7 @@ const siteUrl = Astro.site;
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#0d6efd" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href={AppleTouchIcon.src} />
 
     <!-- PWA -->
     <meta name="theme-color" content="#0d6efd" />
@@ -77,6 +77,8 @@ const siteUrl = Astro.site;
     <!-- <script src="./assets/lib/tailwindcss.js"></script> -->
 
     <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="sitemap" href="./sitemap-index.xml" />
+
     <!-- <link
         rel="preload"
         href="./assets/fonts/IRANSans/IRANSANSWEB.woff2"

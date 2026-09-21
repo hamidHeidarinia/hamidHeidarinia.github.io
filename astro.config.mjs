@@ -4,61 +4,89 @@ import {
 } from "astro/config";
 
 import tailwindcss from "@tailwindcss/vite";
-
 import alpinejs from "@astrojs/alpinejs";
-
+import sitemap from "@astrojs/sitemap";
 
 const SERVER_PORT = 4321;
 
-const LOCALHOST_URK = `http://localhost:${SERVER_PORT}`;
-
+const LOCALHOST_URL = `http://localhost:${SERVER_PORT}`;
 const LIVE_URL = "https://hamidheidarinia.github.io";
 
-const SCRIPT = process.env.npm_lifecycle_event || "";
-const isBuild = SCRIPT.includes("astro build");
-let BASE_URL = LOCALHOST_URK;
+// روش مطمئن‌تر برای تشخیص build به‌جای npm_lifecycle_event
+const isBuild = process.env.NODE_ENV === "production";
 
-if (isBuild) {
-    BASE_URL = LIVE_URL;
-}
+const BASE_URL = isBuild ? LIVE_URL : LOCALHOST_URL;
+
+const SITE_LOCALES = ["en", "az", "az-cyrl", "tr", "fa", "az-ar"];
+const DEFAULT_LOCALE = "en";
 
 // https://astro.build/config
 export default defineConfig({
-    site: "https://www.hamidheidarinia.github.io",
+    site: BASE_URL,
+
     // output: "server", // required, with no prerendered pages
     // adapter: node({
     //     mode: 'standalone',
     // }),
+
     vite: {
         plugins: [tailwindcss()],
     },
+
     devToolbar: {
-        enabled: true
+        enabled: true,
     },
 
-    integrations: [alpinejs()],
+    integrations: [
+        alpinejs(),
+        sitemap({
+            filter: (page) =>
+                page !== `${LIVE_URL}/` &&
+                page !== `${LIVE_URL}/az/` &&
+                page !== `${LIVE_URL}/fa/` &&
+                page !== `${LIVE_URL}/tr/`,
+            i18n: {
+                defaultLocale: DEFAULT_LOCALE,
+                locales: {
+                    en: "en-US",
+                    az: "az-AZ",
+                    tr: "tr-TR",
+                    fa: "fa-IR",
+                },
+            },
+            xslURL: '/sitemap.xsl',
+            namespaces: {
+                news: false,
+                xhtml: false,
+            },
+        }),
+    ],
+
     i18n: {
-        locales: ["en", "az", "tr", "türkcə", "fa"],
-        defaultLocale: "en",
+        locales: SITE_LOCALES,
+        defaultLocale: DEFAULT_LOCALE,
         // fallback: {
-        //     rs: "en"
+        //     az: "en",
+        //     tr: "en",
+        //     fa: "en",
         // },
         routing: {
             prefixDefaultLocale: true,
             // fallbackType: "rewrite"
-        }
+        },
     },
+
     fonts: [{
             provider: fontProviders.local(),
             name: "Calibri",
             cssVariable: "--font-calibri",
             options: {
                 variants: [{
-                    src: ['./src/assets/fonts/Calibri/calibri-regular.woff2'],
-                    weight: 'normal',
-                    style: 'normal'
-                }]
-            }
+                    src: ["./src/assets/fonts/Calibri/calibri-regular.woff2"],
+                    weight: "normal",
+                    style: "normal",
+                }, ],
+            },
         },
         {
             provider: fontProviders.local(),
@@ -66,11 +94,11 @@ export default defineConfig({
             cssVariable: "--font-iransSans",
             options: {
                 variants: [{
-                    src: ['./src/assets/fonts/IRANSans/IRANSANSWEB.woff2'],
-                    weight: 'normal',
-                    style: 'normal'
-                }]
-            }
-        }
-    ]
+                    src: ["./src/assets/fonts/IRANSans/IRANSANSWEB.woff2"],
+                    weight: "normal",
+                    style: "normal",
+                }, ],
+            },
+        },
+    ],
 });
