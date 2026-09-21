@@ -24,7 +24,7 @@ if (isBuild) {
 
 // https://astro.build/config
 export default defineConfig({
-    // site: "https://www.hamidheidarinia.github.io",
+    site: "https://www.hamidheidarinia.github.io",
     // output: "server", // required, with no prerendered pages
     // adapter: node({
     //     mode: 'standalone',
