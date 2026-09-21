@@ -1,7 +1,14 @@
 ---
 // Component Script (JavaScript)
 import "../styles/app.css";
-import { Font } from "astro:assets";
+import { Font, Image } from "astro:assets";
+// import { Image } from "astro:assets";
+import Favicon from "../assets/icons/favicon.ico";
+import Favicon32 from "../assets/icons/favicon-hamidHeidarinia-32x32.webp";
+import Favicon16 from "../assets/icons/favicon-hamidHeidarinia--16x16.webp";
+import AppleTouchIcon from "../assets/icons/apple-touch-icon-hamidHeidarinia.webp";
+import OgCover from "../assets/icons/hamid-heidarinia-profile-badge-builder-1280x720.webp";
+const siteUrl = Astro.site;
 ---
 
 <head>
@@ -24,14 +31,17 @@ import { Font } from "astro:assets";
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="hamid.heidarinia.github.io" />
+    <meta
+        property="og:site_name"
+        content={new URL(Astro.url.pathname, Astro.site)}
+    />
     <meta property="og:title" content="Hamid Heidarinia — Profile" />
     <meta
         property="og:description"
         content="Software Engineer & Database Administrator (DBA) with 10+ years of experience in designing, developing, and maintaining scalable software systems and database solutions."
     />
-    <meta property="og:url" content="https://example.com/" />
-    <meta property="og:image" content="https://example.com/images/cover.jpg" />
+    <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
+    <meta property="og:image" content={OgCover.src} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <!-- <meta property="og:locale" content="fa_IR"> -->
@@ -49,34 +59,23 @@ import { Font } from "astro:assets";
     <!-- iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="apple-mobile-web-app-title" content="Hamid Heidarinia" />
+    <meta
+        name="apple-mobile-web-app-title"
+        content="Hamid Heidarinia — Profile"
+    />
 
     <!-- Manifest -->
     <link rel="manifest" href="./manifest.json" />
 
     <!-- icons -->
-    <link rel="icon" href="./assets/icons/favicon.ico" />
-    <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="/assets/icons/apple-touch-icon-hamidHeidarinia.webp"
-    />
-    <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/assets/icons/favicon-hamidHeidarinia-32x32.webp"
-    />
-    <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/assets/icons/favicon-hamidHeidarinia--16x16.webp"
-    />
+    <link rel="icon" href={Favicon.src} />
+    <link rel="apple-touch-icon" sizes="180x180" href={AppleTouchIcon.src} />
+    <link rel="icon" type="image/png" sizes="32x32" href={Favicon32.src} />
+    <link rel="icon" type="image/png" sizes="16x16" href={Favicon16.src} />
     <link rel="manifest" href="/site.webmanifest" />
 
     <!-- <script src="./assets/lib/tailwindcss.js"></script> -->
-    
+
     <link rel="manifest" href="./manifest.webmanifest" />
     <!-- <link
         rel="preload"
