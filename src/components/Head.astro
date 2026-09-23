@@ -102,7 +102,7 @@ const t = useTranslations(locale);
     <style type="text/tailwindcss">
         @custom-variant dark (&:where(.dark, .dark *));
     </style>
-    <script>
+    <script is:inline>
         // set theme before paint to avoid flash
         if (
             localStorage.getItem("theme") === "dark" ||
