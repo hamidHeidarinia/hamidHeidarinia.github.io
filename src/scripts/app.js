@@ -8,14 +8,15 @@ import momentJalaali from 'moment-jalaali';
 
 // Alpine.start()
 
-window.formatDateRange = (startDate, endDate = null) => {
+window.formatDateRange = (outElement) => {
+    let element = document.getElementById(outElement);
+    const startDate = element.getAttribute('data-start');
+    const endDate = element.getAttribute('data-end') == '' ? null : element.getAttribute('data-end');
     const start = moment(startDate);
     const end = endDate ? moment(endDate) : moment();
-
     const startFormatted = start.format('MMM YYYY');
     const endFormatted = endDate ? end.format('MMM YYYY') : 'Present';
 
-    // کل اختلاف رو بر حسب ماه حساب می‌کنیم و یک ماه اضافه می‌کنیم (برای شمارش inclusive مثل لینکدین)
     let totalMonths = end.diff(start, 'months') + 1;
 
     const years = Math.floor(totalMonths / 12);
@@ -27,5 +28,5 @@ window.formatDateRange = (startDate, endDate = null) => {
 
     const duration = durationParts.join(' ');
 
-    return `${startFormatted} - ${endFormatted} · ${duration}`;
+    element.innerText = `${startFormatted} - ${endFormatted} · ${duration}`;
 }
