@@ -1,15 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Banner from "../components/bannerAndHeader.astro";
+import Header from "../components/Header.astro";
 import About from "../components/About.astro";
 import Experience from "../components/Experience.astro";
-// import { marked } from "marked";
-// import about from "../content/profile/en/about.md?raw";
-// const aboutHtml = marked.parse(about);
+import { useTranslations } from "../i18n/utils";
+
+const locale = "en" as const;
+const t = useTranslations(locale);
 ---
 
-<Layout>
-    <Banner />
+<Layout
+    locale={locale}
+    title={`${t("site.name")} — ${t("site.tagline")}`}
+>
+    <Header />
     <About />
     <Experience />
 </Layout>
