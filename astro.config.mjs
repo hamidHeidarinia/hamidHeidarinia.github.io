@@ -17,7 +17,7 @@ const isBuild = process.env.NODE_ENV === "production";
 
 const BASE_URL = isBuild ? LIVE_URL : LOCALHOST_URL;
 
-const SITE_LOCALES = ["en", "az", "az-cyrl", "tr", "fa", "az-ar"];
+const SITE_LOCALES = ["en", "az", "azcyrl", "azarab", "tr", "fa"];
 const DEFAULT_LOCALE = "en";
 
 // https://astro.build/config
