@@ -8,7 +8,7 @@ import momentJalaali from 'moment-jalaali';
 
 // Alpine.start()
 
-function formatDateRange(startDate, endDate = null) {
+window.formatDateRange = (startDate, endDate = null) => {
     const start = moment(startDate);
     const end = endDate ? moment(endDate) : moment();
 
