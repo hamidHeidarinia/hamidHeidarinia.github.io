@@ -2,7 +2,7 @@
 // import "../styles/app.css";
 import { languages, defaultLocale, type Locale } from "../i18n/ui";
 import Head from "../components/Head.astro";
-
+import Footer from "../components/Footer.astro";
 import Script from "../components/Script.astro";
 
 interface Props {
@@ -34,6 +34,7 @@ const htmlLang = languages[currentLocale].htmlLang;
             >
                 <!-- Page Contents -->
                 <slot />
+                <Footer />
             </div>
         </div>
         <Script />
