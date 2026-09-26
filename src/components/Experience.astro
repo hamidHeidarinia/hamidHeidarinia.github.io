@@ -1,5 +1,13 @@
 ---
+import { useTranslations } from "../i18n/utils";
 
+interface Props {
+    locale: Locale;
+}
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+const moreText = t("experience.show.more");
+const lessText = t("experience.show.less");
 ---
 
 <!-- ============ EXPERIENCE ============ -->
@@ -54,56 +62,64 @@
             <p
                 class="font-semibold text-slate-900 dark:text-white text-sm sm:text-base"
             >
-                Founder & Lead Software Engineer
+                {t("experience.three.job.title")}
             </p>
             <p class="text-slate-700 dark:text-slate-300 text-sm sm:text-base">
-                SaaS Stealth Startup &nbsp;•&nbsp; Self-employed
+                {t("experience.three.organization")} &nbsp;•&nbsp; {
+                    t("experience.three.employment.type")
+                }
             </p>
             <p
                 class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5"
-                id="firstRecord"
-                x-init="document.getElementById('firstRecord').innerHTML = formatDateRange('2022-01-01')"
+                id="firstExRecord"
+                data-start={t("experience.three.start.date")}
+                data-end={t("experience.three.end.date")}
+                x-init="formatDateRange('firstExRecord')"
             >
             </p>
             <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
-                East Azerbaijan Province, Iran &nbsp;•&nbsp; On-site
+                {t("experience.three.location")} &nbsp;•&nbsp; {
+                    t("experience.three.location.type")
+                }
             </p>
 
             <div
                 class="text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed mt-3 space-y-3 max-w-3xl"
             >
                 <p>
-                    As the Founder and Lead Software Engineer, I have been
-                    leading the end-to-end Software Development Life Cycle
-                    (SDLC) for my startup since 2022. I am responsible for
-                    product architecture, technical strategy, backend
-                    engineering, database architecture and administration (DBA),
-                    cloud infrastructure, DevOps, CI/CD, security, performance
-                    optimization, and scalable system design. The product is
-                    currently under active development and has not yet been
-                    publicly launched.
+                    {t("experience.three.highlights.one")}
                 </p>
-
-                <p x-show="expanded" x-cloak x-transition>
-                    Designed and developed the software infrastructure for
-                    products from concept to implementation. Conducted technical
-                    research and feasibility studies to evaluate alternative
-                    solutions. Optimized SQL queries, stored procedures, views,
-                    and indexes to improve database and application performance.
-                    Designed system architecture, data models, and RESTful APIs.
-                    Developed backend services using Laravel. Managed the
-                    product development lifecycle using Agile/Scrum
-                    methodologies. Documented, tested, and optimized various
-                    components of software systems. Led Research and Development
-                    (R&D) initiatives focused on technology and product
-                    innovation.
-                </p>
-
+                <div x-show="expanded" x-cloak x-transition>
+                    <p>
+                        {t("experience.three.highlights.three")}
+                    </p>
+                    <p class="">
+                        {t("experience.three.highlights.foure")}
+                    </p>
+                    <p class="">
+                        {t("experience.three.highlights.five")}
+                    </p>
+                    <p class="">
+                        {t("experience.three.highlights.six")}
+                    </p>
+                    <p class="">
+                        {t("experience.three.highlights.seven")}
+                    </p>
+                    <p class="">
+                        {t("experience.three.highlights.eight")}
+                    </p>
+                    <p class="">
+                        {t("experience.three.highlights.nine")}
+                    </p>
+                    <p class="">
+                        {t("experience.three.highlights.ten")}
+                    </p>
+                </div>
                 <p
                     x-show="!expanded"
                     class="text-slate-500 dark:text-slate-500"
                 >
-                    Designed and developed...
+                    {t("experience.three.highlights.two")}
                 </p>
             </div>
             <br />
@@ -111,7 +127,9 @@
                 @click="expanded = !expanded"
                 class="border border-slate-800 px-[1rem] py-[.5rem] focus-ring flex items-center gap-1 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white rounded-full"
             >
-                <span x-text="expanded ? 'Show less' : 'Show More'"></span>
+                <span
+                    x-text={`expanded ? ${JSON.stringify(lessText)} : ${JSON.stringify(moreText)}`}
+                ></span>
                 <svg
                     class="w-4 h-4 transition-transform"
                     :class="expanded && 'rotate-180'"
@@ -167,73 +185,105 @@
             <p
                 class="font-semibold text-slate-900 dark:text-white text-sm sm:text-base"
             >
-                Senior Backend Software Engineer | Technical Team Lead |
-                Database Administrator (DBA)
+                {t("experience.two.job.title")}
             </p>
             <p class="text-slate-700 dark:text-slate-300 text-sm sm:text-base">
-                Stealth Startup &nbsp;•&nbsp; إFull-time
+                {t("experience.two.organization")} &nbsp;•&nbsp; {
+                    t("experience.two.employment.type")
+                }
             </p>
             <p
                 class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5"
-                id="secondRecord"
-                x-init="document.getElementById('secondRecord').innerHTML = formatDateRange('2019-08-01', '2022-03-31')"
+                id="secondExRecord"
+                data-start={t("experience.two.start.date")}
+                data-end={t("experience.two.end.date")}
+                x-init="formatDateRange('secondExRecord')"
             >
             </p>
             <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
-                Scotland, United Kingdom &nbsp;•&nbsp; Remote
+                {t("experience.two.location")} &nbsp;•&nbsp; {
+                    t("experience.two.location.type")
+                }
             </p>
 
             <div
                 class="text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed mt-3 space-y-3 max-w-3xl"
             >
                 <p>
-                    Building a scalable software platform for restaurants and
-                    takeaway businesses, including EPOS, online ordering,
-                    restaurant management, payment integration, digital
-                    marketing, and 24/7 technical support.
+                    {t("experience.two.highlights.one")}
                 </p>
-                <p class="">
-                    Software Developer (Full Stack / Backend Developer)
-                    Designed, developed, and maintained web-based applications
-                    using ASP.NET MVC. Designed and implemented RESTful APIs for
-                    communication between services and client applications.
+                <p class="font-bold p-0 m-0 mt-4">
+                    {t("experience.two.highlights.two")}
+                </p>
+                <p class="p-0 m-0">
+                    {t("experience.two.highlights.three")}
+                </p>
+                <p class="p-0 m-0">
+                    {t("experience.two.highlights.foure")}
                 </p>
                 <div x-show="expanded" x-cloak x-transition>
                     <p class="">
-                        Developed new features based on business requirements.
-                        Troubleshot, debugged, and enhanced the performance of
-                        existing systems. Collaborated in requirements analysis,
-                        technical design, and project planning.
+                        {t("experience.two.highlights.six")}
                     </p>
-                    <p class="my-2">
-                        Backend Team Lead Led the backend development team in
-                        designing, developing, and maintaining software systems.
-                        Planned, prioritized, and assigned tasks among team
-                        members. Contributed to software architecture design and
-                        technical decision-making. Designed, implemented, and
-                        optimized Microsoft SQL Server databases. Conducted code
-                        reviews and ensured adherence to software development
-                        standards and best practices. Mentored team members and
-                        supported their technical growth. Participated in
-                        requirements analysis and translated business needs into
-                        practical technical solutions.
+                    <p class="">
+                        {t("experience.two.highlights.seven")}
                     </p>
-                    <p class="my-2">
-                        Senior Software Developer, Technical Team Lead &
-                        Database Administrator (DBA) Designed, implemented, and
-                        administered Microsoft SQL Server databases. Designed
-                        data models and database architectures aligned with
-                        business requirements. Optimized queries, stored
-                        procedures, views, and indexes to improve system
-                        performance. Monitored database performance and resolved
-                        performance bottlenecks. Designed and managed database
-                        backup and recovery strategies. Managed database
-                        security, user permissions, and data integrity.
-                        Diagnosed and resolved database-related issues in
-                        production environments. Led the software development
-                        team and coordinated technical activities across
-                        projects. Planned, delegated, and monitored project
-                        tasks to ensure timely delivery.
+                    <p class="">
+                        {t("experience.two.highlights.eight")}
+                    </p>
+                    <p class="font-bold mt-4">
+                        {t("experience.two.highlights.nine")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.ten")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.eleven")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.twelve")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.thirteen")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.fourteen")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.fifteen")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.sixteen")}
+                    </p>
+                    <p class="font-bold mt-4">
+                        {t("experience.two.highlights.seventeen")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.eighteen")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.nineteen")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.twenty")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.twentyOne")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.twentyTwo")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.twentyThree")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.twentyFoure")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.twentyFive")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.twentySix")}
                     </p>
                 </div>
 
@@ -241,7 +291,7 @@
                     x-show="!expanded"
                     class="text-slate-500 dark:text-slate-500"
                 >
-                    Developed new features based on business...
+                    {t("experience.two.highlights.five")}
                 </p>
             </div>
             <br />
@@ -249,7 +299,9 @@
                 @click="expanded = !expanded"
                 class="border border-slate-800 px-[1rem] py-[.5rem] focus-ring flex items-center gap-1 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white rounded-full"
             >
-                <span x-text="expanded ? 'Show less' : 'Show More'"></span>
+                <span
+                    x-text={`expanded ? ${JSON.stringify(lessText)} : ${JSON.stringify(moreText)}`}
+                ></span>
                 <svg
                     class="w-4 h-4 transition-transform"
                     :class="expanded && 'rotate-180'"
@@ -281,46 +333,52 @@
             <p
                 class="font-semibold text-slate-900 dark:text-white text-sm sm:text-base"
             >
-                Full-Stack Web Developer
+                {t("experience.one.job.title")}
             </p>
             <p class="text-slate-700 dark:text-slate-300 text-sm sm:text-base">
-                Independent and personal projects &nbsp;•&nbsp; Self-employed
+                {t("experience.one.organization")} &nbsp;•&nbsp; {
+                    t("experience.one.employment.type")
+                }
             </p>
             <p
                 class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5"
-                id="thirdRecord"
-                x-init="document.getElementById('thirdRecord').innerHTML = formatDateRange('2014-05-01', '2019-07-31')"
+                id="thirdExRecord"
+                data-start={t("experience.one.start.date")}
+                data-end={t("experience.one.end.date")}
+                x-init="formatDateRange('thirdExRecord')"
             >
             </p>
             <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
-                East Azerbaijan Province, Iran &nbsp;•&nbsp; Remote
+                {t("experience.one.location")} &nbsp;•&nbsp; {
+                    t("experience.one.location.type")
+                }
             </p>
 
             <div
                 class="text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed mt-3 space-y-3 max-w-3xl"
             >
-                <p>
-                    Designed, developed, and deployed web-based applications
-                    using Laravel, while optimizing MariaDB databases for
-                    performance and reliability. Developed RESTful APIs and
-                    integrated software services with third-party systems.
-                    Managed the full software development lifecycle (SDLC), from
-                    requirements analysis and system design to deployment and
-                    ongoing maintenance.
+                <p class="p-0 m-0">
+                    {t("experience.one.highlights.one")}
                 </p>
-
-                <p x-show="expanded" x-cloak x-transition>
-                    Collaborated directly with clients to gather requirements,
-                    manage project changes, and ensure successful project
-                    delivery. Prepared technical documentation and delivered
-                    user training when required.
+                <p class="p-0 m-0">
+                    {t("experience.one.highlights.two")}
                 </p>
-
+                <p class="p-0 m-0">
+                    {t("experience.one.highlights.three")}
+                </p>
+                <div x-show="expanded" x-cloak x-transition>
+                    <p class="p-0 m-0">
+                        {t("experience.one.highlights.five")}
+                    </p>
+                    <p class="p-0 m-0">
+                        {t("experience.one.highlights.six")}
+                    </p>
+                </div>
                 <p
                     x-show="!expanded"
                     class="text-slate-500 dark:text-slate-500"
                 >
-                    Collaborated directly with...
+                    {t("experience.one.highlights.foure")}
                 </p>
             </div>
             <br />
@@ -328,7 +386,9 @@
                 @click="expanded = !expanded"
                 class="border border-slate-800 px-[1rem] py-[.5rem] focus-ring flex items-center gap-1 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white rounded-full"
             >
-                <span x-text="expanded ? 'Show less' : 'Show More'"></span>
+                <span
+                    x-text={`expanded ? ${JSON.stringify(lessText)} : ${JSON.stringify(moreText)}`}
+                ></span>
                 <svg
                     class="w-4 h-4 transition-transform"
                     :class="expanded && 'rotate-180'"
