@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import About from "../components/About.astro";
 import Experience from "../components/Experience.astro";
+import Education from "../components/Education.astro";
 import { useTranslations } from "../i18n/utils";
 
 const locale = "en" as const;
@@ -13,4 +14,5 @@ const t = useTranslations(locale);
     <Header locale={locale} currentPath={Astro.url.pathname} />
     <About locale={locale} currentPath={Astro.url.pathname} />
     <Experience locale={locale} currentPath={Astro.url.pathname} />
+    <Education locale={locale} currentPath={Astro.url.pathname} />
 </Layout>
