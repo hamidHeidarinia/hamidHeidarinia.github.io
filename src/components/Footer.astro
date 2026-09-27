@@ -6,8 +6,7 @@ interface Props {
 }
 const { locale } = Astro.props;
 const t = useTranslations(locale);
-const moreText = t("experience.show.more");
-const lessText = t("experience.show.less");
+const lang = Astro.currentLocale ?? "en";
 ---
 
 <footer
@@ -25,6 +24,21 @@ const lessText = t("experience.show.less");
     </div>
 </footer>
 
-<script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+<script define:vars={{ lang }}>
+    window.currentYear = (lang) => {
+        if (lang == "fa") {
+            const shamsiYear = new Intl.DateTimeFormat(
+                "fa-IR-u-ca-persian-nu-latn",
+                {
+                    year: "numeric",
+                },
+            ).format(new Date());
+            document.getElementById("year").textContent = shamsiYear;
+        } else {
+            document.getElementById("year").textContent =
+                new Date().getFullYear();
+        }
+    };
+
+    window.currentYear(lang);
 </script>
