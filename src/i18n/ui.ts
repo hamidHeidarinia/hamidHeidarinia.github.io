@@ -1,10 +1,9 @@
 export const languages = {
-  en: { label: "English", dir: "ltr", htmlLang: "en" },
-  az: { label: "Azerbaijan", dir: "ltr", htmlLang: "az" },
-  azcyrl: { label: "Azerbaijan", dir: "ltr", htmlLang: "az-cyrl" },
-  azarab: { label: "Azerbaijan", dir: "rtl", htmlLang: "az-arab" },
-  tr: { label: "turkey", dir: "ltr", htmlLang: "tr" },
-  fa: { label: "فارسی", dir: "rtl", htmlLang: "fa" },
+  en: { label: "en", native: "English", dir: "ltr", htmlLang: "en" },
+  az: { label: "az", native: "Azərbaycan", dir: "ltr", htmlLang: "az" },
+  تورکچه: { label: "تورکچه", native: "تورکچه", dir: "rtl", htmlLang: "az-ar" },
+  tr: { label: "tr", native: "Türkçe", dir: "ltr", htmlLang: "tr" },
+  fa: { label: "fa", native: "فارسی", dir: "rtl", htmlLang: "fa" },
 } as const;
 
 export type Locale = keyof typeof languages;
