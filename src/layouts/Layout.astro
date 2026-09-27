@@ -34,7 +34,7 @@ const htmlLang = languages[currentLocale].htmlLang;
             >
                 <!-- Page Contents -->
                 <slot />
-                <Footer />
+                <Footer locale={htmlLang} currentPath={Astro.url.pathname}  />
             </div>
         </div>
         <Script />
