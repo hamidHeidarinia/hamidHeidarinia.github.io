@@ -1,0 +1,62 @@
+---
+import { useTranslations } from "../i18n/utils";
+
+interface Props {
+    locale: Locale;
+}
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+const moreText = t("experience.show.more");
+const lessText = t("experience.show.less");
+---
+
+<!-- ============ LANGUAGES ============ -->
+<div class="px-4 sm:px-8 md:px-16 py-6 sm:py-8 pb-10 sm:pb-16">
+    <h2
+        class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-3 sm:mb-4"
+    >
+        {t("languages.title")}
+    </h2>
+    <div class="my-6">
+        <p
+            class="font-semibold text-slate-900 dark:text-white text-sm sm:text-base"
+        >
+            {t("languages.one")}
+        </p>
+        <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm">
+            {t("languages.one.level")}
+        </p>
+    </div>
+    <div class="my-6">
+        <p
+            class="font-semibold text-slate-900 dark:text-white text-sm sm:text-base"
+        >
+            {t("languages.two")}
+        </p>
+        <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm">
+            {t("languages.two.level")}
+        </p>
+    </div>
+
+    <div class="my-6">
+        <p
+            class="font-semibold text-slate-900 dark:text-white text-sm sm:text-base"
+        >
+            {t("languages.three")}
+        </p>
+        <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm">
+            {t("languages.three.level")}
+        </p>
+    </div>
+
+    <div class="my-6">
+        <p
+            class="font-semibold text-slate-900 dark:text-white text-sm sm:text-base"
+        >
+            {t("languages.foure")}
+        </p>
+        <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm">
+            {t("languages.foure.level")}
+        </p>
+    </div>
+</div>
