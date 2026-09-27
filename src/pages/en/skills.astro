@@ -1,9 +1,15 @@
 ---
 // Your component script here!
-import Layout from "../layouts/Layout.astro";
-import Banner from "../components/bannerAndHeader.astro";
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Skills from "../../components/Skills.astro";
+import { useTranslations } from "../../i18n/utils";
+
+const locale = "en" as const;
+const t = useTranslations(locale);
 ---
 
-<Layout>
-    <Banner />
+<Layout locale={locale} title={`${t("site.name")} — ${t("site.tagline")}`}>
+    <Header locale={locale} currentPath={Astro.url.pathname} />
+    <Skills locale={locale} currentPath={Astro.url.pathname} />
 </Layout>
