@@ -1,0 +1,22 @@
+---
+import { useTranslations } from "../i18n/utils";
+
+interface Props {
+    locale: Locale;
+}
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+const moreText = t("experience.show.more");
+const lessText = t("experience.show.less");
+---
+
+<!-- ============ PROJECTS ============ -->
+<div
+    class="px-4 sm:px-8 md:px-16 py-6 sm:py-8 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300"
+>
+    <h2
+        class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-5 sm:mb-6"
+    >
+        {t("projects.title")}
+    </h2>
+</div>
