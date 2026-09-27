@@ -9,15 +9,12 @@ const t = useTranslations(locale);
 const lang = Astro.currentLocale ?? "en";
 ---
 
-<footer
-    dir=""
-    class="bg-gray-900 text-gray-300 px-5 pt-10 pb-6 text-center font-sans"
->
-    <div class="max-w-2xl mx-auto">
+<footer class="px-4 sm:px-8 md:px-16 py-6 sm:py-8 pb-10 sm:pb-16">
+    <div class="max-w-2xl mx-auto text-center">
         <p class="text-xs text-gray-400 border-t border-gray-800 pt-4">
             &copy; {t("footer.start.year")} - <span id="year"></span> &nbsp;
             {t("footer.createdBy")} &nbsp;
-            <strong class="text-gray-200">{t("header.fullname")}</strong>. {
+            <strong class="text-gray-500 dark:text-gray-200">{t("header.fullname")}</strong>. {
                 t("footer.content")
             }
         </p>
