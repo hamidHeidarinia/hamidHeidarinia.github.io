@@ -1,0 +1,77 @@
+---
+import { languages, type Locale } from "../i18n/ui";
+
+interface Props {
+  locale: Locale;
+  currentPath: string;
+  label: string;
+}
+const { locale, currentPath, label } = Astro.props;
+
+// Strip the current locale prefix from the path, then rebuild per-language links.
+const segments = currentPath.split("/").filter(Boolean);
+const rest = segments.slice(1).join("/"); // drop the leading locale segment
+
+function pathFor(target: string) {
+  return `/${target}/${rest}`.replace(/\/+$/, "/") || `/${target}/`;
+}
+
+const entries = Object.entries(languages) as [
+  Locale,
+  (typeof languages)[Locale],
+][];
+---
+
+<div x-data="{ open: false }" @click.outside="open = false" class="relative">
+  <button
+    type="button"
+    @click="open = !open"
+    aria-haspopup="true"
+    :aria-expanded="open"
+    aria-label={label}
+    class="focus-ring flex items-center gap-1 bg-white/95 dark:bg-slate-800/95 border border-slate-200
+        dark:border-slate-700 rounded-md px-2.5 py-1.5 sm:px-3 text-xs sm:text-sm font-medium text-slate-700
+        dark:text-slate-200 shadow-sm hover:bg-white dark:hover:bg-slate-700 transition"
+  >
+    <span>{languages[locale].label}</span>
+
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      :class="open && 'rotate-180'"
+      class="transition-transform"
+    >
+      <path d="M6 9l6 6 6-6"></path>
+    </svg>
+  </button>
+
+  <div
+    x-show="open"
+    x-cloak
+    x-transition:enter="transition ease-out duration-150"
+    x-transition:enter-start="opacity-0 scale-95"
+    x-transition:enter-end="opacity-100 scale-100"
+    class="absolute right-0 mt-1 w-24 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md shadow-lg overflow-hidden"
+  >
+    {
+      entries.map(([code, meta]) => (
+        <a
+          href={pathFor(code)}
+          // dir={meta.dir}
+          class:list={[
+            "block px-4 py-2.5 text-sm transition-colors hover:bg-gold/10",
+            code === locale
+              ? "text-gold font-medium"
+              : "text-ink dark:text-ivory",
+          ]}
+        >
+          {meta.native}
+        </a>
+      ))
+    }
+  </div>
+</div>
