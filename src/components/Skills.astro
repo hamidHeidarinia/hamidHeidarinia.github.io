@@ -1,0 +1,3398 @@
+---
+import { useTranslations } from "../i18n/utils";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+interface Props {
+    locale: Locale;
+    currentPath: string;
+}
+
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+
+const currentLocale = Astro.currentLocale;
+const homeUrl = getRelativeLocaleUrl(currentLocale, "/");
+---
+
+<!-- ============ SKILLS ============ -->
+<div
+    class="px-4 sm:px-8 md:px-16 py-6 sm:py-8 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300"
+>
+    <div
+        class="mb-6 focus-ring mt-5 sm:mt-6 flex items-center justify-between max-w-4xl transition group"
+    >
+        <a href={homeUrl} class="flex items-center gap-3">
+            <svg
+                class="rotate-180 w-6 h-6 text-slate-400 dark:fill-slate-300 group-hover:-translate-x-1 transition-transform shrink-0"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                ><!--! Font Awesome Pro 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc. -->
+                <path opacity=".4" fill="" d=""></path>
+                <path
+                    fill=""
+                    d="M505 273c9.4-9.4 9.4-24.6 0-33.9L337 71c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l127 127-406.1 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l406.1 0-127 127c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0L505 273z"
+                ></path>
+            </svg>
+            <h1
+                class="text-xl sm:text-3xl font-bold text-slate-900 dark:text-white"
+            >
+                {t("skills.title")} (34)
+            </h1>
+        </a>
+    </div>
+
+    <!-- Skill Item 1 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-slate-900 mb-2 dark:text-white">
+            Database Adminstration
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+            >
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff8a00"></stop>
+                        <stop offset="48%" stop-color="#f04432"></stop>
+                        <stop offset="100%" stop-color="#2832a8"></stop>
+                    </linearGradient>
+                </defs>
+
+                <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bg)"
+                ></rect>
+
+                <!-- white logo -->
+                <circle
+                    cx="50"
+                    cy="39"
+                    r="15"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"></circle>
+                <path
+                    d="M35 61
+                                C37 70, 43 75, 50 75
+                                C57 75, 63 70, 65 61"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <div
+                x-data="{ experiencesDBAModal: false }"
+                class="inline-block"
+                x-cloak
+            >
+                <button
+                    type="button"
+                    class="text-blue-600 dark:text-blue-400 font-medium hover:underline"
+                    @click="experiencesDBAModal = true"
+                    @keyup.escape="experiencesDBAModal = false"
+                >
+                    <p
+                        class="text-base text-gray-600 hover:text-blue-600 dark:text-blue-400 font-medium hover:underline cursor-pointer"
+                    >
+                        2 {t("skill.experience")}
+                        {t("experience.three.organization")}
+                        {t("skill.otherAnd")} 1 {t("skill.otherCompany")}
+                    </p>
+                </button>
+                <!-- modal conten -->
+                <div
+                    x-show="experiencesDBAModal"
+                    x-cloak
+                    tabindex="0"
+                    class="z-50 inset-0 w-full h-full py-6 fixed flex justify-center items-center"
+                >
+                    <div
+                        @click.away="experiencesDBAModal = false"
+                        class="z-50 relative p-3 mx-auto my-0 w-11/12 md:w-[60%]"
+                        x-show="experiencesDBAModal"
+                        x-transition:enter="transition duration-500"
+                        x-transition:enter-start="transform opacity-0 -translate-y-4"
+                        x-transition:enter-end="transform opacity-100 translate-y-0"
+                        x-transition:leave="transition -translate-y-4"
+                        x-transition:leave-start="transform opacity-100 translate-y-0"
+                        x-transition:leave-end="transform opacity-0 -translate-y-4"
+                    >
+                        <div
+                            class="bg-white dark:bg-slate-950 dark:text-slate-300 rounded-2xl shadow-lg border border-gray-200 dark:border-slate-700 flex flex-col overflow-hidden"
+                        >
+                            <div
+                                class="flex flex-row justify-between items-center border-b border-gray-200 dark:border-slate-700 px-4 py-2 text-slate-800"
+                            >
+                                <h2
+                                    class="text-2xl font-bold text-gray-900 dark:text-slate-300"
+                                >
+                                    Database Adminstration
+                                </h2>
+                                <button
+                                    @click="experiencesDBAModal = false"
+                                    class="fill-current h-6 w-6 font-3xl font-bold"
+                                >
+                                    <svg
+                                        class="w-5 h-5 fill-current dark:fill-slate-300"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 640 640"
+                                        ><!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                        <path
+                                            d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"
+                                        ></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- modal content -->
+                            <div
+                                class="p-4 bg-white dark:bg-slate-800/95 dark:text-slate-300"
+                            >
+                                <div class="px-6 py-5 space-y-6">
+                                    <div class="flex items-center gap-2">
+                                        <svg
+                                            class="w-7 h-7"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 100 100"
+                                            width="100"
+                                            height="100"
+                                        >
+                                            <defs>
+                                                <linearGradient
+                                                    id="bg"
+                                                    x1="0%"
+                                                    y1="0%"
+                                                    x2="100%"
+                                                    y2="0%"
+                                                >
+                                                    <stop
+                                                        offset="0%"
+                                                        stop-color="#ff8a00"
+                                                    ></stop>
+                                                    <stop
+                                                        offset="48%"
+                                                        stop-color="#f04432"
+                                                    ></stop>
+                                                    <stop
+                                                        offset="100%"
+                                                        stop-color="#2832a8"
+                                                    ></stop>
+                                                </linearGradient>
+                                            </defs>
+
+                                            <rect
+                                                x="4"
+                                                y="4"
+                                                width="92"
+                                                height="92"
+                                                rx="8"
+                                                fill="url(#bg)"></rect>
+
+                                            <!-- white logo -->
+                                            <circle
+                                                cx="50"
+                                                cy="39"
+                                                r="15"
+                                                fill="none"
+                                                stroke="#fff"
+                                                stroke-width="7"></circle>
+                                            <path
+                                                d="M35 61
+                                                                                                                                                                        C37 70, 43 75, 50 75
+                                                                                                                                                                        C57 75, 63 70, 65 61"
+                                                fill="none"
+                                                stroke="#fff"
+                                                stroke-width="7"
+                                                stroke-linecap="butt"
+                                                stroke-linejoin="round"></path>
+                                        </svg>
+                                        <p
+                                            class="text-base text-gray-600 dark:text-slate-300 font-medium"
+                                        >
+                                            {t("experience.three.job.title")} at
+                                            {t("experience.three.organization")}
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <svg
+                                            class="w-7 h-7"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 100 100"
+                                        >
+                                            <circle
+                                                cx="50"
+                                                cy="50"
+                                                r="50"
+                                                fill=""></circle>
+                                            <g stroke-linejoin="round">
+                                                <polygon
+                                                    points="44,28 37,36.9 37.9,61.9 49.9,39"
+                                                    fill="#969696"
+                                                    stroke="#969696"
+                                                    stroke-width="0.6"
+                                                ></polygon>
+                                                <polygon
+                                                    points="38.2,34.2 17,64.9 21.9,73.9 35.9,63.4 38.6,64.2 36.4,62"
+                                                    fill="#626262"
+                                                    stroke="#626262"
+                                                    stroke-width="0.6"
+                                                ></polygon>
+                                                <polygon
+                                                    points="54.6,24.2 56,28 51,39 62,59.9 61.2,64.2 63.9,59 64,39"
+                                                    fill="#626262"
+                                                    stroke="#626262"
+                                                    stroke-width="0.6"
+                                                ></polygon>
+                                                <polygon
+                                                    points="49.9,19 42.6,28.6 50,39 36.5,62 51,69.9 62.4,61.9 50.9,39 55.9,26.9"
+                                                    fill="#7b7b7b"
+                                                    stroke="#7b7b7b"
+                                                    stroke-width="0.6"
+                                                ></polygon>
+                                                <polygon
+                                                    points="55.6,25.2 64,38.9 64,59 50.1,70.9 63,63.9 78.6,74.2 83.9,65.9"
+                                                    fill="#505050"
+                                                    stroke="#505050"
+                                                    stroke-width="0.6"
+                                                ></polygon>
+                                            </g>
+                                        </svg>
+                                        <!-- <svg class="w-9 h-9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+                                                                                                    <circle cx="50" cy="50" r="50" fill="#000" />
+                                                                                                
+                                                                                                    <path d="M16 67 L50 17 L84 67 L74 74 L50 48 L26 74 Z" fill="#555555" />
+                                                                                                
+                                                                                                    <path d="M16 67 L50 17 L50 48 L26 74 Z" fill="#666666" />
+                                                                                                
+                                                                                                    <path d="M50 17 L63 39 L50 65 L37 39 Z" fill="#8A8A8A" />
+                                                                                                
+                                                                                                    <path d="M50 17 L84 67 L74 74 L50 48 Z" fill="#4A4A4A" />
+                                                                                                
+                                                                                                    <path d="M37 39 L50 65 L63 39 L50 48 Z" fill="#707070" />
+                                                                                                </svg> -->
+                                        <p
+                                            class="text-base text-gray-600 dark:text-slate-300 font-medium"
+                                        >
+                                            {t("experience.two.job.title")} at {
+                                                t("experience.two.organization")
+                                            }
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skill Item 2 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            SQL Database Administration
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+            >
+                <circle cx="50" cy="50" r="50" fill=""></circle>
+                <g stroke-linejoin="round">
+                    <polygon
+                        points="44,28 37,36.9 37.9,61.9 49.9,39"
+                        fill="#969696"
+                        stroke="#969696"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="38.2,34.2 17,64.9 21.9,73.9 35.9,63.4 38.6,64.2 36.4,62"
+                        fill="#626262"
+                        stroke="#626262"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="54.6,24.2 56,28 51,39 62,59.9 61.2,64.2 63.9,59 64,39"
+                        fill="#626262"
+                        stroke="#626262"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="49.9,19 42.6,28.6 50,39 36.5,62 51,69.9 62.4,61.9 50.9,39 55.9,26.9"
+                        fill="#7b7b7b"
+                        stroke="#7b7b7b"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="55.6,25.2 64,38.9 64,59 50.1,70.9 63,63.9 78.6,74.2 83.9,65.9"
+                        fill="#505050"
+                        stroke="#505050"
+                        stroke-width="0.6"></polygon>
+                </g>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.two.job.title")}
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 3 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-slate-900 mb-2 dark:text-white">
+            Stored Procedures
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+            >
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff8a00"></stop>
+                        <stop offset="48%" stop-color="#f04432"></stop>
+                        <stop offset="100%" stop-color="#2832a8"></stop>
+                    </linearGradient>
+                </defs>
+
+                <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bg)"
+                ></rect>
+
+                <!-- white logo -->
+                <circle
+                    cx="50"
+                    cy="39"
+                    r="15"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"></circle>
+                <path
+                    d="M35 61
+                                                C37 70, 43 75, 50 75
+                                                C57 75, 63 70, 65 61"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <div
+                x-data="{ experiencesSPModal: false }"
+                class="inline-block"
+                x-cloak
+            >
+                <button
+                    type="button"
+                    class="text-blue-600 dark:text-blue-400 font-medium hover:underline"
+                    @click="experiencesSPModal = true"
+                    @keyup.escape="experiencesSPModal = false"
+                >
+                    <p
+                        class="text-base text-gray-600 hover:text-blue-600 dark:text-blue-400 font-medium hover:underline cursor-pointer"
+                    >
+                        2 {t("skill.experience")}
+                        {t("experience.three.organization")}
+                        {t("skill.otherAnd")} 1 {t("skill.otherCompany")}
+                    </p>
+                </button>
+                <!-- modal conten -->
+                <div
+                    x-show="experiencesSPModal"
+                    x-cloak
+                    tabindex="0"
+                    class="z-50 inset-0 w-full h-full py-6 fixed flex justify-center items-center"
+                >
+                    <div
+                        @click.away="experiencesSPModal = false"
+                        class="z-50 relative p-3 mx-auto my-0 w-11/12 md:w-[60%]"
+                        x-show="experiencesSPModal"
+                        x-transition:enter="transition duration-500"
+                        x-transition:enter-start="transform opacity-0 -translate-y-4"
+                        x-transition:enter-end="transform opacity-100 translate-y-0"
+                        x-transition:leave="transition -translate-y-4"
+                        x-transition:leave-start="transform opacity-100 translate-y-0"
+                        x-transition:leave-end="transform opacity-0 -translate-y-4"
+                    >
+                        <div
+                            class="bg-white dark:bg-slate-950 dark:text-slate-300 rounded-2xl shadow-lg border border-gray-200 dark:border-slate-700 flex flex-col overflow-hidden"
+                        >
+                            <div
+                                class="flex flex-row justify-between items-center border-b border-gray-200 dark:border-slate-700 px-4 py-2 text-slate-800"
+                            >
+                                <h2
+                                    class="text-2xl font-bold text-gray-900 dark:text-slate-300"
+                                >
+                                    Database Adminstration
+                                </h2>
+                                <button
+                                    @click="experiencesSPModal = false"
+                                    class="fill-current h-6 w-6 font-3xl font-bold"
+                                >
+                                    <svg
+                                        class="w-5 h-5 fill-current dark:fill-slate-300"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 640 640"
+                                        ><!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                        <path
+                                            d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"
+                                        ></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- modal content -->
+                            <div
+                                class="p-4 bg-white dark:bg-slate-800/95 dark:text-slate-300"
+                            >
+                                <div class="px-6 py-5 space-y-6">
+                                    <div class="flex items-center gap-2">
+                                        <svg
+                                            class="w-7 h-7"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 100 100"
+                                            width="100"
+                                            height="100"
+                                        >
+                                            <defs>
+                                                <linearGradient
+                                                    id="bg"
+                                                    x1="0%"
+                                                    y1="0%"
+                                                    x2="100%"
+                                                    y2="0%"
+                                                >
+                                                    <stop
+                                                        offset="0%"
+                                                        stop-color="#ff8a00"
+                                                    ></stop>
+                                                    <stop
+                                                        offset="48%"
+                                                        stop-color="#f04432"
+                                                    ></stop>
+                                                    <stop
+                                                        offset="100%"
+                                                        stop-color="#2832a8"
+                                                    ></stop>
+                                                </linearGradient>
+                                            </defs>
+
+                                            <rect
+                                                x="4"
+                                                y="4"
+                                                width="92"
+                                                height="92"
+                                                rx="8"
+                                                fill="url(#bg)"></rect>
+
+                                            <!-- white logo -->
+                                            <circle
+                                                cx="50"
+                                                cy="39"
+                                                r="15"
+                                                fill="none"
+                                                stroke="#fff"
+                                                stroke-width="7"></circle>
+                                            <path
+                                                d="M35 61
+                                                                                                                                                                                        C37 70, 43 75, 50 75
+                                                                                                                                                                                        C57 75, 63 70, 65 61"
+                                                fill="none"
+                                                stroke="#fff"
+                                                stroke-width="7"
+                                                stroke-linecap="butt"
+                                                stroke-linejoin="round"></path>
+                                        </svg>
+                                        <p
+                                            class="text-base text-gray-600 dark:text-slate-300 font-medium"
+                                        >
+                                            {t("experience.three.job.title")} at
+                                            {t("experience.three.organization")}
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <svg
+                                            class="w-7 h-7"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 100 100"
+                                        >
+                                            <circle
+                                                cx="50"
+                                                cy="50"
+                                                r="50"
+                                                fill=""></circle>
+                                            <g stroke-linejoin="round">
+                                                <polygon
+                                                    points="44,28 37,36.9 37.9,61.9 49.9,39"
+                                                    fill="#969696"
+                                                    stroke="#969696"
+                                                    stroke-width="0.6"
+                                                ></polygon>
+                                                <polygon
+                                                    points="38.2,34.2 17,64.9 21.9,73.9 35.9,63.4 38.6,64.2 36.4,62"
+                                                    fill="#626262"
+                                                    stroke="#626262"
+                                                    stroke-width="0.6"
+                                                ></polygon>
+                                                <polygon
+                                                    points="54.6,24.2 56,28 51,39 62,59.9 61.2,64.2 63.9,59 64,39"
+                                                    fill="#626262"
+                                                    stroke="#626262"
+                                                    stroke-width="0.6"
+                                                ></polygon>
+                                                <polygon
+                                                    points="49.9,19 42.6,28.6 50,39 36.5,62 51,69.9 62.4,61.9 50.9,39 55.9,26.9"
+                                                    fill="#7b7b7b"
+                                                    stroke="#7b7b7b"
+                                                    stroke-width="0.6"
+                                                ></polygon>
+                                                <polygon
+                                                    points="55.6,25.2 64,38.9 64,59 50.1,70.9 63,63.9 78.6,74.2 83.9,65.9"
+                                                    fill="#505050"
+                                                    stroke="#505050"
+                                                    stroke-width="0.6"
+                                                ></polygon>
+                                            </g>
+                                        </svg>
+                                        <!-- <svg class="w-9 h-9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+                                                                                                                    <circle cx="50" cy="50" r="50" fill="#000" />
+                                                                                                                
+                                                                                                                    <path d="M16 67 L50 17 L84 67 L74 74 L50 48 L26 74 Z" fill="#555555" />
+                                                                                                                
+                                                                                                                    <path d="M16 67 L50 17 L50 48 L26 74 Z" fill="#666666" />
+                                                                                                                
+                                                                                                                    <path d="M50 17 L63 39 L50 65 L37 39 Z" fill="#8A8A8A" />
+                                                                                                                
+                                                                                                                    <path d="M50 17 L84 67 L74 74 L50 48 Z" fill="#4A4A4A" />
+                                                                                                                
+                                                                                                                    <path d="M37 39 L50 65 L63 39 L50 48 Z" fill="#707070" />
+                                                                                                                </svg> -->
+                                        <p
+                                            class="text-base text-gray-600 dark:text-slate-300 font-medium"
+                                        >
+                                            {t("experience.two.job.title")} at {
+                                                t("experience.two.organization")
+                                            }
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skill Item 4 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            MariaDB
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+            >
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff8a00"></stop>
+                        <stop offset="48%" stop-color="#f04432"></stop>
+                        <stop offset="100%" stop-color="#2832a8"></stop>
+                    </linearGradient>
+                </defs>
+
+                <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bg)"
+                ></rect>
+
+                <!-- white logo -->
+                <circle
+                    cx="50"
+                    cy="39"
+                    r="15"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"></circle>
+                <path
+                    d="M35 61
+                                                                                                                                                        C37 70, 43 75, 50 75
+                                                                                                                                                        C57 75, 63 70, 65 61"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.three.job.title")} at {
+                    t("experience.three.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 5 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            MySQL
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 128 128"
+                id="company-accent-4"
+            >
+                <path fill="#e7e2dc" d="M0 0h128v128H0z"></path>
+                <path fill="#9db3c8" d="M48 16h64v112H48z"></path>
+                <path fill="#788fa5" d="M16 80h32v48H16z"></path>
+                <path fill="#56687a" d="M48 80h32v48H48z"></path>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.one.job.title")} at {
+                    t("experience.one.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 6 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            PostgreSQL
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+            >
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff8a00"></stop>
+                        <stop offset="48%" stop-color="#f04432"></stop>
+                        <stop offset="100%" stop-color="#2832a8"></stop>
+                    </linearGradient>
+                </defs>
+
+                <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bg)"
+                ></rect>
+
+                <!-- white logo -->
+                <circle
+                    cx="50"
+                    cy="39"
+                    r="15"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"></circle>
+                <path
+                    d="M35 61
+                                                                                                                                                        C37 70, 43 75, 50 75
+                                                                                                                                                        C57 75, 63 70, 65 61"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.three.job.title")} at {
+                    t("experience.three.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 7 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            Microsoft SQL Server
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+            >
+                <circle cx="50" cy="50" r="50" fill=""></circle>
+                <g stroke-linejoin="round">
+                    <polygon
+                        points="44,28 37,36.9 37.9,61.9 49.9,39"
+                        fill="#969696"
+                        stroke="#969696"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="38.2,34.2 17,64.9 21.9,73.9 35.9,63.4 38.6,64.2 36.4,62"
+                        fill="#626262"
+                        stroke="#626262"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="54.6,24.2 56,28 51,39 62,59.9 61.2,64.2 63.9,59 64,39"
+                        fill="#626262"
+                        stroke="#626262"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="49.9,19 42.6,28.6 50,39 36.5,62 51,69.9 62.4,61.9 50.9,39 55.9,26.9"
+                        fill="#7b7b7b"
+                        stroke="#7b7b7b"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="55.6,25.2 64,38.9 64,59 50.1,70.9 63,63.9 78.6,74.2 83.9,65.9"
+                        fill="#505050"
+                        stroke="#505050"
+                        stroke-width="0.6"></polygon>
+                </g>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.two.job.title")} at {
+                    t("experience.two.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 8 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            Data Modeling
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+            >
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff8a00"></stop>
+                        <stop offset="48%" stop-color="#f04432"></stop>
+                        <stop offset="100%" stop-color="#2832a8"></stop>
+                    </linearGradient>
+                </defs>
+
+                <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bg)"
+                ></rect>
+
+                <!-- white logo -->
+                <circle
+                    cx="50"
+                    cy="39"
+                    r="15"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"></circle>
+                <path
+                    d="M35 61
+                                                                                                                                                        C37 70, 43 75, 50 75
+                                                                                                                                                        C57 75, 63 70, 65 61"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.three.job.title")} at {
+                    t("experience.three.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 9 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            Linux System Administration
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+            >
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff8a00"></stop>
+                        <stop offset="48%" stop-color="#f04432"></stop>
+                        <stop offset="100%" stop-color="#2832a8"></stop>
+                    </linearGradient>
+                </defs>
+
+                <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bg)"
+                ></rect>
+
+                <!-- white logo -->
+                <circle
+                    cx="50"
+                    cy="39"
+                    r="15"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"></circle>
+                <path
+                    d="M35 61
+                                                                                                                                                        C37 70, 43 75, 50 75
+                                                                                                                                                        C57 75, 63 70, 65 61"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.three.job.title")} at {
+                    t("experience.three.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 10 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            Software Development Life Cycle (SDLC)
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+            >
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff8a00"></stop>
+                        <stop offset="48%" stop-color="#f04432"></stop>
+                        <stop offset="100%" stop-color="#2832a8"></stop>
+                    </linearGradient>
+                </defs>
+
+                <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bg)"
+                ></rect>
+
+                <!-- white logo -->
+                <circle
+                    cx="50"
+                    cy="39"
+                    r="15"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"></circle>
+                <path
+                    d="M35 61
+                                                                                                                                        C37 70, 43 75, 50 75
+                                                                                                                                        C57 75, 63 70, 65 61"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.three.job.title")} at {
+                    t("experience.three.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 11 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            Neo4j
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+            >
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff8a00"></stop>
+                        <stop offset="48%" stop-color="#f04432"></stop>
+                        <stop offset="100%" stop-color="#2832a8"></stop>
+                    </linearGradient>
+                </defs>
+
+                <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bg)"
+                ></rect>
+
+                <!-- white logo -->
+                <circle
+                    cx="50"
+                    cy="39"
+                    r="15"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"></circle>
+                <path
+                    d="M35 61
+                                                                                                                                        C37 70, 43 75, 50 75
+                                                                                                                                        C57 75, 63 70, 65 61"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.three.job.title")} at {
+                    t("experience.three.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 12 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            Redis
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+            >
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff8a00"></stop>
+                        <stop offset="48%" stop-color="#f04432"></stop>
+                        <stop offset="100%" stop-color="#2832a8"></stop>
+                    </linearGradient>
+                </defs>
+
+                <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bg)"
+                ></rect>
+
+                <!-- white logo -->
+                <circle
+                    cx="50"
+                    cy="39"
+                    r="15"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"></circle>
+                <path
+                    d="M35 61
+                                                                                                                                        C37 70, 43 75, 50 75
+                                                                                                                                        C57 75, 63 70, 65 61"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.three.job.title")} at {
+                    t("experience.three.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 13 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            Couchbase
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+            >
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff8a00"></stop>
+                        <stop offset="48%" stop-color="#f04432"></stop>
+                        <stop offset="100%" stop-color="#2832a8"></stop>
+                    </linearGradient>
+                </defs>
+
+                <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bg)"
+                ></rect>
+
+                <!-- white logo -->
+                <circle
+                    cx="50"
+                    cy="39"
+                    r="15"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"></circle>
+                <path
+                    d="M35 61
+                                                                                                                                        C37 70, 43 75, 50 75
+                                                                                                                                        C57 75, 63 70, 65 61"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.three.job.title")} at {
+                    t("experience.three.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 14 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-slate-900 mb-2 dark:text-white">
+            Laravel
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+            >
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff8a00"></stop>
+                        <stop offset="48%" stop-color="#f04432"></stop>
+                        <stop offset="100%" stop-color="#2832a8"></stop>
+                    </linearGradient>
+                </defs>
+
+                <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bg)"
+                ></rect>
+
+                <!-- white logo -->
+                <circle
+                    cx="50"
+                    cy="39"
+                    r="15"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"></circle>
+                <path
+                    d="M35 61
+                                C37 70, 43 75, 50 75
+                                C57 75, 63 70, 65 61"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <div
+                x-data="{ experiencesLaravelModal: false }"
+                class="inline-block"
+                x-cloak
+            >
+                <button
+                    type="button"
+                    class="text-blue-600 dark:text-blue-400 font-medium hover:underline"
+                    @click="experiencesLaravelModal = true"
+                    @keyup.escape="experiencesLaravelModal = false"
+                >
+                    <p
+                        class="text-base text-gray-600 hover:text-blue-600 dark:text-blue-400 font-medium hover:underline cursor-pointer"
+                    >
+                        2 {t("skill.experience")}
+                        {t("experience.three.organization")}
+                        {t("skill.otherAnd")} 1 {t("skill.otherCompany")}
+                    </p>
+                </button>
+                <!-- modal conten -->
+                <div
+                    x-show="experiencesLaravelModal"
+                    x-cloak
+                    tabindex="0"
+                    class="z-50 inset-0 w-full h-full py-6 fixed flex justify-center items-center"
+                >
+                    <div
+                        @click.away="experiencesLaravelModal = false"
+                        class="z-50 relative p-3 mx-auto my-0 w-11/12 md:w-[60%]"
+                        x-show="experiencesLaravelModal"
+                        x-transition:enter="transition duration-500"
+                        x-transition:enter-start="transform opacity-0 -translate-y-4"
+                        x-transition:enter-end="transform opacity-100 translate-y-0"
+                        x-transition:leave="transition -translate-y-4"
+                        x-transition:leave-start="transform opacity-100 translate-y-0"
+                        x-transition:leave-end="transform opacity-0 -translate-y-4"
+                    >
+                        <div
+                            class="bg-white dark:bg-slate-950 dark:text-slate-300 rounded-2xl shadow-lg border border-gray-200 dark:border-slate-700 flex flex-col overflow-hidden"
+                        >
+                            <div
+                                class="flex flex-row justify-between items-center border-b border-gray-200 dark:border-slate-700 px-4 py-2 text-slate-800"
+                            >
+                                <h2
+                                    class="text-2xl font-bold text-gray-900 dark:text-slate-300"
+                                >
+                                    Database Adminstration
+                                </h2>
+                                <button
+                                    @click="experiencesLaravelModal = false"
+                                    class="fill-current h-6 w-6 font-3xl font-bold"
+                                >
+                                    <svg
+                                        class="w-5 h-5 fill-current dark:fill-slate-300"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 640 640"
+                                        ><!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                        <path
+                                            d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"
+                                        ></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- modal content -->
+                            <div
+                                class="p-4 bg-white dark:bg-slate-800/95 dark:text-slate-300"
+                            >
+                                <div class="px-6 py-5 space-y-6">
+                                    <div class="flex items-center gap-2">
+                                        <svg
+                                            class="w-7 h-7"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 100 100"
+                                            width="100"
+                                            height="100"
+                                        >
+                                            <defs>
+                                                <linearGradient
+                                                    id="bg"
+                                                    x1="0%"
+                                                    y1="0%"
+                                                    x2="100%"
+                                                    y2="0%"
+                                                >
+                                                    <stop
+                                                        offset="0%"
+                                                        stop-color="#ff8a00"
+                                                    ></stop>
+                                                    <stop
+                                                        offset="48%"
+                                                        stop-color="#f04432"
+                                                    ></stop>
+                                                    <stop
+                                                        offset="100%"
+                                                        stop-color="#2832a8"
+                                                    ></stop>
+                                                </linearGradient>
+                                            </defs>
+
+                                            <rect
+                                                x="4"
+                                                y="4"
+                                                width="92"
+                                                height="92"
+                                                rx="8"
+                                                fill="url(#bg)"></rect>
+
+                                            <!-- white logo -->
+                                            <circle
+                                                cx="50"
+                                                cy="39"
+                                                r="15"
+                                                fill="none"
+                                                stroke="#fff"
+                                                stroke-width="7"></circle>
+                                            <path
+                                                d="M35 61
+                                                                                                                                                                        C37 70, 43 75, 50 75
+                                                                                                                                                                        C57 75, 63 70, 65 61"
+                                                fill="none"
+                                                stroke="#fff"
+                                                stroke-width="7"
+                                                stroke-linecap="butt"
+                                                stroke-linejoin="round"></path>
+                                        </svg>
+                                        <p
+                                            class="text-base text-gray-600 dark:text-slate-300 font-medium"
+                                        >
+                                            {t("experience.three.job.title")} at
+                                            {t("experience.three.organization")}
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <svg
+                                            class="w-7 h-7"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 128 128"
+                                            id="company-accent-4"
+                                        >
+                                            <path
+                                                fill="#e7e2dc"
+                                                d="M0 0h128v128H0z"></path>
+                                            <path
+                                                fill="#9db3c8"
+                                                d="M48 16h64v112H48z"></path>
+                                            <path
+                                                fill="#788fa5"
+                                                d="M16 80h32v48H16z"></path>
+                                            <path
+                                                fill="#56687a"
+                                                d="M48 80h32v48H48z"></path>
+                                        </svg>
+                                        <p
+                                            class="text-base text-gray-600 dark:text-slate-300 font-medium"
+                                        >
+                                            {t("experience.one.job.title")} at
+                                            {t("experience.one.organization")}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skill Item 15 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            ASP.NET MVC
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+            >
+                <circle cx="50" cy="50" r="50" fill=""></circle>
+                <g stroke-linejoin="round">
+                    <polygon
+                        points="44,28 37,36.9 37.9,61.9 49.9,39"
+                        fill="#969696"
+                        stroke="#969696"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="38.2,34.2 17,64.9 21.9,73.9 35.9,63.4 38.6,64.2 36.4,62"
+                        fill="#626262"
+                        stroke="#626262"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="54.6,24.2 56,28 51,39 62,59.9 61.2,64.2 63.9,59 64,39"
+                        fill="#626262"
+                        stroke="#626262"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="49.9,19 42.6,28.6 50,39 36.5,62 51,69.9 62.4,61.9 50.9,39 55.9,26.9"
+                        fill="#7b7b7b"
+                        stroke="#7b7b7b"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="55.6,25.2 64,38.9 64,59 50.1,70.9 63,63.9 78.6,74.2 83.9,65.9"
+                        fill="#505050"
+                        stroke="#505050"
+                        stroke-width="0.6"></polygon>
+                </g>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.two.job.title")} at {
+                    t("experience.two.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 16 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            Python (Programming Language)
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+            >
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff8a00"></stop>
+                        <stop offset="48%" stop-color="#f04432"></stop>
+                        <stop offset="100%" stop-color="#2832a8"></stop>
+                    </linearGradient>
+                </defs>
+
+                <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bg)"
+                ></rect>
+
+                <!-- white logo -->
+                <circle
+                    cx="50"
+                    cy="39"
+                    r="15"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"></circle>
+                <path
+                    d="M35 61
+                                                                                                                                                        C37 70, 43 75, 50 75
+                                                                                                                                                        C57 75, 63 70, 65 61"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.three.job.title")} at {
+                    t("experience.three.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 17 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            Django
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+            >
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff8a00"></stop>
+                        <stop offset="48%" stop-color="#f04432"></stop>
+                        <stop offset="100%" stop-color="#2832a8"></stop>
+                    </linearGradient>
+                </defs>
+
+                <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bg)"
+                ></rect>
+
+                <!-- white logo -->
+                <circle
+                    cx="50"
+                    cy="39"
+                    r="15"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"></circle>
+                <path
+                    d="M35 61
+                                                                                                                                        C37 70, 43 75, 50 75
+                                                                                                                                        C57 75, 63 70, 65 61"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.three.job.title")} at {
+                    t("experience.three.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 18 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            GraphQL
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+            >
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff8a00"></stop>
+                        <stop offset="48%" stop-color="#f04432"></stop>
+                        <stop offset="100%" stop-color="#2832a8"></stop>
+                    </linearGradient>
+                </defs>
+
+                <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bg)"
+                ></rect>
+
+                <!-- white logo -->
+                <circle
+                    cx="50"
+                    cy="39"
+                    r="15"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"></circle>
+                <path
+                    d="M35 61
+                                                                                                                                        C37 70, 43 75, 50 75
+                                                                                                                                        C57 75, 63 70, 65 61"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.three.job.title")} at {
+                    t("experience.three.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 19 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-slate-900 mb-2 dark:text-white">
+            Unit Testing
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+            >
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff8a00"></stop>
+                        <stop offset="48%" stop-color="#f04432"></stop>
+                        <stop offset="100%" stop-color="#2832a8"></stop>
+                    </linearGradient>
+                </defs>
+
+                <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bg)"
+                ></rect>
+
+                <!-- white logo -->
+                <circle
+                    cx="50"
+                    cy="39"
+                    r="15"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"></circle>
+                <path
+                    d="M35 61
+                                                C37 70, 43 75, 50 75
+                                                C57 75, 63 70, 65 61"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <div
+                x-data="{ experiencesUnitTestModal: false }"
+                class="inline-block"
+                x-cloak
+            >
+                <button
+                    type="button"
+                    class="text-blue-600 dark:text-blue-400 font-medium hover:underline"
+                    @click="experiencesUnitTestModal = true"
+                    @keyup.escape="experiencesUnitTestModal = false"
+                >
+                    <p
+                        class="text-base text-gray-600 hover:text-blue-600 dark:text-blue-400 font-medium hover:underline cursor-pointer"
+                    >
+                        2 {t("skill.experience")}
+                        {t("experience.three.organization")}
+                        {t("skill.otherAnd")} 1 {t("skill.otherCompany")}
+                    </p>
+                </button>
+                <!-- modal conten -->
+                <div
+                    x-show="experiencesUnitTestModal"
+                    x-cloak
+                    tabindex="0"
+                    class="z-50 inset-0 w-full h-full py-6 fixed flex justify-center items-center"
+                >
+                    <div
+                        @click.away="experiencesUnitTestModal = false"
+                        class="z-50 relative p-3 mx-auto my-0 w-11/12 md:w-[60%]"
+                        x-show="experiencesUnitTestModal"
+                        x-transition:enter="transition duration-500"
+                        x-transition:enter-start="transform opacity-0 -translate-y-4"
+                        x-transition:enter-end="transform opacity-100 translate-y-0"
+                        x-transition:leave="transition -translate-y-4"
+                        x-transition:leave-start="transform opacity-100 translate-y-0"
+                        x-transition:leave-end="transform opacity-0 -translate-y-4"
+                    >
+                        <div
+                            class="bg-white dark:bg-slate-950 dark:text-slate-300 rounded-2xl shadow-lg border border-gray-200 dark:border-slate-700 flex flex-col overflow-hidden"
+                        >
+                            <div
+                                class="flex flex-row justify-between items-center border-b border-gray-200 dark:border-slate-700 px-4 py-2 text-slate-800"
+                            >
+                                <h2
+                                    class="text-2xl font-bold text-gray-900 dark:text-slate-300"
+                                >
+                                    Database Adminstration
+                                </h2>
+                                <button
+                                    @click="experiencesUnitTestModal = false"
+                                    class="fill-current h-6 w-6 font-3xl font-bold"
+                                >
+                                    <svg
+                                        class="w-5 h-5 fill-current dark:fill-slate-300"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 640 640"
+                                        ><!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                        <path
+                                            d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"
+                                        ></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- modal content -->
+                            <div
+                                class="p-4 bg-white dark:bg-slate-800/95 dark:text-slate-300"
+                            >
+                                <div class="px-6 py-5 space-y-6">
+                                    <div class="flex items-center gap-2">
+                                        <svg
+                                            class="w-7 h-7"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 100 100"
+                                            width="100"
+                                            height="100"
+                                        >
+                                            <defs>
+                                                <linearGradient
+                                                    id="bg"
+                                                    x1="0%"
+                                                    y1="0%"
+                                                    x2="100%"
+                                                    y2="0%"
+                                                >
+                                                    <stop
+                                                        offset="0%"
+                                                        stop-color="#ff8a00"
+                                                    ></stop>
+                                                    <stop
+                                                        offset="48%"
+                                                        stop-color="#f04432"
+                                                    ></stop>
+                                                    <stop
+                                                        offset="100%"
+                                                        stop-color="#2832a8"
+                                                    ></stop>
+                                                </linearGradient>
+                                            </defs>
+
+                                            <rect
+                                                x="4"
+                                                y="4"
+                                                width="92"
+                                                height="92"
+                                                rx="8"
+                                                fill="url(#bg)"></rect>
+
+                                            <!-- white logo -->
+                                            <circle
+                                                cx="50"
+                                                cy="39"
+                                                r="15"
+                                                fill="none"
+                                                stroke="#fff"
+                                                stroke-width="7"></circle>
+                                            <path
+                                                d="M35 61
+                                                                                                                                                                                        C37 70, 43 75, 50 75
+                                                                                                                                                                                        C57 75, 63 70, 65 61"
+                                                fill="none"
+                                                stroke="#fff"
+                                                stroke-width="7"
+                                                stroke-linecap="butt"
+                                                stroke-linejoin="round"></path>
+                                        </svg>
+                                        <p
+                                            class="text-base text-gray-600 dark:text-slate-300 font-medium"
+                                        >
+                                            {t("experience.three.job.title")} at
+                                            {t("experience.three.organization")}
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <svg
+                                            class="w-7 h-7"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 128 128"
+                                            id="company-accent-4"
+                                        >
+                                            <path
+                                                fill="#e7e2dc"
+                                                d="M0 0h128v128H0z"></path>
+                                            <path
+                                                fill="#9db3c8"
+                                                d="M48 16h64v112H48z"></path>
+                                            <path
+                                                fill="#788fa5"
+                                                d="M16 80h32v48H16z"></path>
+                                            <path
+                                                fill="#56687a"
+                                                d="M48 80h32v48H48z"></path>
+                                        </svg>
+                                        <p
+                                            class="text-base text-gray-600 dark:text-slate-300 font-medium"
+                                        >
+                                            {t("experience.one.job.title")} at
+                                            {t("experience.one.organization")}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skill Item 20 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            WebSocket
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+            >
+                <circle cx="50" cy="50" r="50" fill=""></circle>
+                <g stroke-linejoin="round">
+                    <polygon
+                        points="44,28 37,36.9 37.9,61.9 49.9,39"
+                        fill="#969696"
+                        stroke="#969696"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="38.2,34.2 17,64.9 21.9,73.9 35.9,63.4 38.6,64.2 36.4,62"
+                        fill="#626262"
+                        stroke="#626262"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="54.6,24.2 56,28 51,39 62,59.9 61.2,64.2 63.9,59 64,39"
+                        fill="#626262"
+                        stroke="#626262"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="49.9,19 42.6,28.6 50,39 36.5,62 51,69.9 62.4,61.9 50.9,39 55.9,26.9"
+                        fill="#7b7b7b"
+                        stroke="#7b7b7b"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="55.6,25.2 64,38.9 64,59 50.1,70.9 63,63.9 78.6,74.2 83.9,65.9"
+                        fill="#505050"
+                        stroke="#505050"
+                        stroke-width="0.6"></polygon>
+                </g>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.two.job.title")} at {
+                    t("experience.two.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 21 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            Docker
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+            >
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff8a00"></stop>
+                        <stop offset="48%" stop-color="#f04432"></stop>
+                        <stop offset="100%" stop-color="#2832a8"></stop>
+                    </linearGradient>
+                </defs>
+
+                <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bg)"
+                ></rect>
+
+                <!-- white logo -->
+                <circle
+                    cx="50"
+                    cy="39"
+                    r="15"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"></circle>
+                <path
+                    d="M35 61
+                                                                                                                                        C37 70, 43 75, 50 75
+                                                                                                                                        C57 75, 63 70, 65 61"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.three.job.title")} at {
+                    t("experience.three.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 22 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-slate-900 mb-2 dark:text-white">
+            Software Design Patterns
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+            >
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff8a00"></stop>
+                        <stop offset="48%" stop-color="#f04432"></stop>
+                        <stop offset="100%" stop-color="#2832a8"></stop>
+                    </linearGradient>
+                </defs>
+
+                <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bg)"
+                ></rect>
+
+                <!-- white logo -->
+                <circle
+                    cx="50"
+                    cy="39"
+                    r="15"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"></circle>
+                <path
+                    d="M35 61
+                                C37 70, 43 75, 50 75
+                                C57 75, 63 70, 65 61"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <div
+                x-data="{ experiencesSDPModal: false }"
+                class="inline-block"
+                x-cloak
+            >
+                <button
+                    type="button"
+                    class="text-blue-600 dark:text-blue-400 font-medium hover:underline"
+                    @click="experiencesSDPModal = true"
+                    @keyup.escape="experiencesSDPModal = false"
+                >
+                    <p
+                        class="text-base text-gray-600 hover:text-blue-600 dark:text-blue-400 font-medium hover:underline cursor-pointer"
+                    >
+                        2 {t("skill.experience")}
+                        {t("experience.three.organization")}
+                        {t("skill.otherAnd")} 1 {t("skill.otherCompany")}
+                    </p>
+                </button>
+                <!-- modal conten -->
+                <div
+                    x-show="experiencesSDPModal"
+                    x-cloak
+                    tabindex="0"
+                    class="z-50 inset-0 w-full h-full py-6 fixed flex justify-center items-center"
+                >
+                    <div
+                        @click.away="experiencesSDPModal = false"
+                        class="z-50 relative p-3 mx-auto my-0 w-11/12 md:w-[60%]"
+                        x-show="experiencesSDPModal"
+                        x-transition:enter="transition duration-500"
+                        x-transition:enter-start="transform opacity-0 -translate-y-4"
+                        x-transition:enter-end="transform opacity-100 translate-y-0"
+                        x-transition:leave="transition -translate-y-4"
+                        x-transition:leave-start="transform opacity-100 translate-y-0"
+                        x-transition:leave-end="transform opacity-0 -translate-y-4"
+                    >
+                        <div
+                            class="bg-white dark:bg-slate-950 dark:text-slate-300 rounded-2xl shadow-lg border border-gray-200 dark:border-slate-700 flex flex-col overflow-hidden"
+                        >
+                            <div
+                                class="flex flex-row justify-between items-center border-b border-gray-200 dark:border-slate-700 px-4 py-2 text-slate-800"
+                            >
+                                <h2
+                                    class="text-2xl font-bold text-gray-900 dark:text-slate-300"
+                                >
+                                    Database Adminstration
+                                </h2>
+                                <button
+                                    @click="experiencesSDPModal = false"
+                                    class="fill-current h-6 w-6 font-3xl font-bold"
+                                >
+                                    <svg
+                                        class="w-5 h-5 fill-current dark:fill-slate-300"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 640 640"
+                                        ><!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                        <path
+                                            d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"
+                                        ></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- modal content -->
+                            <div
+                                class="p-4 bg-white dark:bg-slate-800/95 dark:text-slate-300"
+                            >
+                                <div class="px-6 py-5 space-y-6">
+                                    <div class="flex items-center gap-2">
+                                        <svg
+                                            class="w-7 h-7"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 100 100"
+                                            width="100"
+                                            height="100"
+                                        >
+                                            <defs>
+                                                <linearGradient
+                                                    id="bg"
+                                                    x1="0%"
+                                                    y1="0%"
+                                                    x2="100%"
+                                                    y2="0%"
+                                                >
+                                                    <stop
+                                                        offset="0%"
+                                                        stop-color="#ff8a00"
+                                                    ></stop>
+                                                    <stop
+                                                        offset="48%"
+                                                        stop-color="#f04432"
+                                                    ></stop>
+                                                    <stop
+                                                        offset="100%"
+                                                        stop-color="#2832a8"
+                                                    ></stop>
+                                                </linearGradient>
+                                            </defs>
+
+                                            <rect
+                                                x="4"
+                                                y="4"
+                                                width="92"
+                                                height="92"
+                                                rx="8"
+                                                fill="url(#bg)"></rect>
+
+                                            <!-- white logo -->
+                                            <circle
+                                                cx="50"
+                                                cy="39"
+                                                r="15"
+                                                fill="none"
+                                                stroke="#fff"
+                                                stroke-width="7"></circle>
+                                            <path
+                                                d="M35 61
+                                                                                                                                                                        C37 70, 43 75, 50 75
+                                                                                                                                                                        C57 75, 63 70, 65 61"
+                                                fill="none"
+                                                stroke="#fff"
+                                                stroke-width="7"
+                                                stroke-linecap="butt"
+                                                stroke-linejoin="round"></path>
+                                        </svg>
+                                        <p
+                                            class="text-base text-gray-600 dark:text-slate-300 font-medium"
+                                        >
+                                            {t("experience.three.job.title")} at
+                                            {t("experience.three.organization")}
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <svg
+                                            class="w-7 h-7"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 100 100"
+                                        >
+                                            <circle
+                                                cx="50"
+                                                cy="50"
+                                                r="50"
+                                                fill=""></circle>
+                                            <g stroke-linejoin="round">
+                                                <polygon
+                                                    points="44,28 37,36.9 37.9,61.9 49.9,39"
+                                                    fill="#969696"
+                                                    stroke="#969696"
+                                                    stroke-width="0.6"
+                                                ></polygon>
+                                                <polygon
+                                                    points="38.2,34.2 17,64.9 21.9,73.9 35.9,63.4 38.6,64.2 36.4,62"
+                                                    fill="#626262"
+                                                    stroke="#626262"
+                                                    stroke-width="0.6"
+                                                ></polygon>
+                                                <polygon
+                                                    points="54.6,24.2 56,28 51,39 62,59.9 61.2,64.2 63.9,59 64,39"
+                                                    fill="#626262"
+                                                    stroke="#626262"
+                                                    stroke-width="0.6"
+                                                ></polygon>
+                                                <polygon
+                                                    points="49.9,19 42.6,28.6 50,39 36.5,62 51,69.9 62.4,61.9 50.9,39 55.9,26.9"
+                                                    fill="#7b7b7b"
+                                                    stroke="#7b7b7b"
+                                                    stroke-width="0.6"
+                                                ></polygon>
+                                                <polygon
+                                                    points="55.6,25.2 64,38.9 64,59 50.1,70.9 63,63.9 78.6,74.2 83.9,65.9"
+                                                    fill="#505050"
+                                                    stroke="#505050"
+                                                    stroke-width="0.6"
+                                                ></polygon>
+                                            </g>
+                                        </svg>
+                                        <p
+                                            class="text-base text-gray-600 dark:text-slate-300 font-medium"
+                                        >
+                                            {t("experience.two.job.title")} at {
+                                                t("experience.two.organization")
+                                            }
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skill Item 23 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-slate-900 mb-2 dark:text-white">
+            Object-Oriented Programming (OOP)
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+            >
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff8a00"></stop>
+                        <stop offset="48%" stop-color="#f04432"></stop>
+                        <stop offset="100%" stop-color="#2832a8"></stop>
+                    </linearGradient>
+                </defs>
+
+                <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bg)"
+                ></rect>
+
+                <!-- white logo -->
+                <circle
+                    cx="50"
+                    cy="39"
+                    r="15"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"></circle>
+                <path
+                    d="M35 61
+                                C37 70, 43 75, 50 75
+                                C57 75, 63 70, 65 61"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <div
+                x-data="{ experiencesOOPModal: false }"
+                class="inline-block"
+                x-cloak
+            >
+                <button
+                    type="button"
+                    class="text-blue-600 dark:text-blue-400 font-medium hover:underline"
+                    @click="experiencesOOPModal = true"
+                    @keyup.escape="experiencesOOPModal = false"
+                >
+                    <p
+                        class="text-base text-gray-600 hover:text-blue-600 dark:text-blue-400 font-medium hover:underline cursor-pointer"
+                    >
+                        2 {t("skill.experience")}
+                        {t("experience.three.organization")}
+                        {t("skill.otherAnd")} 1 {t("skill.otherCompany")}
+                    </p>
+                </button>
+                <!-- modal conten -->
+                <div
+                    x-show="experiencesOOPModal"
+                    x-cloak
+                    tabindex="0"
+                    class="z-50 inset-0 w-full h-full py-6 fixed flex justify-center items-center"
+                >
+                    <div
+                        @click.away="experiencesOOPModal = false"
+                        class="z-50 relative p-3 mx-auto my-0 w-11/12 md:w-[60%]"
+                        x-show="experiencesOOPModal"
+                        x-transition:enter="transition duration-500"
+                        x-transition:enter-start="transform opacity-0 -translate-y-4"
+                        x-transition:enter-end="transform opacity-100 translate-y-0"
+                        x-transition:leave="transition -translate-y-4"
+                        x-transition:leave-start="transform opacity-100 translate-y-0"
+                        x-transition:leave-end="transform opacity-0 -translate-y-4"
+                    >
+                        <div
+                            class="bg-white dark:bg-slate-950 dark:text-slate-300 rounded-2xl shadow-lg border border-gray-200 dark:border-slate-700 flex flex-col overflow-hidden"
+                        >
+                            <div
+                                class="flex flex-row justify-between items-center border-b border-gray-200 dark:border-slate-700 px-4 py-2 text-slate-800"
+                            >
+                                <h2
+                                    class="text-2xl font-bold text-gray-900 dark:text-slate-300"
+                                >
+                                    Database Adminstration
+                                </h2>
+                                <button
+                                    @click="experiencesOOPModal = false"
+                                    class="fill-current h-6 w-6 font-3xl font-bold"
+                                >
+                                    <svg
+                                        class="w-5 h-5 fill-current dark:fill-slate-300"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 640 640"
+                                        ><!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                        <path
+                                            d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"
+                                        ></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- modal content -->
+                            <div
+                                class="p-4 bg-white dark:bg-slate-800/95 dark:text-slate-300"
+                            >
+                                <div class="px-6 py-5 space-y-6">
+                                    <div class="flex items-center gap-2">
+                                        <svg
+                                            class="w-7 h-7"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 100 100"
+                                            width="100"
+                                            height="100"
+                                        >
+                                            <defs>
+                                                <linearGradient
+                                                    id="bg"
+                                                    x1="0%"
+                                                    y1="0%"
+                                                    x2="100%"
+                                                    y2="0%"
+                                                >
+                                                    <stop
+                                                        offset="0%"
+                                                        stop-color="#ff8a00"
+                                                    ></stop>
+                                                    <stop
+                                                        offset="48%"
+                                                        stop-color="#f04432"
+                                                    ></stop>
+                                                    <stop
+                                                        offset="100%"
+                                                        stop-color="#2832a8"
+                                                    ></stop>
+                                                </linearGradient>
+                                            </defs>
+
+                                            <rect
+                                                x="4"
+                                                y="4"
+                                                width="92"
+                                                height="92"
+                                                rx="8"
+                                                fill="url(#bg)"></rect>
+
+                                            <!-- white logo -->
+                                            <circle
+                                                cx="50"
+                                                cy="39"
+                                                r="15"
+                                                fill="none"
+                                                stroke="#fff"
+                                                stroke-width="7"></circle>
+                                            <path
+                                                d="M35 61
+                                                                                                                                                                        C37 70, 43 75, 50 75
+                                                                                                                                                                        C57 75, 63 70, 65 61"
+                                                fill="none"
+                                                stroke="#fff"
+                                                stroke-width="7"
+                                                stroke-linecap="butt"
+                                                stroke-linejoin="round"></path>
+                                        </svg>
+                                        <p
+                                            class="text-base text-gray-600 dark:text-slate-300 font-medium"
+                                        >
+                                            {t("experience.three.job.title")} at
+                                            {t("experience.three.organization")}
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <svg
+                                            class="w-7 h-7"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 100 100"
+                                        >
+                                            <circle
+                                                cx="50"
+                                                cy="50"
+                                                r="50"
+                                                fill=""></circle>
+                                            <g stroke-linejoin="round">
+                                                <polygon
+                                                    points="44,28 37,36.9 37.9,61.9 49.9,39"
+                                                    fill="#969696"
+                                                    stroke="#969696"
+                                                    stroke-width="0.6"
+                                                ></polygon>
+                                                <polygon
+                                                    points="38.2,34.2 17,64.9 21.9,73.9 35.9,63.4 38.6,64.2 36.4,62"
+                                                    fill="#626262"
+                                                    stroke="#626262"
+                                                    stroke-width="0.6"
+                                                ></polygon>
+                                                <polygon
+                                                    points="54.6,24.2 56,28 51,39 62,59.9 61.2,64.2 63.9,59 64,39"
+                                                    fill="#626262"
+                                                    stroke="#626262"
+                                                    stroke-width="0.6"
+                                                ></polygon>
+                                                <polygon
+                                                    points="49.9,19 42.6,28.6 50,39 36.5,62 51,69.9 62.4,61.9 50.9,39 55.9,26.9"
+                                                    fill="#7b7b7b"
+                                                    stroke="#7b7b7b"
+                                                    stroke-width="0.6"
+                                                ></polygon>
+                                                <polygon
+                                                    points="55.6,25.2 64,38.9 64,59 50.1,70.9 63,63.9 78.6,74.2 83.9,65.9"
+                                                    fill="#505050"
+                                                    stroke="#505050"
+                                                    stroke-width="0.6"
+                                                ></polygon>
+                                            </g>
+                                        </svg>
+                                        <p
+                                            class="text-base text-gray-600 dark:text-slate-300 font-medium"
+                                        >
+                                            {t("experience.two.job.title")} at {
+                                                t("experience.two.organization")
+                                            }
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skill Item 24 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            SOLID Design Principles
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+            >
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff8a00"></stop>
+                        <stop offset="48%" stop-color="#f04432"></stop>
+                        <stop offset="100%" stop-color="#2832a8"></stop>
+                    </linearGradient>
+                </defs>
+
+                <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bg)"
+                ></rect>
+
+                <!-- white logo -->
+                <circle
+                    cx="50"
+                    cy="39"
+                    r="15"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"></circle>
+                <path
+                    d="M35 61
+                                                                                                                                        C37 70, 43 75, 50 75
+                                                                                                                                        C57 75, 63 70, 65 61"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.three.job.title")} at {
+                    t("experience.three.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 25 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-slate-900 mb-2 dark:text-white">
+            REST APIs
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+            >
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff8a00"></stop>
+                        <stop offset="48%" stop-color="#f04432"></stop>
+                        <stop offset="100%" stop-color="#2832a8"></stop>
+                    </linearGradient>
+                </defs>
+
+                <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bg)"
+                ></rect>
+
+                <!-- white logo -->
+                <circle
+                    cx="50"
+                    cy="39"
+                    r="15"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"></circle>
+                <path
+                    d="M35 61
+                                C37 70, 43 75, 50 75
+                                C57 75, 63 70, 65 61"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <div
+                x-data="{ experiencesRAPIModal: false }"
+                class="inline-block"
+                x-cloak
+            >
+                <button
+                    type="button"
+                    class="text-blue-600 dark:text-blue-400 font-medium hover:underline"
+                    @click="experiencesRAPIModal = true"
+                    @keyup.escape="experiencesRAPIModal = false"
+                >
+                    <p
+                        class="text-base text-gray-600 hover:text-blue-600 dark:text-blue-400 font-medium hover:underline cursor-pointer"
+                    >
+                        2 {t("skill.experience")}
+                        {t("experience.three.organization")}
+                        {t("skill.otherAnd")} 1 {t("skill.otherCompany")}
+                    </p>
+                </button>
+                <!-- modal conten -->
+                <div
+                    x-show="experiencesRAPIModal"
+                    x-cloak
+                    tabindex="0"
+                    class="z-50 inset-0 w-full h-full py-6 fixed flex justify-center items-center"
+                >
+                    <div
+                        @click.away="experiencesRAPIModal = false"
+                        class="z-50 relative p-3 mx-auto my-0 w-11/12 md:w-[60%]"
+                        x-show="experiencesRAPIModal"
+                        x-transition:enter="transition duration-500"
+                        x-transition:enter-start="transform opacity-0 -translate-y-4"
+                        x-transition:enter-end="transform opacity-100 translate-y-0"
+                        x-transition:leave="transition -translate-y-4"
+                        x-transition:leave-start="transform opacity-100 translate-y-0"
+                        x-transition:leave-end="transform opacity-0 -translate-y-4"
+                    >
+                        <div
+                            class="bg-white dark:bg-slate-950 dark:text-slate-300 rounded-2xl shadow-lg border border-gray-200 dark:border-slate-700 flex flex-col overflow-hidden"
+                        >
+                            <div
+                                class="flex flex-row justify-between items-center border-b border-gray-200 dark:border-slate-700 px-4 py-2 text-slate-800"
+                            >
+                                <h2
+                                    class="text-2xl font-bold text-gray-900 dark:text-slate-300"
+                                >
+                                    Database Adminstration
+                                </h2>
+                                <button
+                                    @click="experiencesRAPIModal = false"
+                                    class="fill-current h-6 w-6 font-3xl font-bold"
+                                >
+                                    <svg
+                                        class="w-5 h-5 fill-current dark:fill-slate-300"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 640 640"
+                                        ><!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                        <path
+                                            d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"
+                                        ></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- modal content -->
+                            <div
+                                class="p-4 bg-white dark:bg-slate-800/95 dark:text-slate-300"
+                            >
+                                <div class="px-6 py-5 space-y-6">
+                                    <div class="flex items-center gap-2">
+                                        <svg
+                                            class="w-7 h-7"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 100 100"
+                                            width="100"
+                                            height="100"
+                                        >
+                                            <defs>
+                                                <linearGradient
+                                                    id="bg"
+                                                    x1="0%"
+                                                    y1="0%"
+                                                    x2="100%"
+                                                    y2="0%"
+                                                >
+                                                    <stop
+                                                        offset="0%"
+                                                        stop-color="#ff8a00"
+                                                    ></stop>
+                                                    <stop
+                                                        offset="48%"
+                                                        stop-color="#f04432"
+                                                    ></stop>
+                                                    <stop
+                                                        offset="100%"
+                                                        stop-color="#2832a8"
+                                                    ></stop>
+                                                </linearGradient>
+                                            </defs>
+
+                                            <rect
+                                                x="4"
+                                                y="4"
+                                                width="92"
+                                                height="92"
+                                                rx="8"
+                                                fill="url(#bg)"></rect>
+
+                                            <!-- white logo -->
+                                            <circle
+                                                cx="50"
+                                                cy="39"
+                                                r="15"
+                                                fill="none"
+                                                stroke="#fff"
+                                                stroke-width="7"></circle>
+                                            <path
+                                                d="M35 61
+                                                                                                                                                                        C37 70, 43 75, 50 75
+                                                                                                                                                                        C57 75, 63 70, 65 61"
+                                                fill="none"
+                                                stroke="#fff"
+                                                stroke-width="7"
+                                                stroke-linecap="butt"
+                                                stroke-linejoin="round"></path>
+                                        </svg>
+                                        <p
+                                            class="text-base text-gray-600 dark:text-slate-300 font-medium"
+                                        >
+                                            {t("experience.three.job.title")} at
+                                            {t("experience.three.organization")}
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <svg
+                                            class="w-7 h-7"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 100 100"
+                                        >
+                                            <circle
+                                                cx="50"
+                                                cy="50"
+                                                r="50"
+                                                fill=""></circle>
+                                            <g stroke-linejoin="round">
+                                                <polygon
+                                                    points="44,28 37,36.9 37.9,61.9 49.9,39"
+                                                    fill="#969696"
+                                                    stroke="#969696"
+                                                    stroke-width="0.6"
+                                                ></polygon>
+                                                <polygon
+                                                    points="38.2,34.2 17,64.9 21.9,73.9 35.9,63.4 38.6,64.2 36.4,62"
+                                                    fill="#626262"
+                                                    stroke="#626262"
+                                                    stroke-width="0.6"
+                                                ></polygon>
+                                                <polygon
+                                                    points="54.6,24.2 56,28 51,39 62,59.9 61.2,64.2 63.9,59 64,39"
+                                                    fill="#626262"
+                                                    stroke="#626262"
+                                                    stroke-width="0.6"
+                                                ></polygon>
+                                                <polygon
+                                                    points="49.9,19 42.6,28.6 50,39 36.5,62 51,69.9 62.4,61.9 50.9,39 55.9,26.9"
+                                                    fill="#7b7b7b"
+                                                    stroke="#7b7b7b"
+                                                    stroke-width="0.6"
+                                                ></polygon>
+                                                <polygon
+                                                    points="55.6,25.2 64,38.9 64,59 50.1,70.9 63,63.9 78.6,74.2 83.9,65.9"
+                                                    fill="#505050"
+                                                    stroke="#505050"
+                                                    stroke-width="0.6"
+                                                ></polygon>
+                                            </g>
+                                        </svg>
+                                        <p
+                                            class="text-base text-gray-600 dark:text-slate-300 font-medium"
+                                        >
+                                            {t("experience.two.job.title")} at {
+                                                t("experience.two.organization")
+                                            }
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skill Item 26 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            Django REST Framework
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+            >
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff8a00"></stop>
+                        <stop offset="48%" stop-color="#f04432"></stop>
+                        <stop offset="100%" stop-color="#2832a8"></stop>
+                    </linearGradient>
+                </defs>
+
+                <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bg)"
+                ></rect>
+
+                <!-- white logo -->
+                <circle
+                    cx="50"
+                    cy="39"
+                    r="15"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"></circle>
+                <path
+                    d="M35 61
+                                                                                                                                        C37 70, 43 75, 50 75
+                                                                                                                                        C57 75, 63 70, 65 61"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.three.job.title")} at {
+                    t("experience.three.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 27 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            ASP.NET Web API
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+            >
+                <circle cx="50" cy="50" r="50" fill=""></circle>
+                <g stroke-linejoin="round">
+                    <polygon
+                        points="44,28 37,36.9 37.9,61.9 49.9,39"
+                        fill="#969696"
+                        stroke="#969696"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="38.2,34.2 17,64.9 21.9,73.9 35.9,63.4 38.6,64.2 36.4,62"
+                        fill="#626262"
+                        stroke="#626262"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="54.6,24.2 56,28 51,39 62,59.9 61.2,64.2 63.9,59 64,39"
+                        fill="#626262"
+                        stroke="#626262"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="49.9,19 42.6,28.6 50,39 36.5,62 51,69.9 62.4,61.9 50.9,39 55.9,26.9"
+                        fill="#7b7b7b"
+                        stroke="#7b7b7b"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="55.6,25.2 64,38.9 64,59 50.1,70.9 63,63.9 78.6,74.2 83.9,65.9"
+                        fill="#505050"
+                        stroke="#505050"
+                        stroke-width="0.6"></polygon>
+                </g>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.two.job.title")} at {
+                    t("experience.two.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 28 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            Agile Methodologies
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+            >
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff8a00"></stop>
+                        <stop offset="48%" stop-color="#f04432"></stop>
+                        <stop offset="100%" stop-color="#2832a8"></stop>
+                    </linearGradient>
+                </defs>
+
+                <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bg)"
+                ></rect>
+
+                <!-- white logo -->
+                <circle
+                    cx="50"
+                    cy="39"
+                    r="15"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"></circle>
+                <path
+                    d="M35 61
+                                                                                                                                        C37 70, 43 75, 50 75
+                                                                                                                                        C57 75, 63 70, 65 61"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.three.job.title")} at {
+                    t("experience.three.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 29 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            Scrum
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+            >
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff8a00"></stop>
+                        <stop offset="48%" stop-color="#f04432"></stop>
+                        <stop offset="100%" stop-color="#2832a8"></stop>
+                    </linearGradient>
+                </defs>
+
+                <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bg)"
+                ></rect>
+
+                <!-- white logo -->
+                <circle
+                    cx="50"
+                    cy="39"
+                    r="15"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"></circle>
+                <path
+                    d="M35 61
+                                                                                                                                        C37 70, 43 75, 50 75
+                                                                                                                                        C57 75, 63 70, 65 61"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.three.job.title")} at {
+                    t("experience.three.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 30 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            HTML5
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 128 128"
+                id="company-accent-4"
+            >
+                <path fill="#e7e2dc" d="M0 0h128v128H0z"></path>
+                <path fill="#9db3c8" d="M48 16h64v112H48z"></path>
+                <path fill="#788fa5" d="M16 80h32v48H16z"></path>
+                <path fill="#56687a" d="M48 80h32v48H48z"></path>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.one.job.title")} at {
+                    t("experience.one.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 31 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            Cascading Style Sheets (CSS)
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 128 128"
+                id="company-accent-4"
+            >
+                <path fill="#e7e2dc" d="M0 0h128v128H0z"></path>
+                <path fill="#9db3c8" d="M48 16h64v112H48z"></path>
+                <path fill="#788fa5" d="M16 80h32v48H16z"></path>
+                <path fill="#56687a" d="M48 80h32v48H48z"></path>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.one.job.title")} at {
+                    t("experience.one.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 32 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            Bootstrap (Framework)
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 128 128"
+                id="company-accent-4"
+            >
+                <path fill="#e7e2dc" d="M0 0h128v128H0z"></path>
+                <path fill="#9db3c8" d="M48 16h64v112H48z"></path>
+                <path fill="#788fa5" d="M16 80h32v48H16z"></path>
+                <path fill="#56687a" d="M48 80h32v48H48z"></path>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.one.job.title")} at {
+                    t("experience.one.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 33 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-slate-900 mb-2 dark:text-white">
+            JavaScript
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+            >
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff8a00"></stop>
+                        <stop offset="48%" stop-color="#f04432"></stop>
+                        <stop offset="100%" stop-color="#2832a8"></stop>
+                    </linearGradient>
+                </defs>
+
+                <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bg)"
+                ></rect>
+
+                <!-- white logo -->
+                <circle
+                    cx="50"
+                    cy="39"
+                    r="15"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"></circle>
+                <path
+                    d="M35 61
+                                C37 70, 43 75, 50 75
+                                C57 75, 63 70, 65 61"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="7"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <div
+                x-data="{ experiencesJsModal: false }"
+                class="inline-block"
+                x-cloak
+            >
+                <button
+                    type="button"
+                    class="text-blue-600 dark:text-blue-400 font-medium hover:underline"
+                    @click="experiencesJsModal = true"
+                    @keyup.escape="experiencesJsModal = false"
+                >
+                    <p
+                        class="text-base text-gray-600 hover:text-blue-600 dark:text-blue-400 font-medium hover:underline cursor-pointer"
+                    >
+                        2 {t("skill.experience")}
+                        {t("experience.three.organization")}
+                        {t("skill.otherAnd")} 1 {t("skill.otherCompany")}
+                    </p>
+                </button>
+                <!-- modal conten -->
+                <div
+                    x-show="experiencesJsModal"
+                    x-cloak
+                    tabindex="0"
+                    class="z-50 inset-0 w-full h-full py-6 fixed flex justify-center items-center"
+                >
+                    <div
+                        @click.away="experiencesJsModal = false"
+                        class="z-50 relative p-3 mx-auto my-0 w-11/12 md:w-[60%]"
+                        x-show="experiencesJsModal"
+                        x-transition:enter="transition duration-500"
+                        x-transition:enter-start="transform opacity-0 -translate-y-4"
+                        x-transition:enter-end="transform opacity-100 translate-y-0"
+                        x-transition:leave="transition -translate-y-4"
+                        x-transition:leave-start="transform opacity-100 translate-y-0"
+                        x-transition:leave-end="transform opacity-0 -translate-y-4"
+                    >
+                        <div
+                            class="bg-white dark:bg-slate-950 dark:text-slate-300 rounded-2xl shadow-lg border border-gray-200 dark:border-slate-700 flex flex-col overflow-hidden"
+                        >
+                            <div
+                                class="flex flex-row justify-between items-center border-b border-gray-200 dark:border-slate-700 px-4 py-2 text-slate-800"
+                            >
+                                <h2
+                                    class="text-2xl font-bold text-gray-900 dark:text-slate-300"
+                                >
+                                    Database Adminstration
+                                </h2>
+                                <button
+                                    @click="experiencesJsModal = false"
+                                    class="fill-current h-6 w-6 font-3xl font-bold"
+                                >
+                                    <svg
+                                        class="w-5 h-5 fill-current dark:fill-slate-300"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 640 640"
+                                        ><!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                        <path
+                                            d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"
+                                        ></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- modal content -->
+                            <div
+                                class="p-4 bg-white dark:bg-slate-800/95 dark:text-slate-300"
+                            >
+                                <div class="px-6 py-5 space-y-6">
+                                    <div class="flex items-center gap-2">
+                                        <svg
+                                            class="w-7 h-7"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 100 100"
+                                            width="100"
+                                            height="100"
+                                        >
+                                            <defs>
+                                                <linearGradient
+                                                    id="bg"
+                                                    x1="0%"
+                                                    y1="0%"
+                                                    x2="100%"
+                                                    y2="0%"
+                                                >
+                                                    <stop
+                                                        offset="0%"
+                                                        stop-color="#ff8a00"
+                                                    ></stop>
+                                                    <stop
+                                                        offset="48%"
+                                                        stop-color="#f04432"
+                                                    ></stop>
+                                                    <stop
+                                                        offset="100%"
+                                                        stop-color="#2832a8"
+                                                    ></stop>
+                                                </linearGradient>
+                                            </defs>
+
+                                            <rect
+                                                x="4"
+                                                y="4"
+                                                width="92"
+                                                height="92"
+                                                rx="8"
+                                                fill="url(#bg)"></rect>
+
+                                            <!-- white logo -->
+                                            <circle
+                                                cx="50"
+                                                cy="39"
+                                                r="15"
+                                                fill="none"
+                                                stroke="#fff"
+                                                stroke-width="7"></circle>
+                                            <path
+                                                d="M35 61
+                                                                                                                                                                        C37 70, 43 75, 50 75
+                                                                                                                                                                        C57 75, 63 70, 65 61"
+                                                fill="none"
+                                                stroke="#fff"
+                                                stroke-width="7"
+                                                stroke-linecap="butt"
+                                                stroke-linejoin="round"></path>
+                                        </svg>
+                                        <p
+                                            class="text-base text-gray-600 dark:text-slate-300 font-medium"
+                                        >
+                                            {t("experience.three.job.title")} at
+                                            {t("experience.three.organization")}
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <svg
+                                            class="w-7 h-7"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 128 128"
+                                            id="company-accent-4"
+                                        >
+                                            <path
+                                                fill="#e7e2dc"
+                                                d="M0 0h128v128H0z"></path>
+                                            <path
+                                                fill="#9db3c8"
+                                                d="M48 16h64v112H48z"></path>
+                                            <path
+                                                fill="#788fa5"
+                                                d="M16 80h32v48H16z"></path>
+                                            <path
+                                                fill="#56687a"
+                                                d="M48 80h32v48H48z"></path>
+                                        </svg>
+                                        <p
+                                            class="text-base text-gray-600 dark:text-slate-300 font-medium"
+                                        >
+                                            {t("experience.one.job.title")} at
+                                            {t("experience.one.organization")}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skill Item 34 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            jQuery
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 128 128"
+                id="company-accent-4"
+            >
+                <path fill="#e7e2dc" d="M0 0h128v128H0z"></path>
+                <path fill="#9db3c8" d="M48 16h64v112H48z"></path>
+                <path fill="#788fa5" d="M16 80h32v48H16z"></path>
+                <path fill="#56687a" d="M48 80h32v48H48z"></path>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.one.job.title")} at {
+                    t("experience.one.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 35 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            Full-Stack Development
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+            >
+                <circle cx="50" cy="50" r="50" fill=""></circle>
+                <g stroke-linejoin="round">
+                    <polygon
+                        points="44,28 37,36.9 37.9,61.9 49.9,39"
+                        fill="#969696"
+                        stroke="#969696"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="38.2,34.2 17,64.9 21.9,73.9 35.9,63.4 38.6,64.2 36.4,62"
+                        fill="#626262"
+                        stroke="#626262"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="54.6,24.2 56,28 51,39 62,59.9 61.2,64.2 63.9,59 64,39"
+                        fill="#626262"
+                        stroke="#626262"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="49.9,19 42.6,28.6 50,39 36.5,62 51,69.9 62.4,61.9 50.9,39 55.9,26.9"
+                        fill="#7b7b7b"
+                        stroke="#7b7b7b"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="55.6,25.2 64,38.9 64,59 50.1,70.9 63,63.9 78.6,74.2 83.9,65.9"
+                        fill="#505050"
+                        stroke="#505050"
+                        stroke-width="0.6"></polygon>
+                </g>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.two.job.title")} at {
+                    t("experience.two.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 36 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            Git
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 128 128"
+                id="company-accent-4"
+            >
+                <path fill="#e7e2dc" d="M0 0h128v128H0z"></path>
+                <path fill="#9db3c8" d="M48 16h64v112H48z"></path>
+                <path fill="#788fa5" d="M16 80h32v48H16z"></path>
+                <path fill="#56687a" d="M48 80h32v48H48z"></path>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.one.job.title")} at {
+                    t("experience.one.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 37 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            GitHub
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 128 128"
+                id="company-accent-4"
+            >
+                <path fill="#e7e2dc" d="M0 0h128v128H0z"></path>
+                <path fill="#9db3c8" d="M48 16h64v112H48z"></path>
+                <path fill="#788fa5" d="M16 80h32v48H16z"></path>
+                <path fill="#56687a" d="M48 80h32v48H48z"></path>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.one.job.title")} at {
+                    t("experience.one.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 38 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            Gitlab
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 128 128"
+                id="company-accent-4"
+            >
+                <path fill="#e7e2dc" d="M0 0h128v128H0z"></path>
+                <path fill="#9db3c8" d="M48 16h64v112H48z"></path>
+                <path fill="#788fa5" d="M16 80h32v48H16z"></path>
+                <path fill="#56687a" d="M48 80h32v48H48z"></path>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.one.job.title")} at {
+                    t("experience.one.organization")
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 39 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            Microsoft Teams
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+            >
+                <circle cx="50" cy="50" r="50" fill=""></circle>
+                <g stroke-linejoin="round">
+                    <polygon
+                        points="44,28 37,36.9 37.9,61.9 49.9,39"
+                        fill="#969696"
+                        stroke="#969696"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="38.2,34.2 17,64.9 21.9,73.9 35.9,63.4 38.6,64.2 36.4,62"
+                        fill="#626262"
+                        stroke="#626262"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="54.6,24.2 56,28 51,39 62,59.9 61.2,64.2 63.9,59 64,39"
+                        fill="#626262"
+                        stroke="#626262"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="49.9,19 42.6,28.6 50,39 36.5,62 51,69.9 62.4,61.9 50.9,39 55.9,26.9"
+                        fill="#7b7b7b"
+                        stroke="#7b7b7b"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="55.6,25.2 64,38.9 64,59 50.1,70.9 63,63.9 78.6,74.2 83.9,65.9"
+                        fill="#505050"
+                        stroke="#505050"
+                        stroke-width="0.6"></polygon>
+                </g>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.two.job.title")} at {t("experience.two.organization")}
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 40 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            Slack
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+            >
+                <circle cx="50" cy="50" r="50" fill=""></circle>
+                <g stroke-linejoin="round">
+                    <polygon
+                        points="44,28 37,36.9 37.9,61.9 49.9,39"
+                        fill="#969696"
+                        stroke="#969696"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="38.2,34.2 17,64.9 21.9,73.9 35.9,63.4 38.6,64.2 36.4,62"
+                        fill="#626262"
+                        stroke="#626262"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="54.6,24.2 56,28 51,39 62,59.9 61.2,64.2 63.9,59 64,39"
+                        fill="#626262"
+                        stroke="#626262"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="49.9,19 42.6,28.6 50,39 36.5,62 51,69.9 62.4,61.9 50.9,39 55.9,26.9"
+                        fill="#7b7b7b"
+                        stroke="#7b7b7b"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="55.6,25.2 64,38.9 64,59 50.1,70.9 63,63.9 78.6,74.2 83.9,65.9"
+                        fill="#505050"
+                        stroke="#505050"
+                        stroke-width="0.6"></polygon>
+                </g>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.two.job.title")} at {t("experience.two.organization")}
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 41 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            Skype
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+            >
+                <circle cx="50" cy="50" r="50" fill=""></circle>
+                <g stroke-linejoin="round">
+                    <polygon
+                        points="44,28 37,36.9 37.9,61.9 49.9,39"
+                        fill="#969696"
+                        stroke="#969696"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="38.2,34.2 17,64.9 21.9,73.9 35.9,63.4 38.6,64.2 36.4,62"
+                        fill="#626262"
+                        stroke="#626262"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="54.6,24.2 56,28 51,39 62,59.9 61.2,64.2 63.9,59 64,39"
+                        fill="#626262"
+                        stroke="#626262"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="49.9,19 42.6,28.6 50,39 36.5,62 51,69.9 62.4,61.9 50.9,39 55.9,26.9"
+                        fill="#7b7b7b"
+                        stroke="#7b7b7b"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="55.6,25.2 64,38.9 64,59 50.1,70.9 63,63.9 78.6,74.2 83.9,65.9"
+                        fill="#505050"
+                        stroke="#505050"
+                        stroke-width="0.6"></polygon>
+                </g>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.two.job.title")} at {t("experience.two.organization")}
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 42 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            Zoom
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+            >
+                <circle cx="50" cy="50" r="50" fill=""></circle>
+                <g stroke-linejoin="round">
+                    <polygon
+                        points="44,28 37,36.9 37.9,61.9 49.9,39"
+                        fill="#969696"
+                        stroke="#969696"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="38.2,34.2 17,64.9 21.9,73.9 35.9,63.4 38.6,64.2 36.4,62"
+                        fill="#626262"
+                        stroke="#626262"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="54.6,24.2 56,28 51,39 62,59.9 61.2,64.2 63.9,59 64,39"
+                        fill="#626262"
+                        stroke="#626262"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="49.9,19 42.6,28.6 50,39 36.5,62 51,69.9 62.4,61.9 50.9,39 55.9,26.9"
+                        fill="#7b7b7b"
+                        stroke="#7b7b7b"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="55.6,25.2 64,38.9 64,59 50.1,70.9 63,63.9 78.6,74.2 83.9,65.9"
+                        fill="#505050"
+                        stroke="#505050"
+                        stroke-width="0.6"></polygon>
+                </g>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.two.job.title")} at {t("experience.two.organization")}
+            </p>
+        </div>
+    </div>
+
+    <!-- Skill Item 43 -->
+    <div class="border-b border-gray-200 pb-4 mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+            monday.com
+        </h2>
+        <div class="flex items-center gap-2">
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+            >
+                <circle cx="50" cy="50" r="50" fill=""></circle>
+                <g stroke-linejoin="round">
+                    <polygon
+                        points="44,28 37,36.9 37.9,61.9 49.9,39"
+                        fill="#969696"
+                        stroke="#969696"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="38.2,34.2 17,64.9 21.9,73.9 35.9,63.4 38.6,64.2 36.4,62"
+                        fill="#626262"
+                        stroke="#626262"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="54.6,24.2 56,28 51,39 62,59.9 61.2,64.2 63.9,59 64,39"
+                        fill="#626262"
+                        stroke="#626262"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="49.9,19 42.6,28.6 50,39 36.5,62 51,69.9 62.4,61.9 50.9,39 55.9,26.9"
+                        fill="#7b7b7b"
+                        stroke="#7b7b7b"
+                        stroke-width="0.6"></polygon>
+                    <polygon
+                        points="55.6,25.2 64,38.9 64,59 50.1,70.9 63,63.9 78.6,74.2 83.9,65.9"
+                        fill="#505050"
+                        stroke="#505050"
+                        stroke-width="0.6"></polygon>
+                </g>
+            </svg>
+            <p class="text-base text-gray-600 dark:text-slate-300 font-medium">
+                {t("experience.two.job.title")} at {t("experience.two.organization")}
+            </p>
+        </div>
+    </div>
+</div>
