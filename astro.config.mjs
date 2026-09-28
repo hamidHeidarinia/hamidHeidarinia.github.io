@@ -17,7 +17,7 @@ const isBuild = process.env.NODE_ENV === "production";
 
 const BASE_URL = isBuild ? LIVE_URL : LOCALHOST_URL;
 
-const SITE_LOCALES = ["en", "az", "azarab", "tr", "fa"];
+const SITE_LOCALES = ["en", "az", "azarab", "tr", "otk", "fa"];
 const DEFAULT_LOCALE = "en";
 
 // https://astro.build/config
@@ -95,6 +95,18 @@ export default defineConfig({
             options: {
                 variants: [{
                     src: ["./src/assets/fonts/IRANSans/IRANSANSWEB.woff2"],
+                    weight: "normal",
+                    style: "normal",
+                }, ],
+            },
+        },
+        {
+            provider: fontProviders.local(),
+            name: "KokTuruk",
+            cssVariable: "--font-iransSans",
+            options: {
+                variants: [{
+                    src: ["./src/assets/fonts/KokTuruk/KokTurukUnicodeTugrulCavdar.woff2"],
                     weight: "normal",
                     style: "normal",
                 }, ],

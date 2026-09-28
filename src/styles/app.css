@@ -42,6 +42,15 @@ Persian font: IRANSans
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'KokTuruk';
+    src: url('../assets/fonts/KokTuruk/KokTurukUnicodeTugrulCavdar.woff2') format('woff2'),
+        url('../assets/fonts/KokTuruk/KokTurukUnicodeTugrulCavdar.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* ===================================
 English font: Calibri
 =================================== */
