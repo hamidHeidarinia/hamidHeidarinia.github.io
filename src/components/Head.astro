@@ -18,6 +18,8 @@ interface Props {
 }
 const { locale } = Astro.props;
 const t = useTranslations(locale);
+const lang = Astro.currentLocale ?? "en";
+const manifest = `/manifest-${lang}.webmanifest`;
 ---
 
 <head>
@@ -68,14 +70,15 @@ const t = useTranslations(locale);
     />
 
     <!-- Manifest -->
-    <link rel="manifest" href="./manifest.json" />
+    <!-- <link rel="manifest" href="./manifest.json" /> -->
+    <link rel="manifest" href={manifest} />
 
     <!-- icons -->
     <link rel="icon" href={Favicon.src} />
     <link rel="apple-touch-icon" sizes="180x180" href={AppleTouchIcon.src} />
     <link rel="icon" type="image/png" sizes="32x32" href={Favicon32.src} />
     <link rel="icon" type="image/png" sizes="16x16" href={Favicon16.src} />
-    <link rel="manifest" href="/site.webmanifest" />
+    <!-- <link rel="manifest" href="/site.webmanifest" /> -->
 
     <!-- <script src="./assets/lib/tailwindcss.js"></script> -->
 
@@ -99,7 +102,7 @@ const t = useTranslations(locale);
     <Font cssVariable="--font-calibri" />
 
     <!-- <link rel="stylesheet" href="./assets/css/app.css" /> -->
-    
+
     <script is:inline>
         // set theme before paint to avoid flash
         if (
