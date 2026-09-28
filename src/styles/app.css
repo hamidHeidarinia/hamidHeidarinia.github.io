@@ -1,6 +1,13 @@
 @import "tailwindcss";
 /* Class-based dark mode: toggled via Alpine on <html class="dark"> */
 @custom-variant dark (&:where(.dark, .dark *));
+ @layer base {
+
+     html[dir="rtl"] body,
+     html[dir="rtl"] body * {
+         direction: rtl;
+     }
+ }
 /* ===================================
 Persian font: IRANSans
 =================================== */
