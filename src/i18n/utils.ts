@@ -8,6 +8,6 @@ export function getLocaleFromUrl(url: URL): Locale {
 
 export function useTranslations(locale: Locale) {
   return function t(key: keyof (typeof ui)[typeof defaultLocale]) {
-    return ui[locale][key] ?? ui[defaultLocale][key];
+    return (ui as any)[locale]?.[key] ?? (ui as any)[defaultLocale]?.[key] ?? key;
   };
 }
