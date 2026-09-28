@@ -1,1 +1,22 @@
-fa
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import About from "../../components/About.astro";
+import Experiences from "../../components/Experiences.astro";
+import Educations from "../../components/Educations.astro";
+import Languages from "../../components/Languages.astro";
+import Projects from "../../components/Projects.astro";
+import { useTranslations } from "../../i18n/utils";
+
+const locale = "fa" as const;
+const t = useTranslations(locale);
+---
+
+<Layout locale={locale} title={`${t("site.name")} — ${t("site.tagline")}`}>
+    <Header locale={locale} currentPath={Astro.url.pathname} />
+    <About locale={locale} currentPath={Astro.url.pathname} />
+    <Experiences locale={locale} currentPath={Astro.url.pathname} />
+    <Educations locale={locale} currentPath={Astro.url.pathname} />
+    <Projects locale={locale} currentPath={Astro.url.pathname} />
+    <Languages locale={locale} currentPath={Astro.url.pathname} />
+</Layout>
