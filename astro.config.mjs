@@ -42,15 +42,20 @@ export default defineConfig({
         sitemap({
             filter: (page) =>
                 page !== `${LIVE_URL}/` &&
+                page !== `${LIVE_URL}/en/` &&
                 page !== `${LIVE_URL}/az/` &&
-                page !== `${LIVE_URL}/fa/` &&
-                page !== `${LIVE_URL}/tr/`,
+                page !== `${LIVE_URL}/azarab/` &&
+                page !== `${LIVE_URL}/tr/` &&
+                page !== `${LIVE_URL}/otk/` &&
+                page !== `${LIVE_URL}/fa/`,
             i18n: {
                 defaultLocale: DEFAULT_LOCALE,
                 locales: {
-                    en: "en-US",
-                    az: "az-AZ",
+                    en: "en",
+                    az: "az",
+                    azarab: "az-Arab",
                     tr: "tr-TR",
+                    otk: "otk",
                     fa: "fa-IR",
                 },
             },
