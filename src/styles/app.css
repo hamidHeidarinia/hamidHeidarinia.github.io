@@ -8,6 +8,10 @@
          direction: rtl;
      }
  }
+
+ html[dir="rtl"] svg.arrowIcon {
+    transform: rotate(180deg);
+ }
 /* ===================================
 Persian font: IRANSans
 =================================== */
