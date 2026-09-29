@@ -3,7 +3,7 @@ export const languages = {
   az: { label: "az", native: "Azərbaycan", dir: "ltr", htmlLang: "az" },
   azarab: { label: "azarab", native: "تورکچه", dir: "rtl", htmlLang: "az-Arab" },
   tr: { label: "tr", native: "Türkçe", dir: "ltr", htmlLang: "tr" },
-  otk: { label: "otk", native: "𐰆𐰺𐰴𐰆𐰣", dir: "rtl", htmlLang: "otk" },
+  otk: { label: "otk", native: "𐰆𐰺𐰴𐰣", dir: "rtl", htmlLang: "otk" },
   fa: { label: "fa", native: "فارسی", dir: "rtl", htmlLang: "fa" },
 } as const;
 
