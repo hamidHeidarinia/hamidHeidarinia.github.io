@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://hamidheidarinia.github.io/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://hamidheidarinia.github.io/en/skills/" />
+    <xhtml:link rel="alternate" hreflang="az-Latn-AZ"
+      href="https://hamidheidarinia.github.io/az/" />
+    <xhtml:link rel="alternate" hreflang="az-Latn-AZ"
+      href="https://hamidheidarinia.github.io/az/skills/" />
+    <xhtml:link rel="alternate" hreflang="az-Arab-IR"
+      href="https://hamidheidarinia.github.io/azarab/" />
+    <xhtml:link rel="alternate" hreflang="az-Arab-IR"
+      href="https://hamidheidarinia.github.io/azarab/skills/" />
+    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://hamidheidarinia.github.io/tr/" />
+    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://hamidheidarinia.github.io/tr/skills/" />
+    <xhtml:link rel="alternate" hreflang="otk" href="https://hamidheidarinia.github.io/otk/" />
+    <xhtml:link rel="alternate" hreflang="otk" href="https://hamidheidarinia.github.io/otk/skills/" />
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://hamidheidarinia.github.io/fa/" />
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://hamidheidarinia.github.io/fa/skills/" />
+  </url>
+</urlset>

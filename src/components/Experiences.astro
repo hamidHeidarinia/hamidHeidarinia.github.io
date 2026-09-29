@@ -1,0 +1,405 @@
+---
+import { useTranslations } from "../i18n/utils";
+
+interface Props {
+    locale: Locale;
+}
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+const moreText = t("experience.show.more");
+const lessText = t("experience.show.less");
+---
+
+<!-- ============ EXPERIENCE ============ -->
+<div
+    class="px-4 sm:px-8 md:px-16 py-6 sm:py-8 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300"
+>
+    <h2
+        class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-5 sm:mb-6"
+    >
+        {t("experiences.title")}
+    </h2>
+
+    <!-- SaaS Stealth Startup -->
+    <div class="flex gap-3 sm:gap-4" x-data="{ expanded: false }">
+        <svg
+            class="w-10 h-10 sm:w-11 sm:h-11 rounded-md flex items-center justify-center text-white font-bold shrink-0"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 100"
+            width="100"
+            height="100"
+        >
+            <defs>
+                <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#ff8a00"></stop>
+                    <stop offset="48%" stop-color="#f04432"></stop>
+                    <stop offset="100%" stop-color="#2832a8"></stop>
+                </linearGradient>
+            </defs>
+
+            <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bg)"
+            ></rect>
+
+            <!-- white logo -->
+            <circle
+                cx="50"
+                cy="39"
+                r="15"
+                fill="none"
+                stroke="#fff"
+                stroke-width="7"></circle>
+            <path
+                d="M35 61
+                                                            C37 70, 43 75, 50 75
+                                                            C57 75, 63 70, 65 61"
+                fill="none"
+                stroke="#fff"
+                stroke-width="7"
+                stroke-linecap="butt"
+                stroke-linejoin="round"></path>
+        </svg>
+        <div class="flex-1 min-w-0">
+            <p
+                class="font-semibold text-slate-900 dark:text-white text-sm sm:text-base"
+            >
+                {t("experience.three.job.title")}
+            </p>
+            <p class="text-slate-700 dark:text-slate-300 text-sm sm:text-base">
+                {t("experience.three.organization")} &nbsp;•&nbsp; {
+                    t("experience.three.employment.type")
+                }
+            </p>
+            <p
+                class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5"
+                id="firstExRecord"
+                data-start={t("experience.three.start.date")}
+                data-end={t("experience.three.end.date")}
+                x-init="formatDateRange('firstExRecord')"
+            >
+            </p>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+                {t("experience.three.location")} &nbsp;•&nbsp; {
+                    t("experience.three.location.type")
+                }
+            </p>
+
+            <div
+                class="text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed mt-3 space-y-3 max-w-3xl"
+            >
+                <p>
+                    {t("experience.three.highlights.one")}
+                </p>
+                <div x-show="expanded" x-cloak x-transition>
+                    <p>
+                        {t("experience.three.highlights.three")}
+                    </p>
+                    <p class="">
+                        {t("experience.three.highlights.foure")}
+                    </p>
+                    <p class="">
+                        {t("experience.three.highlights.five")}
+                    </p>
+                    <p class="">
+                        {t("experience.three.highlights.six")}
+                    </p>
+                    <p class="">
+                        {t("experience.three.highlights.seven")}
+                    </p>
+                    <p class="">
+                        {t("experience.three.highlights.eight")}
+                    </p>
+                    <p class="">
+                        {t("experience.three.highlights.nine")}
+                    </p>
+                    <p class="">
+                        {t("experience.three.highlights.ten")}
+                    </p>
+                </div>
+                <p
+                    x-show="!expanded"
+                    class="text-slate-500 dark:text-slate-500"
+                >
+                    {t("experience.three.highlights.two")}
+                </p>
+            </div>
+            <br />
+            <button
+                @click="expanded = !expanded"
+                class="border border-slate-800 px-[1rem] py-[.5rem] focus-ring flex items-center gap-1 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white rounded-full"
+            >
+                <span
+                    x-text={`expanded ? ${JSON.stringify(lessText)} : ${JSON.stringify(moreText)}`}
+                ></span>
+                <svg
+                    class="w-4 h-4 transition-transform"
+                    :class="expanded && 'rotate-180'"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                >
+                    <path d="M6 9l6 6 6-6"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Senior Backend Software Engineer | Technical Team Lead | Database Administrator (DBA) -->
+    <div class="flex gap-3 sm:gap-4 mt-5" x-data="{ expanded: false }">
+        <svg
+            class="w-10 h-10 sm:w-11 sm:h-11 rounded-md flex items-center justify-center text-white font-bold shrink-0"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 100"
+        >
+            <circle cx="50" cy="50" r="50" fill=""></circle>
+            <g stroke-linejoin="round">
+                <polygon
+                    points="44,28 37,36.9 37.9,61.9 49.9,39"
+                    fill="#969696"
+                    stroke="#969696"
+                    stroke-width="0.6"></polygon>
+                <polygon
+                    points="38.2,34.2 17,64.9 21.9,73.9 35.9,63.4 38.6,64.2 36.4,62"
+                    fill="#626262"
+                    stroke="#626262"
+                    stroke-width="0.6"></polygon>
+                <polygon
+                    points="54.6,24.2 56,28 51,39 62,59.9 61.2,64.2 63.9,59 64,39"
+                    fill="#626262"
+                    stroke="#626262"
+                    stroke-width="0.6"></polygon>
+                <polygon
+                    points="49.9,19 42.6,28.6 50,39 36.5,62 51,69.9 62.4,61.9 50.9,39 55.9,26.9"
+                    fill="#7b7b7b"
+                    stroke="#7b7b7b"
+                    stroke-width="0.6"></polygon>
+                <polygon
+                    points="55.6,25.2 64,38.9 64,59 50.1,70.9 63,63.9 78.6,74.2 83.9,65.9"
+                    fill="#505050"
+                    stroke="#505050"
+                    stroke-width="0.6"></polygon>
+            </g>
+        </svg>
+
+        <div class="flex-1 min-w-0">
+            <p
+                class="font-semibold text-slate-900 dark:text-white text-sm sm:text-base"
+            >
+                {t("experience.two.job.title")}
+            </p>
+            <p class="text-slate-700 dark:text-slate-300 text-sm sm:text-base">
+                {t("experience.two.organization")} &nbsp;•&nbsp; {
+                    t("experience.two.employment.type")
+                }
+            </p>
+            <p
+                class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5"
+                id="secondExRecord"
+                data-start={t("experience.two.start.date")}
+                data-end={t("experience.two.end.date")}
+                x-init="formatDateRange('secondExRecord')"
+            >
+            </p>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+                {t("experience.two.location")} &nbsp;•&nbsp; {
+                    t("experience.two.location.type")
+                }
+            </p>
+
+            <div
+                class="text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed mt-3 space-y-3 max-w-3xl"
+            >
+                <p class="break-words">
+                    {t("experience.two.highlights.one")}
+                </p>
+                <p class="font-bold p-0 m-0 mt-4">
+                    {t("experience.two.highlights.two")}
+                </p>
+                <p class="p-0 m-0">
+                    {t("experience.two.highlights.three")}
+                </p>
+                <p class="p-0 m-0">
+                    {t("experience.two.highlights.foure")}
+                </p>
+                <div x-show="expanded" x-cloak x-transition>
+                    <p class="">
+                        {t("experience.two.highlights.six")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.seven")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.eight")}
+                    </p>
+                    <p class="font-bold mt-4">
+                        {t("experience.two.highlights.nine")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.ten")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.eleven")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.twelve")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.thirteen")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.fourteen")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.fifteen")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.sixteen")}
+                    </p>
+                    <p class="font-bold mt-4">
+                        {t("experience.two.highlights.seventeen")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.eighteen")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.nineteen")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.twenty")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.twentyOne")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.twentyTwo")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.twentyThree")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.twentyFoure")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.twentyFive")}
+                    </p>
+                    <p class="">
+                        {t("experience.two.highlights.twentySix")}
+                    </p>
+                </div>
+
+                <p
+                    x-show="!expanded"
+                    class="text-slate-500 dark:text-slate-500"
+                >
+                    {t("experience.two.highlights.five")}
+                </p>
+            </div>
+            <br />
+            <button
+                @click="expanded = !expanded"
+                class="border border-slate-800 px-[1rem] py-[.5rem] focus-ring flex items-center gap-1 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white rounded-full"
+            >
+                <span
+                    x-text={`expanded ? ${JSON.stringify(lessText)} : ${JSON.stringify(moreText)}`}
+                ></span>
+                <svg
+                    class="w-4 h-4 transition-transform"
+                    :class="expanded && 'rotate-180'"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                >
+                    <path d="M6 9l6 6 6-6"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Full-Stack Web Developer -->
+    <div class="flex gap-3 sm:gap-4 mt-5" x-data="{ expanded: false }">
+        <svg
+            class="w-10 h-10 sm:w-11 sm:h-11 rounded-md flex items-center justify-center text-white font-bold shrink-0"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 128 128"
+            id="company-accent-4"
+        >
+            <path fill="#e7e2dc" d="M0 0h128v128H0z"></path>
+            <path fill="#9db3c8" d="M48 16h64v112H48z"></path>
+            <path fill="#788fa5" d="M16 80h32v48H16z"></path>
+            <path fill="#56687a" d="M48 80h32v48H48z"></path>
+        </svg>
+        <div class="flex-1 min-w-0">
+            <p
+                class="font-semibold text-slate-900 dark:text-white text-sm sm:text-base"
+            >
+                {t("experience.one.job.title")}
+            </p>
+            <p class="text-slate-700 dark:text-slate-300 text-sm sm:text-base">
+                {t("experience.one.organization")} &nbsp;•&nbsp; {
+                    t("experience.one.employment.type")
+                }
+            </p>
+            <p
+                class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5"
+                id="thirdExRecord"
+                data-start={t("experience.one.start.date")}
+                data-end={t("experience.one.end.date")}
+                x-init="formatDateRange('thirdExRecord')"
+            >
+            </p>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+                {t("experience.one.location")} &nbsp;•&nbsp; {
+                    t("experience.one.location.type")
+                }
+            </p>
+
+            <div
+                class="text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed mt-3 space-y-3 max-w-3xl"
+            >
+                <p class="p-0 m-0">
+                    {t("experience.one.highlights.one")}
+                </p>
+                <p class="p-0 m-0">
+                    {t("experience.one.highlights.two")}
+                </p>
+                <p class="p-0 m-0">
+                    {t("experience.one.highlights.three")}
+                </p>
+                <div x-show="expanded" x-cloak x-transition>
+                    <p class="p-0 m-0">
+                        {t("experience.one.highlights.five")}
+                    </p>
+                    <p class="p-0 m-0">
+                        {t("experience.one.highlights.six")}
+                    </p>
+                </div>
+                <p
+                    x-show="!expanded"
+                    class="text-slate-500 dark:text-slate-500"
+                >
+                    {t("experience.one.highlights.foure")}
+                </p>
+            </div>
+            <br />
+            <button
+                @click="expanded = !expanded"
+                class="border border-slate-800 px-[1rem] py-[.5rem] focus-ring flex items-center gap-1 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white rounded-full"
+            >
+                <span
+                    x-text={`expanded ? ${JSON.stringify(lessText)} : ${JSON.stringify(moreText)}`}
+                ></span>
+                <svg
+                    class="w-4 h-4 transition-transform"
+                    :class="expanded && 'rotate-180'"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                >
+                    <path d="M6 9l6 6 6-6"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>

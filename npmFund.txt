@@ -1,0 +1,60 @@
+hamidheidarinia.github.io@1.0.0
+├─┬ https://opencollective.com/astrodotbuild
+│ │ └── astro@7.3.5
+│ ├── https://github.com/sponsors/sibiraj-s
+│ │   └── ci-info@4.4.0
+│ ├── https://opencollective.com/express
+│ │   └── cookie@2.0.1
+│ ├─┬ https://github.com/privatenumber/get-tsconfig?sponsor=1
+│ │ │ └── get-tsconfig@5.0.0-beta.4
+│ │ └── https://github.com/privatenumber/resolve-pkg-maps?sponsor=1
+│ │     └── resolve-pkg-maps@1.0.0
+│ ├── https://github.com/sponsors/puzrin
+│ │   └── js-yaml@4.3.2
+│ ├── https://github.com/sponsors/sxzz
+│ │   └── obug@3.0.0, verkit@0.4.1
+│ ├── https://github.com/sponsors/sindresorhus
+│ │   └── p-limit@7.3.3, yocto-queue@1.2.2, p-queue@9.3.3, p-timeout@7.0.2, is-plain-obj@4.1.0, is-docker@4.0.0
+│ ├── https://github.com/sponsors/cyyynthia
+│ │   └── smol-toml@1.9.0
+│ ├─┬ https://opencollective.com/svgo
+│ │ │ └── svgo@4.1.0
+│ │ └─┬ https://github.com/sponsors/fb55
+│ │   │ └── css-select@6.0.0, domelementtype@2.3.0, css-what@7.0.0
+│ │   ├── https://github.com/fb55/domhandler?sponsor=1
+│ │   │   └── domhandler@5.0.3
+│ │   ├─┬ https://github.com/fb55/domutils?sponsor=1
+│ │   │ │ └── domutils@3.2.2
+│ │   │ └─┬ https://github.com/cheeriojs/dom-serializer?sponsor=1
+│ │   │   │ └── dom-serializer@2.0.0
+│ │   │   └── https://github.com/fb55/entities?sponsor=1
+│ │   │       └── entities@4.5.0
+│ │   └── https://github.com/fb55/nth-check?sponsor=1
+│ │       └── nth-check@2.1.1
+│ ├── https://opencollective.com/libvips
+│ │   └── sharp@0.35.4, @img/sharp-libvips-linux-x64@1.3.3, @img/sharp-libvips-linuxmusl-x64@1.3.3, @img/sharp-linux-x64@0.35.4, @img/sharp-linuxmusl-x64@0.35.4
+│ ├── https://opencollective.com/unified
+│ │   └── retext-smartypants@6.2.0, nlcst-to-string@4.0.0, unist-util-visit@5.1.0, unist-util-is@6.0.1, unist-util-visit-parents@6.0.2, unified@11.0.5, vfile@6.0.3, vfile-message@4.0.3, unist-util-stringify-position@4.0.0, hast-util-to-html@9.0.5, hast-util-whitespace@3.0.0, mdast-util-to-hast@13.2.1, unist-util-position@5.0.0
+│ ├── https://paulmillr.com/funding/
+│ │   └── chokidar@5.0.0, readdirp@5.1.1
+│ ├── https://github.com/sponsors/jonschlinkert
+│ │   └── picomatch@2.3.2, picomatch@4.0.7
+│ └── https://github.com/sponsors/brc-dd
+│     └── iron-webcrypto@1.2.1
+├── https://github.com/sponsors/colinhacks
+│   └── zod@4.6.5
+├─┬ https://github.com/vitejs/vite?sponsor=1
+│ │ └── vite@8.3.1
+│ ├── https://opencollective.com/parcel
+│ │   └── lightningcss@1.33.0, lightningcss-linux-x64-gnu@1.33.0, lightningcss-linux-x64-musl@1.33.0, lightningcss@1.32.0, lightningcss-linux-x64-gnu@1.32.0, lightningcss-linux-x64-musl@1.32.0
+│ ├─┬ https://opencollective.com/postcss/
+│ │ │ └── postcss@8.5.28
+│ │ └── https://github.com/sponsors/ai
+│ │     └── nanoid@3.3.19
+│ ├── https://github.com/sponsors/SuperchupuDev
+│ │   └── tinyglobby@0.2.17
+│ └── https://github.com/sponsors/oxc-project
+│     └── @oxc-project/types@0.151.0
+└── https://opencollective.com/webpack
+    └── tapable@2.3.3
+

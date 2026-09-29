@@ -1,0 +1,41 @@
+---
+import { useTranslations } from "../i18n/utils";
+
+interface Props {
+    locale: Locale;
+}
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+const lang = Astro.currentLocale ?? "en";
+---
+
+<footer class="px-4 sm:px-8 md:px-16 py-6 sm:py-8 pb-10 sm:pb-16">
+    <div class="max-w-2xl mx-auto text-center">
+        <p class="text-xs text-gray-400 border-t border-gray-800 pt-4">
+            &copy; {t("footer.start.year")} - <span id="year"></span> &nbsp;
+            {t("footer.createdBy")} &nbsp;
+            <strong class="text-gray-500 dark:text-gray-200">{t("header.fullname")}</strong>. {
+                t("footer.content")
+            }
+        </p>
+    </div>
+</footer>
+
+<script define:vars={{ lang }}>
+    window.currentYear = (lang) => {
+        if (lang == "fa") {
+            const shamsiYear = new Intl.DateTimeFormat(
+                "fa-IR-u-ca-persian-nu-latn",
+                {
+                    year: "numeric",
+                },
+            ).format(new Date());
+            document.getElementById("year").textContent = shamsiYear;
+        } else {
+            document.getElementById("year").textContent =
+                new Date().getFullYear();
+        }
+    };
+
+    window.currentYear(lang);
+</script>

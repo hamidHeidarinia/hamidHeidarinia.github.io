@@ -1,0 +1,22 @@
+---
+// Component Script (JavaScript)
+---
+
+<script>
+    import "../scripts/app.js";
+</script>
+
+<script is:inline>
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+            navigator.serviceWorker
+                .register("/serviceworker.js", { scope: "/" })
+                .then(() =>
+                    console.log("Service Worker registered successfully."),
+                )
+                .catch((error) =>
+                    console.error("Service Worker registration failed:", error),
+                );
+        });
+    }
+</script>
