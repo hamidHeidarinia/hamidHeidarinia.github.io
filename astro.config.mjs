@@ -89,37 +89,47 @@ export default defineConfig({
 
     fonts: [{
             provider: fontProviders.local(),
-            name: "Calibri",
-            cssVariable: "--font-calibri",
+            name: "IRANSans",
+            cssVariable: "--font-iranssans",
             options: {
                 variants: [{
-                    src: ["./src/assets/fonts/Calibri/calibri-regular.woff2"],
-                    weight: "normal",
-                    style: "normal",
-                }, ],
+                        weight: 400,
+                        style: "normal",
+                        src: ["./src/assets/fonts/IRANSans/IRANSans_Medium.woff2"]
+                    },
+                    {
+                        weight: 700,
+                        style: "normal",
+                        src: ["./src/assets/fonts/IRANSans/IRANSans_Bold.woff2"]
+                    },
+                ],
             },
         },
         {
             provider: fontProviders.local(),
-            name: "IRANSans",
-            cssVariable: "--font-iransSans",
+            name: "Calibri",
+            cssVariable: "--font-calibri",
             options: {
                 variants: [{
-                    src: ["./src/assets/fonts/IRANSans/IRANSANSWEB.woff2"],
-                    weight: "normal",
+                    weight: 400,
                     style: "normal",
+                    src: ["./src/assets/fonts/Calibri/calibri-regular.woff2"]
+                }, {
+                    weight: 700,
+                    style: "normal",
+                    src: ["./src/assets/fonts/Calibri/calibri-bold.woff2"]
                 }, ],
             },
         },
         {
             provider: fontProviders.local(),
             name: "KokTuruk",
-            cssVariable: "--font-iransSans",
+            cssVariable: "--font-kokturuk",
             options: {
                 variants: [{
-                    src: ["./src/assets/fonts/KokTuruk/KokTurukUnicodeTugrulCavdar.woff2"],
-                    weight: "normal",
+                    weight: 400,
                     style: "normal",
+                    src: ["./src/assets/fonts/KokTuruk/KokTurukUnicodeTugrulCavdar.woff2"]
                 }, ],
             },
         },
