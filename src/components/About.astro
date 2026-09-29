@@ -22,13 +22,13 @@ const skillsUrl = getRelativeLocaleUrl(currentLocale, "skills");
     <div
         class="text-sm sm:text-lg text-slate-700 dark:text-slate-300 leading-relaxed space-y-4 max-w-4xl"
     >
-        <p class="p-0 m-0">
+        <p class="p-0 m-0 break-words">
             {t("about.text.part.one")}
         </p>
-        <p class="p-0 m-0">
+        <p class="p-0 m-0 break-words">
             {t("about.text.part.two")}
         </p>
-        <p class="p-0 m-0">
+        <p class="p-0 m-0 break-words">
             {t("about.text.part.three")}
         </p>
     </div>
@@ -64,7 +64,8 @@ const skillsUrl = getRelativeLocaleUrl(currentLocale, "skills");
                     </p>
                 </div>
             </div>
-            <svg id=""
+            <svg
+                id=""
                 class="arrowIcon w-5 h-5 fill-slate-500 dark:fill-slate-400 group-hover:translate-x-1 transition-transform shrink-0"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
