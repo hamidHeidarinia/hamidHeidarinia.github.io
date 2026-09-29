@@ -1,17 +1,19 @@
 @import "tailwindcss";
 /* Class-based dark mode: toggled via Alpine on <html class="dark"> */
 @custom-variant dark (&:where(.dark, .dark *));
- @layer base {
 
-     html[dir="rtl"] body,
-     html[dir="rtl"] body * {
-         direction: rtl;
-     }
- }
+@layer base {
 
- html[dir="rtl"] svg.arrowIcon {
+    html[dir="rtl"] body,
+    html[dir="rtl"] body * {
+        direction: rtl;
+    }
+}
+
+html[dir="rtl"] svg.arrowIcon {
     transform: rotate(180deg);
- }
+}
+
 /* ===================================
 Persian font: IRANSans
 =================================== */
@@ -43,9 +45,9 @@ Persian font: IRANSans
 }
 
 @font-face {
-    font-family: 'KokTuruk';
-    src: url('../assets/fonts/KokTuruk/KokTurukUnicodeTugrulCavdar.woff2') format('woff2'),
-        url('../assets/fonts/KokTuruk/KokTurukUnicodeTugrulCavdar.woff') format('woff');
+    font-family: 'IRANSans';
+    src: url('../assets/fonts/IRANSans/IRANSans(FaNum)_Medium.woff2') format('woff2'),
+        url('../assets/fonts/IRANSans/IRANSans(FaNum)_Medium.woff') format('woff');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -54,6 +56,7 @@ Persian font: IRANSans
 /* ===================================
 English font: Calibri
 =================================== */
+
 @font-face {
     font-family: 'Carlito';
     src: url('../assets/fonts/Calibri/calibri-regular.woff2') format('woff2'),
@@ -73,12 +76,26 @@ English font: Calibri
 }
 
 /* ===================================
+Ruhun font: Kok turuk
+=================================== */
+
+@font-face {
+    font-family: 'KokTuruk';
+    src: url('../assets/fonts/KokTuruk/KokTurukUnicodeTugrulCavdar.woff2') format('woff2'),
+        url('../assets/fonts/KokTuruk/KokTurukUnicodeTugrulCavdar.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ===================================
 Variables and general operations
 =================================== */
 :root {
     --font-rtl: 'IRANSans';
     --font-ltr: 'Carlito';
 }
+
 /* 
 * {
     margin: 0;
