@@ -88,6 +88,11 @@ export default defineConfig({
                         style: "normal",
                         src: ["./src/assets/fonts/IRANSans/IRANSans_Bold.woff2"]
                     },
+                    {
+                        weight: 400,
+                        style: "normal",
+                        src: ["./src/assets/fonts/IRANSans/IRANSans(FaNum)_Medium.woff2"]
+                    },
                 ],
             },
         },
