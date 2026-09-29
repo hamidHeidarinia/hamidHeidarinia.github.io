@@ -25,7 +25,7 @@ const lang = Astro.currentLocale ?? "en";
     window.currentYear = (lang) => {
         if (lang == "fa") {
             const shamsiYear = new Intl.DateTimeFormat(
-                "fa-IR-u-ca-persian-nu-latn",
+                "fa-IR-u-ca-persian",
                 {
                     year: "numeric",
                 },
