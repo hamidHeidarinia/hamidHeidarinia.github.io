@@ -1,0 +1,177 @@
+---
+import "../styles/app.css";
+
+import { errors, getLangFromPath, rtlLocales, type Locale } from '../i18n/errors';
+
+interface Props {
+  code: '404' | '500';
+  lang?: Locale; // اگر ندهی از روی URL تشخیص داده می‌شود
+}
+
+const { code, lang: langProp } = Astro.props;
+const lang = langProp ?? getLangFromPath(Astro.url.pathname);
+const t = errors[lang];
+const dir = rtlLocales.includes(lang) ? 'rtl' : 'ltr';
+const is500 = code === '500';
+const homeHref = `/${lang}/`;
+
+// کلاس‌ها کامل نوشته شده‌اند تا Tailwind در build آن‌ها را پیدا کند
+const theme = is500
+  ? { glow1: 'bg-rose-600/30', glow2: 'bg-orange-500/20' }
+  : { glow1: 'bg-violet-600/30', glow2: 'bg-cyan-500/20' };
+
+const icons = {
+  home: 'M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75',
+  back: 'M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18',
+  refresh: 'M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99',
+};
+
+const primaryClass =
+  'group w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-white hover:bg-slate-200 transition-colors px-7 py-3.5 font-semibold text-slate-900 shadow-xl shadow-white/10 cursor-pointer';
+const secondaryClass =
+  'w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-slate-800/60 hover:bg-slate-800 active:bg-slate-900 transition-colors px-7 py-3.5 font-semibold text-slate-200 border border-slate-700 backdrop-blur cursor-pointer';
+const manifest = `/manifest-${lang}.webmanifest`;
+
+---
+
+<!doctype html>
+<html lang={lang} dir={dir}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>{code} - {t[code].title}</title>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Vazirmatn:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  /> -->
+
+    <script>
+        import "../scripts/app.js";
+    </script>
+    <link rel="manifest" href={manifest} />
+
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100 flex items-center justify-center p-6 relative overflow-hidden">
+
+  <!-- background dot grid -->
+  <div
+    class="absolute inset-0 opacity-20"
+    style="background-image: radial-gradient(circle, #64748b 1px, transparent 1px); background-size: 32px 32px;"
+  ></div>
+
+  <!-- glow effects (بنفش/فیروزه‌ای برای 404، قرمز/نارنجی برای 500) -->
+  <div class={`pointer-events-none absolute top-1/4 -left-40 w-96 h-96 ${theme.glow1} rounded-full blur-3xl glow`}></div>
+  <div class={`pointer-events-none absolute bottom-1/4 -right-40 w-96 h-96 ${theme.glow2} rounded-full blur-3xl glow`} style="animation-delay: 1.5s;"></div>
+
+  <main class="relative z-10 w-full max-w-lg text-center">
+
+    <!-- big number -->
+    <div class="relative mb-6 select-none" dir="ltr">
+      <h1 class="text-[9rem] sm:text-[11rem] leading-none font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-600">
+        {code}
+      </h1>
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        {is500 ? (
+          <span class="relative flex items-center justify-center">
+            <span class="absolute w-16 h-16 rounded-full bg-rose-500/40 pulse-ring"></span>
+            <svg class="relative w-20 h-20 sm:w-24 sm:h-24 text-rose-400/90 float" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
+            </svg>
+          </span>
+        ) : (
+          <svg class="w-20 h-20 sm:w-24 sm:h-24 text-violet-400/80 float" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 17.25h.007v.008H12v-.008Z" />
+          </svg>
+        )}
+      </div>
+    </div>
+
+    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3">
+      {t[code].title}
+    </h2>
+
+    <p class="text-slate-400 leading-7 mb-10 max-w-sm mx-auto">
+      {t[code].text}
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+      {is500 ? (
+        <>
+          <!-- 500: دکمهٔ اصلی = تلاش دوباره، دکمهٔ فرعی = خانه -->
+          <button data-action="reload" class={primaryClass}>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition-transform group-hover:rotate-180 duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d={icons.refresh} />
+            </svg>
+            {t.retry}
+          </button>
+          <a href={homeHref} class={secondaryClass}>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d={icons.home} />
+            </svg>
+            {t.home}
+          </a>
+        </>
+      ) : (
+        <>
+          <!-- 404: دکمهٔ اصلی = خانه، دکمهٔ فرعی = بازگشت -->
+          <a href={homeHref} class={primaryClass}>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d={icons.home} />
+            </svg>
+            {t.home}
+          </a>
+          <button data-action="back" class={secondaryClass}>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d={icons.back} />
+            </svg>
+            {t.back}
+          </button>
+        </>
+      )}
+    </div>
+
+    <!-- quick links -->
+    <div class="mt-12 pt-6 border-t border-slate-800/80 flex items-center justify-center gap-6 text-sm">
+      <a href={homeHref} class="text-slate-500 hover:text-slate-300 transition-colors">{t.home}</a>
+      <span class="w-1 h-1 rounded-full bg-slate-700"></span>
+      <a href={`/${lang}/skills`} class="text-slate-500 hover:text-slate-300 transition-colors">{t.skills}</a>
+    </div>
+  </main>
+
+  <script is:inline>
+    document.querySelectorAll<HTMLElement>('[data-action]').forEach((el) => {
+      el.addEventListener('click', () => {
+        if (el.dataset.action === 'reload') location.reload();
+        else history.back();
+      });
+    });
+  </script>
+</body>
+</html>
+
+<style is:global>
+  body { font-family: 'Inter', sans-serif; }
+  html[dir='rtl'] body { font-family: 'Vazirmatn', 'Inter', sans-serif; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-16px); }
+  }
+  .float { animation: float 5s ease-in-out infinite; }
+
+  @keyframes glow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+  .glow { animation: glow 3s ease-in-out infinite; }
+
+  @keyframes pulse-ring {
+    0% { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(1.8); opacity: 0; }
+  }
+  .pulse-ring { animation: pulse-ring 2.5s ease-out infinite; }
+</style>
