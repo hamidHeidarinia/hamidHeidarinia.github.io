@@ -40,20 +40,6 @@ export default defineConfig({
     integrations: [
         alpinejs(),
         sitemap({
-            filter: (page) =>
-                page !== `${LIVE_URL}/` &&
-                page !== `${LIVE_URL}/en/` &&
-                page !== `${LIVE_URL}/en/skills/` &&
-                page !== `${LIVE_URL}/az/` &&
-                page !== `${LIVE_URL}/az/skills/` &&
-                page !== `${LIVE_URL}/azarab/` &&
-                page !== `${LIVE_URL}/azarab/skills/` &&
-                page !== `${LIVE_URL}/tr/` &&
-                page !== `${LIVE_URL}/tr/skills/` &&
-                page !== `${LIVE_URL}/otk/` &&
-                page !== `${LIVE_URL}/otk/skills/` &&
-                page !== `${LIVE_URL}/fa/` &&
-                page !== `${LIVE_URL}/fa/skills/`,
             i18n: {
                 defaultLocale: DEFAULT_LOCALE,
                 locales: {
@@ -65,7 +51,7 @@ export default defineConfig({
                     fa: 'fa-IR',
                 },
             },
-            xslURL: '/sitemap.xsl',
+            // xslURL: '/sitemap.xsl',
             namespaces: {
                 news: false,
                 xhtml: false,
