@@ -1,12 +1,14 @@
 import moment from 'moment';
-
 import momentJalaali from 'moment-jalaali';
 
-// import Alpine from 'alpinejs'
+// نام ماه‌های فارسی و ارقام فارسی (فقط یک بار، بعد از import)
+momentJalaali.loadPersian({
+    usePersianDigits: true,
+    dialect: 'persian-modern'
+});
 
-// window.Alpine = Alpine
-
-// Alpine.start()
+// تبدیل ارقام لاتین به فارسی (برای مدت زمان)
+const toFa = (n) => String(n).replace(/\d/g, (d) => '۰۱۲۳۴۵۶۷۸۹' [d]);
 
 window.formatDateRange = (outElement) => {
     let element = document.getElementById(outElement);
@@ -36,9 +38,10 @@ window.formatShamsiDateRange = (outElement) => {
     const startDate = element.getAttribute('data-start');
     const endDate = element.getAttribute('data-end') == '' ? null : element.getAttribute('data-end');
 
-    const start = moment(startDate);
-    const end = endDate ? moment(endDate) : moment();
+    const start = momentJalaali(startDate);
+    const end = endDate ? momentJalaali(endDate) : momentJalaali();
 
+    // j قبل از MMMM و YYYY یعنی ماه و سال شمسی
     const startFormatted = start.format('jMMMM jYYYY');
     const endFormatted = endDate ? end.format('jMMMM jYYYY') : 'اکنون';
 
@@ -48,8 +51,8 @@ window.formatShamsiDateRange = (outElement) => {
     const months = totalMonths % 12;
 
     let durationParts = [];
-    if (years > 0) durationParts.push(`${years} سال`);
-    if (months > 0) durationParts.push(`${months} ماه`);
+    if (years > 0) durationParts.push(`${toFa(years)} سال`);
+    if (months > 0) durationParts.push(`${toFa(months)} ماه`);
 
     const duration = durationParts.join(' و ');
 
