@@ -1,9 +1,5 @@
 ---
-interface Props {
-    error: unknown;
-}
-
-const { error } = Astro.props;
+import ErrorPage from "../components/ErrorPage.astro";
 ---
 
-<div>{error instanceof Error ? error.message : "Unknown error"}</div>
+<ErrorPage code="500" />
