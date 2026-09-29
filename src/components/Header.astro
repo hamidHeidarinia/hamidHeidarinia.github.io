@@ -12,6 +12,13 @@ import HeaderImg from "../assets/images/hamidHeidarinia-Header-page.webp";
 import AvatarImg from "../assets/images/hamidHeidarinia-avatar.webp";
 import ThemeToggle from "./ThemeToggle.astro";
 import LangSwitcher from "./LangSwitcher.astro";
+const cvLinks = {
+    en: "/cv/hamid-heidarinia-en.pdf",
+    az: "/cv/hamid-heidarinia-az-ar.pdf",
+    azarab: "/cv/hamid-heidarinia-az.pdf",
+    tr: "/cv/hamid-heidarinia-tr.pdf",
+    fa: "/cv/hamid-heidarinia-fa.pdf",
+};
 ---
 
 <!-- Component Template (HTML + JS Expressions) --><!-- ============ BANNER ============ -->
@@ -426,12 +433,18 @@ import LangSwitcher from "./LangSwitcher.astro";
                 >
                     {t("header.join.btn.title")}
                 </a>
-                <a
-                    href="#"
-                    class="focus-ring border border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-slate-800 active:bg-blue-100 text-sm font-semibold px-[1rem] py-[.5rem] rounded-full transition"
-                >
-                    {t("header.download.cv.btn.title")}
-                </a>
+                {
+                    locale !== "otk" && (
+                        <a
+                            href={cvLinks[locale]}
+                            target="_blank"
+                            download
+                            class="focus-ring border border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-slate-800 active:bg-blue-100 text-sm font-semibold px-[1rem] py-[.5rem] rounded-full transition"
+                        >
+                            {t("header.download.cv.btn.title")}
+                        </a>
+                    )
+                }
             </div>
         </div>
 
@@ -525,7 +538,7 @@ import LangSwitcher from "./LangSwitcher.astro";
                     href="https://github.com/hamidHeidarinia"
                     class="text-sm sm:text-base text-slate-700 dark:text-slate-300 font-medium"
                     >Github
-                    </a>
+                </a>
             </div>
         </div>
     </div>
