@@ -28,15 +28,18 @@ const htmlLang = languages[currentLocale].htmlLang;
         x-cloak
         x-effect="document.documentElement.classList.toggle('dark', dark); localStorage.setItem('theme', dark ? 'dark' : 'light')"
     >
-        <div class="min-h-screen sm:py-6 lg:py-10">
+        <main class="min-h-screen sm:py-6 lg:py-10">
             <div
                 class="max-w-5xl mx-auto bg-white dark:bg-slate-900 rounded-none lg:rounded-2xl sm:shadow-sm sm:border sm:border-slate-200 dark:sm:border-slate-800 overflow-hidden transition-colors duration-300"
             >
                 <!-- Page Contents -->
                 <slot />
-                <Footer locale={currentLocale} currentPath={Astro.url.pathname}  />
+                <Footer
+                    locale={currentLocale}
+                    currentPath={Astro.url.pathname}
+                />
             </div>
-        </div>
+        </main>
         <Script />
     </body>
 </html>
