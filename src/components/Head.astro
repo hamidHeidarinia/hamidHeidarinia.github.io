@@ -1,4 +1,5 @@
 ---
+import PersonSchema from "../components/PersonSchema.astro";
 import "../styles/app.css";
 import { Font } from "astro:assets";
 import Favicon from "../assets/icons/favicon.ico";
@@ -106,7 +107,7 @@ const path = Astro.url.pathname.replace(/^\/[^/]+/, "");
     <link rel="apple-touch-icon" sizes="180x180" href={AppleTouchIcon.src} />
 
     <link rel="sitemap" href="/sitemap-index.xml" />
-
+    <PersonSchema />
     <Font cssVariable="--font-calibri" />
 
     <script is:inline>
