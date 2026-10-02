@@ -1,0 +1,13 @@
+---
+import { IDENTITY } from "../data/identity";
+
+const schema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: IDENTITY.name,
+    alternateName: IDENTITY.alternateNames,
+    url: Astro.site?.href,
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
