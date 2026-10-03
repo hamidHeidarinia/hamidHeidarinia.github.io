@@ -8,7 +8,9 @@ const { locale } = Astro.props;
 const t = useTranslations(locale);
 const moreText = t("experience.show.more");
 const lessText = t("experience.show.less");
-const dateFn = locale === "fa" ? "formatShamsiDateRange" : "formatDateRange";
+const shamsiLocales = ["fa", "azarab"];
+const dateRange = shamsiLocales.includes(locale) ? "shamsi" : "default";
+const lang = locale;
 ---
 
 <!-- ============ EXPERIENCE ============ -->
@@ -82,10 +84,12 @@ const dateFn = locale === "fa" ? "formatShamsiDateRange" : "formatDateRange";
 
             <p
                 class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5"
-                id="firstExRecord"
+                id="thirdExRecord"
                 data-start={t("experience.three.start.date")}
                 data-end={t("experience.three.end.date")}
-                x-init={`${dateFn}('firstExRecord')`}
+                data-lang={lang}
+                data-present={t("experience.three.present")}
+                data-date-range={dateRange}
             >
             </p>
             <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
@@ -147,7 +151,8 @@ const dateFn = locale === "fa" ? "formatShamsiDateRange" : "formatDateRange";
                 @click="expanded = !expanded"
                 class="border border-slate-800 px-[1.2rem] py-[.5rem] focus-ring flex items-center gap-1 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white rounded-full"
             >
-                <span class="font-medium"
+                <span
+                    class="font-medium"
                     x-text={`expanded ? ${JSON.stringify(lessText)} : ${JSON.stringify(moreText)}`}
                 ></span>
                 <svg
@@ -226,7 +231,9 @@ const dateFn = locale === "fa" ? "formatShamsiDateRange" : "formatDateRange";
                 id="secondExRecord"
                 data-start={t("experience.two.start.date")}
                 data-end={t("experience.two.end.date")}
-                x-init={`${dateFn}('secondExRecord')`}
+                data-lang={lang}
+                data-present={t("experience.two.present")}
+                data-date-range={dateRange}
             >
             </p>
             <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
@@ -337,7 +344,8 @@ const dateFn = locale === "fa" ? "formatShamsiDateRange" : "formatDateRange";
                 @click="expanded = !expanded"
                 class="border border-slate-800 px-[1.2rem] py-[.5rem] focus-ring flex items-center gap-1 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white rounded-full"
             >
-                <span class="font-medium"
+                <span
+                    class="font-medium"
                     x-text={`expanded ? ${JSON.stringify(lessText)} : ${JSON.stringify(moreText)}`}
                 ></span>
                 <svg
@@ -389,10 +397,12 @@ const dateFn = locale === "fa" ? "formatShamsiDateRange" : "formatDateRange";
             </p>
             <p
                 class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5"
-                id="thirdExRecord"
+                id="firstExRecord"
                 data-start={t("experience.one.start.date")}
                 data-end={t("experience.one.end.date")}
-                x-init={`${dateFn}('thirdExRecord')`}
+                data-lang={lang}
+                data-present={t("experience.one.present")}
+                data-date-range={dateRange}
             >
             </p>
             <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
@@ -442,7 +452,8 @@ const dateFn = locale === "fa" ? "formatShamsiDateRange" : "formatDateRange";
                 @click="expanded = !expanded"
                 class="border border-slate-800 px-[1.2rem] py-[.5rem] focus-ring flex items-center gap-1 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white rounded-full"
             >
-                <span class="font-medium"
+                <span
+                    class="font-medium"
                     x-text={`expanded ? ${JSON.stringify(lessText)} : ${JSON.stringify(moreText)}`}
                 ></span>
                 <svg
