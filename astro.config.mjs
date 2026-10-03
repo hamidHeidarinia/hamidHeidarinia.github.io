@@ -12,23 +12,34 @@ const SERVER_PORT = 4321;
 const LOCALHOST_URL = `http://localhost:${SERVER_PORT}`;
 const LIVE_URL = "https://hamidheidarinia.github.io";
 
-// روش مطمئن‌تر برای تشخیص build به‌جای npm_lifecycle_event
-const isBuild = process.env.NODE_ENV === "production";
+const LOCAL_BASE = "/";
+const LIVE_BASE = "/hamidHeidarinia.github.io";
+
+const isBuild =
+    process.argv.includes("build") || process.env.NODE_ENV === "production";
+
 
 const BASE_URL = isBuild ? LIVE_URL : LOCALHOST_URL;
+const BASE_PATH = isBuild ? LIVE_BASE : "/";
 
-const SITE_LOCALES = ["en", "az", "azarab", "tr", "otk", "fa"];
+const BASE_PREFIX = BASE_PATH.replace(/\/$/, "");
+
+const SITE_LOCALES = ["en", "azarab", "az", "tr", "otk", "fa"];
 const DEFAULT_LOCALE = "en";
 
 // https://astro.build/config
 export default defineConfig({
+    compressHTML: true,
     site: BASE_URL,
+    base: BASE_PATH,
 
     // output: "server", // required, with no prerendered pages
     // adapter: node({
     //     mode: 'standalone',
     // }),
-
+    redirects: {
+        "/": `${BASE_PREFIX}/en/`,
+    },
     vite: {
         plugins: [tailwindcss()],
     },
@@ -44,8 +55,8 @@ export default defineConfig({
                 defaultLocale: DEFAULT_LOCALE,
                 locales: {
                     en: 'en-US',
-                    az: 'az-Latn-AZ',
                     azarab: 'az-Arab-IR',
+                    az: 'az-Latn-AZ',
                     tr: 'tr-TR',
                     otk: 'otk',
                     fa: 'fa-IR',
