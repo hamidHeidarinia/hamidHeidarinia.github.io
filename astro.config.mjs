@@ -31,7 +31,8 @@ const DEFAULT_LOCALE = "en";
 export default defineConfig({
     compressHTML: true,
     site: BASE_URL,
-    base: BASE_PATH,
+    // base: BASE_PATH,
+    base: "/",
 
     // output: "server", // required, with no prerendered pages
     // adapter: node({
