@@ -132,7 +132,7 @@ const cvLinks = {
                     >
                         <div
                             @click.away="contactInfoModal = false"
-                            class="z-50 relative p-3 mx-auto my-0 w-11/12 md:w-[80%]"
+                            class="z-50 relative p-3 mx-auto my-0 w-11/12 sm:w-[80%] lg:w-[60%]"
                             x-show="contactInfoModal"
                             x-transition:enter="transition duration-500"
                             x-transition:enter-start="transform opacity-0 -translate-y-4"
@@ -500,11 +500,12 @@ const cvLinks = {
                         stroke-linejoin="round"></path>
                 </svg>
 
-                <a href="#threeEx"
+                <a
+                    href="#threeEx"
                     class="text-sm sm:text-base text-slate-700 dark:text-slate-300 font-medium"
                 >
                     {t("experience.three.organization")}
-            </a>
+                </a>
             </div>
             <div class="flex items-center gap-3">
                 <svg
@@ -517,11 +518,12 @@ const cvLinks = {
                     ></path>
                 </svg>
 
-                <a href="#twoEd"
+                <a
+                    href="#twoEd"
                     class="text-sm sm:text-base text-slate-700 dark:text-slate-300 font-medium"
                 >
                     {t("education.two.school")}
-            </a>
+                </a>
             </div>
             <div class="flex items-center gap-3">
                 <svg
