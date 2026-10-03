@@ -30,7 +30,7 @@ window.formatDateRange = (outElement) => {
 
     const duration = durationParts.join(' ');
 
-    element.innerText = `${startFormatted} - ${endFormatted} · ${duration}`;
+    element.innerText = `${startFormatted} - ${endFormatted} 🞄 ${duration}`;
 };
 
 window.formatShamsiDateRange = (outElement) => {
@@ -56,5 +56,5 @@ window.formatShamsiDateRange = (outElement) => {
 
     const duration = durationParts.join(' و ');
 
-    element.innerText = `${startFormatted} - ${endFormatted} · ${duration}`;
+    element.innerText = `${startFormatted} - ${endFormatted} 🞄 ${duration}`;
 };
