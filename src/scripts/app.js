@@ -48,7 +48,7 @@ const SHAMSI_UNITS = {
         month: 'ماه',
         and: ' و '
     },
-    azfa: {
+    azarab: {
         year: 'ایل',
         month: 'آی',
         and: ' '
