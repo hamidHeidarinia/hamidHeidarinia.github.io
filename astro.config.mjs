@@ -24,7 +24,7 @@ const BASE_PATH = isBuild ? LIVE_BASE : "/";
 
 const BASE_PREFIX = BASE_PATH.replace(/\/$/, "");
 
-const SITE_LOCALES = ["en", "azarab", "az", "tr", "otk", "fa"];
+const SITE_LOCALES = ["en", "az-Arab", "az", "az-Cyrl", "tr", "ota", "otk", "fa"];
 const DEFAULT_LOCALE = "en";
 
 // https://astro.build/config
@@ -56,9 +56,11 @@ export default defineConfig({
                 defaultLocale: DEFAULT_LOCALE,
                 locales: {
                     en: 'en-US',
-                    azarab: 'az-Arab-IR',
-                    az: 'az-Latn-AZ',
+                    "az-Arab": 'az-Arab-IR',
+                    "az-Latn": 'az-Latn-AZ',
+                    'az-Cyrl': 'az-Cyrl-AZ',
                     tr: 'tr-TR',
+                    ota: 'ota-TR',
                     otk: 'otk',
                     fa: 'fa-IR',
                 },
