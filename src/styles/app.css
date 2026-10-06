@@ -10,6 +10,58 @@
     }
 }
 
+@layer components {
+    .scrollbars::-webkit-scrollbar {
+        @apply w-1 h-1
+    }
+
+    .scrollbars::-webkit-scrollbar-track {
+        @apply bg-sky-100
+    }
+
+    .scrollbars::-webkit-scrollbar-thumb {
+        @apply bg-[#05B4F9] rounded-sm
+    }
+
+    .scrollbars::-webkit-scrollbar-thumb:hover {
+        @apply bg-[#05B4F9] w-3
+    }
+
+    .scrollbars2::-webkit-scrollbar {
+        @apply w-1 h-1
+    }
+
+    .scrollbars2::-webkit-scrollbar-track {
+        @apply bg-transparent
+    }
+
+    .scrollbars2::-webkit-scrollbar-thumb {
+        @apply bg-transparent
+    }
+
+    .scrollbars2::-webkit-scrollbar-thumb:hover {
+        @apply bg-transparent
+    }
+}
+
+@layer utilities {
+    body::-webkit-scrollbar {
+        @apply w-1 h-1
+    }
+
+    body::-webkit-scrollbar-track {
+        @apply bg-sky-100
+    }
+
+    body::-webkit-scrollbar-thumb {
+        @apply bg-[#05B4F9] rounded-sm
+    }
+
+    body::-webkit-scrollbar-thumb:hover {
+        @apply bg-[#05B4F9] w-3
+    }
+}
+
 html[dir="rtl"] svg.arrowIcon {
     transform: rotate(180deg);
 }
