@@ -8,8 +8,14 @@ const { locale } = Astro.props;
 const t = useTranslations(locale);
 const moreText = t("experience.show.more");
 const lessText = t("experience.show.less");
-const shamsiLocales = ["fa", "azarab"];
-const dateRange = shamsiLocales.includes(locale) ? "shamsi" : "default";
+const shamsiLocales = ["az-Arab", "fa"];
+const hijriLocales = ["ota"];
+// const dateRange = shamsiLocales.includes(locale) ? "shamsi" : "default";
+const dateRange = shamsiLocales.includes(locale)
+    ? "shamsi"
+    : hijriLocales.includes(locale)
+      ? "hijri"
+      : "default";
 const lang = locale;
 ---
 
