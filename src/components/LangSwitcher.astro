@@ -31,7 +31,7 @@ const entries = Object.entries(languages) as [
     aria-label={label}
     class="focus-ring flex items-center gap-1 bg-white/95 dark:bg-slate-800/95 border border-slate-200
         dark:border-slate-700 rounded-md px-2.5 py-1.5 sm:px-3 text-xs sm:text-md font-medium text-slate-700
-        dark:text-slate-200 shadow-sm hover:bg-white dark:hover:bg-slate-700 transition"
+        dark:text-slate-200 shadow-sm hover:bg-white dark:hover:bg-slate-700 transition h-8 sm:h-9"
   >
     <span>{languages[locale].label}</span>
 
@@ -61,7 +61,7 @@ const entries = Object.entries(languages) as [
       entries.map(([code, meta]) => (
         <a
           href={pathFor(code)}
-          // dir={meta.dir}
+          dir={meta.dir}
           class:list={[
             "block px-4 py-2.5 text-md transition-colors hover:bg-gold/10",
             code === locale
