@@ -22,14 +22,41 @@ const skillsUrl = getRelativeLocaleUrl(currentLocale, "skills");
     <div
         class="text-md sm:text-lg text-slate-700 dark:text-slate-300 leading-relaxed space-y-4 max-w-4xl"
     >
-        <p class="p-0 m-0 break-words">
+        <p class="break-words">
             {t("about.text.part.one")}
         </p>
-        <p class="p-0 m-0 break-words">
+        <p class="break-words">
             {t("about.text.part.two")}
         </p>
-        <p class="p-0 m-0 break-words">
+        <p class="break-words">
             {t("about.text.part.three")}
+        </p>
+        <p class="p-0 m-0 break-words">
+            {t("about.text.part.foure")}
+        </p>
+        <p class="p-0 m-0 break-words">
+            {t("about.text.part.five")}
+        </p>
+        <p class="p-0 m-0 break-words">
+            {t("about.text.part.six")}
+        </p>
+        <p class="p-0 m-0 break-words">
+            {t("about.text.part.seven")}
+        </p>
+        <p class="break-words">
+            {t("about.text.part.eight")}
+        </p>
+        <p class="break-words">
+            {t("about.text.part.nine")}
+        </p>
+        <p class="break-words">
+            {t("about.text.part.ten")}
+        </p>
+        <p class="break-words">
+            {t("about.text.part.eleven")}
+        </p>
+        <p class="break-words">
+            {t("about.text.part.twelve")}
         </p>
     </div>
 
@@ -60,7 +87,7 @@ const skillsUrl = getRelativeLocaleUrl(currentLocale, "skills");
                     <p
                         class="text-xs sm:text-base text-slate-500 dark:text-slate-400 truncate"
                     >
-                        MariaDB
+                        Backend Development
                         <svg
                             class="w-[.4rem] h-[.4rem] fill-current inline-block"
                             xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +98,7 @@ const skillsUrl = getRelativeLocaleUrl(currentLocale, "skills");
                                 d="M56 336C56 181.4 181.4 56 336 56C490.6 56 616 181.4 616 336C616 490.6 490.6 616 336 616C181.4 616 56 490.6 56 336z"
                             ></path>
                         </svg>
-                        MySQL
+                        SQL
                         <svg
                             class="w-[.4rem] h-[.4rem] fill-current inline-block"
                             xmlns="http://www.w3.org/2000/svg"
@@ -82,18 +109,7 @@ const skillsUrl = getRelativeLocaleUrl(currentLocale, "skills");
                                 d="M56 336C56 181.4 181.4 56 336 56C490.6 56 616 181.4 616 336C616 490.6 490.6 616 336 616C181.4 616 56 490.6 56 336z"
                             ></path>
                         </svg>
-                        Microsoft SQL Server
-                        <svg
-                            class="w-[.4rem] h-[.4rem] fill-current inline-block"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 672 672"
-                            ><!--! Font Awesome Pro 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc. -->
-                            <path
-                                fill=""
-                                d="M56 336C56 181.4 181.4 56 336 56C490.6 56 616 181.4 616 336C616 490.6 490.6 616 336 616C181.4 616 56 490.6 56 336z"
-                            ></path>
-                        </svg>
-                        PostgreSQL
+                        Database Administration
                     </p>
                 </div>
             </div>
@@ -173,7 +189,7 @@ const skillsUrl = getRelativeLocaleUrl(currentLocale, "skills");
                                     <h2
                                         class="text-2xl font-bold text-slate-900 dark:text-white mb-2"
                                     >
-                                        MariaDB
+                                        Backend Development
                                     </h2>
                                     <svg
                                         class="w-5 h-5 fill-current"
@@ -189,7 +205,7 @@ const skillsUrl = getRelativeLocaleUrl(currentLocale, "skills");
                                     </svg>
                                 </div>
                                 <div
-                                    class="flex items-center gap-2"
+                                    class="flex items-center gap-2 mb-4"
                                     x-show="!open"
                                 >
                                     <svg
@@ -253,33 +269,65 @@ const skillsUrl = getRelativeLocaleUrl(currentLocale, "skills");
                                         {t("experience.three.organization")}
                                     </p>
                                 </div>
-                            </div>
-                            <!-- Skill Item 2 -->
-                            <div
-                                class="pb-2 border-b border-gray-200"
-                                x-data="{ open: false }"
-                            >
                                 <div
-                                    class="flex flex-row justify-between items-center"
-                                    :class="{ 'mb-4': open == false, 'mb-0': open == true}"
+                                    class="flex items-center gap-2 mb-4"
+                                    x-show="!open"
                                 >
-                                    <h2
-                                        class="text-2xl font-bold text-slate-900 dark:text-white mb-2"
-                                    >
-                                        MySQL
-                                    </h2>
                                     <svg
-                                        class="w-5 h-5 fill-current"
+                                        class="w-7 h-7"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        :style="`transform: rotate(${open ? 180 : 0}deg); transition: transform 0.3s ease;`"
-                                        @click="open = !open"
-                                        viewBox="0 0 384 512"
-                                        ><!--! Font Awesome Pro 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc. -->
-                                        <path opacity=".4" fill="" d=""></path>
-                                        <path
-                                            d="M180.7 148.7c6.2-6.2 16.4-6.2 22.6 0l160 160c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0L192 182.6 43.3 331.3c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l160-160z"
-                                        ></path>
+                                        viewBox="0 0 100 100"
+                                    >
+                                        <circle cx="50" cy="50" r="50" fill=""
+                                        ></circle>
+                                        <g stroke-linejoin="round">
+                                            <polygon
+                                                points="44,28 37,36.9 37.9,61.9 49.9,39"
+                                                fill="#969696"
+                                                stroke="#969696"
+                                                stroke-width="0.6"></polygon>
+                                            <polygon
+                                                points="38.2,34.2 17,64.9 21.9,73.9 35.9,63.4 38.6,64.2 36.4,62"
+                                                fill="#626262"
+                                                stroke="#626262"
+                                                stroke-width="0.6"></polygon>
+                                            <polygon
+                                                points="54.6,24.2 56,28 51,39 62,59.9 61.2,64.2 63.9,59 64,39"
+                                                fill="#626262"
+                                                stroke="#626262"
+                                                stroke-width="0.6"></polygon>
+                                            <polygon
+                                                points="49.9,19 42.6,28.6 50,39 36.5,62 51,69.9 62.4,61.9 50.9,39 55.9,26.9"
+                                                fill="#7b7b7b"
+                                                stroke="#7b7b7b"
+                                                stroke-width="0.6"></polygon>
+                                            <polygon
+                                                points="55.6,25.2 64,38.9 64,59 50.1,70.9 63,63.9 78.6,74.2 83.9,65.9"
+                                                fill="#505050"
+                                                stroke="#505050"
+                                                stroke-width="0.6"></polygon>
+                                        </g>
                                     </svg>
+                                    <!-- <svg class="w-9 h-9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+                                                    <circle cx="50" cy="50" r="50" fill="#000" />
+                                                
+                                                    <path d="M16 67 L50 17 L84 67 L74 74 L50 48 L26 74 Z" fill="#555555" />
+                                                
+                                                    <path d="M16 67 L50 17 L50 48 L26 74 Z" fill="#666666" />
+                                                
+                                                    <path d="M50 17 L63 39 L50 65 L37 39 Z" fill="#8A8A8A" />
+                                                
+                                                    <path d="M50 17 L84 67 L74 74 L50 48 Z" fill="#4A4A4A" />
+                                                
+                                                    <path d="M37 39 L50 65 L63 39 L50 48 Z" fill="#707070" />
+                                                </svg> -->
+                                    <p
+                                        class="text-base text-gray-600 dark:text-slate-300 font-medium"
+                                    >
+                                        {t("experience.two.job.title")}
+                                        &nbsp;{t("skill.at")}&nbsp;
+                                        {t("experience.two.organization")}
+                                    </p>
                                 </div>
                                 <div
                                     class="flex items-center gap-2"
@@ -312,7 +360,7 @@ const skillsUrl = getRelativeLocaleUrl(currentLocale, "skills");
                                     </p>
                                 </div>
                             </div>
-                            <!-- Skill Item 3 -->
+                            <!-- Skill Item 2 -->
                             <div
                                 class="pb-2 border-b border-gray-200"
                                 x-data="{ open: false }"
@@ -324,7 +372,7 @@ const skillsUrl = getRelativeLocaleUrl(currentLocale, "skills");
                                     <h2
                                         class="text-2xl font-bold text-slate-900 dark:text-white mb-2"
                                     >
-                                        Microsoft SQL Server
+                                        SQL
                                     </h2>
                                     <svg
                                         class="w-5 h-5 fill-current"
@@ -340,7 +388,72 @@ const skillsUrl = getRelativeLocaleUrl(currentLocale, "skills");
                                     </svg>
                                 </div>
                                 <div
-                                    class="flex items-center gap-2"
+                                    class="flex items-center gap-2 mb-4"
+                                    x-show="!open"
+                                >
+                                    <svg
+                                        class="w-7 h-7"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 100 100"
+                                        width="100"
+                                        height="100"
+                                    >
+                                        <defs>
+                                            <linearGradient
+                                                id="bg"
+                                                x1="0%"
+                                                y1="0%"
+                                                x2="100%"
+                                                y2="0%"
+                                            >
+                                                <stop
+                                                    offset="0%"
+                                                    stop-color="#ff8a00"></stop>
+                                                <stop
+                                                    offset="48%"
+                                                    stop-color="#f04432"></stop>
+                                                <stop
+                                                    offset="100%"
+                                                    stop-color="#2832a8"></stop>
+                                            </linearGradient>
+                                        </defs>
+
+                                        <rect
+                                            x="4"
+                                            y="4"
+                                            width="92"
+                                            height="92"
+                                            rx="8"
+                                            fill="url(#bg)"></rect>
+
+                                        <!-- white logo -->
+                                        <circle
+                                            cx="50"
+                                            cy="39"
+                                            r="15"
+                                            fill="none"
+                                            stroke="#fff"
+                                            stroke-width="7"></circle>
+                                        <path
+                                            d="M35 61
+                                                                        C37 70, 43 75, 50 75
+                                                                        C57 75, 63 70, 65 61"
+                                            fill="none"
+                                            stroke="#fff"
+                                            stroke-width="7"
+                                            stroke-linecap="butt"
+                                            stroke-linejoin="round"></path>
+                                    </svg>
+                                    <p
+                                        class="text-base text-gray-600 dark:text-slate-300 font-medium"
+                                    >
+                                        {t("experience.three.job.title")}
+                                        &nbsp;{t("skill.at")}&nbsp;
+                                        {t("experience.three.organization")}
+                                    </p>
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 mb-4"
                                     x-show="!open"
                                 >
                                     <svg
@@ -400,7 +513,8 @@ const skillsUrl = getRelativeLocaleUrl(currentLocale, "skills");
                                     </p>
                                 </div>
                             </div>
-                            <!-- Skill Item 4 -->
+
+                            <!-- Skill Item 3 -->
                             <div class="pb-2" x-data="{ open: false }">
                                 <div
                                     class="flex flex-row justify-between items-center"
@@ -409,7 +523,7 @@ const skillsUrl = getRelativeLocaleUrl(currentLocale, "skills");
                                     <h2
                                         class="text-2xl font-bold text-slate-900 dark:text-white mb-2"
                                     >
-                                        PostgreSQL
+                                        Database Administration
                                     </h2>
                                     <svg
                                         class="w-5 h-5 fill-current"
