@@ -116,40 +116,47 @@ const lang = locale;
             <div
                 class="text-md sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed mt-3 space-y-3 max-w-3xl"
             >
-                <p>
+                <p class="" break-words>
                     {t("experience.three.highlights.one")}
                 </p>
+                <p class="font-bold">
+                    {t("experience.three.highlights.two")}
+                </p>
+                <p class="p-0 m-0 break-words">
+                    {t("experience.three.highlights.three")}
+                </p>
                 <div x-show="expanded" x-cloak x-transition>
-                    <p>
-                        {t("experience.three.highlights.three")}
-                    </p>
-                    <p class="">
-                        {t("experience.three.highlights.foure")}
-                    </p>
-                    <p class="">
+                    <p class="p-0 m-0 break-words">
                         {t("experience.three.highlights.five")}
                     </p>
-                    <p class="">
+                    <p class="p-0 m-0 break-words">
                         {t("experience.three.highlights.six")}
                     </p>
-                    <p class="">
+
+                    <p class="p-0 m-0 break-words">
                         {t("experience.three.highlights.seven")}
                     </p>
-                    <p class="">
+                    <p class="p-0 m-0 break-words">
                         {t("experience.three.highlights.eight")}
                     </p>
-                    <p class="">
+                    <p class="p-0 m-0 break-words">
                         {t("experience.three.highlights.nine")}
                     </p>
-                    <p class="">
+                    <p class="p-0 m-0 break-words">
                         {t("experience.three.highlights.ten")}
+                    </p>
+                    <p class="p-0 m-0 break-words">
+                        {t("experience.three.highlights.eleven")}
+                    </p>
+                    <p class="break-words mt-4">
+                        {t("experience.three.highlights.twelve")}
                     </p>
                 </div>
                 <p
                     x-show="!expanded"
                     class="text-slate-500 dark:text-slate-500"
                 >
-                    {t("experience.three.highlights.two")}
+                    {t("experience.three.highlights.foure")}
                 </p>
             </div>
             <br />
@@ -263,78 +270,33 @@ const lang = locale;
                 <p class="break-words">
                     {t("experience.two.highlights.one")}
                 </p>
-                <p class="font-bold p-0 m-0 mt-4">
+                <p class="font-bold">
                     {t("experience.two.highlights.two")}
                 </p>
-                <p class="p-0 m-0">
+                <p class="p-0 m-0 break-words">
                     {t("experience.two.highlights.three")}
                 </p>
-                <p class="p-0 m-0">
-                    {t("experience.two.highlights.foure")}
-                </p>
                 <div x-show="expanded" x-cloak x-transition>
-                    <p class="">
+                    <p class="p-0 m-0 break-words">
+                        {t("experience.two.highlights.five")}
+                    </p>
+                    <p class="p-0 m-0 break-words">
                         {t("experience.two.highlights.six")}
                     </p>
-                    <p class="">
+                    <p class="p-0 m-0 break-words">
                         {t("experience.two.highlights.seven")}
                     </p>
-                    <p class="">
+                    <p class="p-0 m-0 break-words">
                         {t("experience.two.highlights.eight")}
                     </p>
-                    <p class="font-bold mt-4">
+                    <p class="fp-0 m-0 break-words">
                         {t("experience.two.highlights.nine")}
                     </p>
-                    <p class="">
+                    <p class="p-0 m-0 break-words">
                         {t("experience.two.highlights.ten")}
                     </p>
-                    <p class="">
+                    <p class="p-0 m-0 break-words">
                         {t("experience.two.highlights.eleven")}
-                    </p>
-                    <p class="">
-                        {t("experience.two.highlights.twelve")}
-                    </p>
-                    <p class="">
-                        {t("experience.two.highlights.thirteen")}
-                    </p>
-                    <p class="">
-                        {t("experience.two.highlights.fourteen")}
-                    </p>
-                    <p class="">
-                        {t("experience.two.highlights.fifteen")}
-                    </p>
-                    <p class="">
-                        {t("experience.two.highlights.sixteen")}
-                    </p>
-                    <p class="font-bold mt-4">
-                        {t("experience.two.highlights.seventeen")}
-                    </p>
-                    <p class="">
-                        {t("experience.two.highlights.eighteen")}
-                    </p>
-                    <p class="">
-                        {t("experience.two.highlights.nineteen")}
-                    </p>
-                    <p class="">
-                        {t("experience.two.highlights.twenty")}
-                    </p>
-                    <p class="">
-                        {t("experience.two.highlights.twentyOne")}
-                    </p>
-                    <p class="">
-                        {t("experience.two.highlights.twentyTwo")}
-                    </p>
-                    <p class="">
-                        {t("experience.two.highlights.twentyThree")}
-                    </p>
-                    <p class="">
-                        {t("experience.two.highlights.twentyFoure")}
-                    </p>
-                    <p class="">
-                        {t("experience.two.highlights.twentyFive")}
-                    </p>
-                    <p class="">
-                        {t("experience.two.highlights.twentySix")}
                     </p>
                 </div>
 
@@ -342,7 +304,7 @@ const lang = locale;
                     x-show="!expanded"
                     class="text-slate-500 dark:text-slate-500"
                 >
-                    {t("experience.two.highlights.five")}
+                    {t("experience.two.highlights.foure")}
                 </p>
             </div>
             <br />
@@ -429,28 +391,40 @@ const lang = locale;
             <div
                 class="text-md sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed mt-3 space-y-3 max-w-3xl"
             >
-                <p class="p-0 m-0">
+                <p class="break-words">
                     {t("experience.one.highlights.one")}
                 </p>
-                <p class="p-0 m-0">
+                <p class="p-0 m-0 break-words">
                     {t("experience.one.highlights.two")}
                 </p>
-                <p class="p-0 m-0">
+                <p class="p-0 m-0 break-words">
                     {t("experience.one.highlights.three")}
                 </p>
+                <p class="p-0 m-0 break-words">
+                    {t("experience.one.highlights.foure")}
+                </p>
                 <div x-show="expanded" x-cloak x-transition>
-                    <p class="p-0 m-0">
-                        {t("experience.one.highlights.five")}
-                    </p>
-                    <p class="p-0 m-0">
+                    <p class="p-0 m-0 break-words">
                         {t("experience.one.highlights.six")}
+                    </p>
+                    <p class="p-0 m-0 break-words">
+                        {t("experience.one.highlights.seven")}
+                    </p>
+                    <p class="p-0 m-0 break-words">
+                        {t("experience.one.highlights.eight")}
+                    </p>
+                    <p class="p-0 m-0 break-words">
+                        {t("experience.one.highlights.nine")}
+                    </p>
+                    <p class="p-0 m-0 break-words">
+                        {t("experience.one.highlights.ten")}
                     </p>
                 </div>
                 <p
                     x-show="!expanded"
-                    class="text-slate-500 dark:text-slate-500"
+                    class="text-slate-500 dark:text-slate-500 break-words"
                 >
-                    {t("experience.one.highlights.foure")}
+                    {t("experience.one.highlights.five")}
                 </p>
             </div>
             <br />
