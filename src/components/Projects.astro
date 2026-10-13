@@ -6,8 +6,6 @@ interface Props {
 }
 const { locale } = Astro.props;
 const t = useTranslations(locale);
-const moreText = t("experience.show.more");
-const lessText = t("experience.show.less");
 ---
 
 <!-- ============ PROJECTS ============ -->
@@ -19,4 +17,83 @@ const lessText = t("experience.show.less");
     >
         {t("projects.title")}
     </h2>
+
+    <div class="flex flex-col gap-4">
+        <a
+            href="https://hamidheidarinia.github.io/bootstrap-rtl/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group block overflow-hidden rounded-xl border border-neutral-200 bg-white transition hover:border-neutral-300 hover:shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 dark:border-slate-700 dark:bg-slate-900 dark:hover:border-slate-600"
+        >
+            
+
+            <div class="flex flex-col sm:flex-row sm:min-h-44">
+                <!-- Image -->
+                <div
+                    class="flex items-center justify-center overflow-hidden bg-white px-4 py-6 sm:w-2/5 sm:shrink-0 sm:py-4 lg:w-80 dark:bg-slate-900"
+                >
+                    <div class="flex flex-col items-center">
+                        <!-- Layered logo -->
+                        <svg
+                            class="w-36 sm:w-40 md:w-48 lg:w-52"
+                            viewBox="0 0 240 200"
+                            fill="none"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M120 100 22 150l98 50 98-50-98-50Z"
+                                fill="#4c2a85"
+                                transform="translate(0 -10)"></path>
+                            <path
+                                d="M120 70 22 120l98 50 98-50-98-50Z"
+                                fill="#6636a8"
+                                transform="translate(0 -10)"></path>
+                            <path
+                                d="M120 40 22 90l98 50 98-50-98-50Z"
+                                fill="#7d4cc6"
+                                transform="translate(0 -10)"></path>
+                            <text
+                                x="120"
+                                y="108"
+                                text-anchor="middle"
+                                font-size="64"
+                                font-weight="700"
+                                fill="#fff"
+                                font-family="ui-sans-serif, system-ui, sans-serif"
+                            >
+                                B
+                            </text>
+                        </svg>
+                        <span
+                            class="-mt-3 font-mono text-lg font-bold tracking-tight text-[#5a2d9c] sm:text-xl md:text-2xl dark:text-[#a77ce6] mt-2"
+                        >
+                            {t("project.one.logo.type")}
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Meta -->
+                <div
+                    class="flex min-w-0 flex-1 flex-col justify-center gap-1.5 bg-[#f2f1ec] p-4 sm:p-5 md:p-6 dark:bg-slate-800"
+                >
+                    <h3
+                        class="text-base leading-snug font-semibold text-neutral-900 group-hover:underline md:text-lg dark:text-white"
+                    >
+                        {t("project.one.name")}
+                    </h3>
+                    <p
+                        class="break-all text-xs text-neutral-500 sm:truncate sm:break-normal sm:text-sm dark:text-slate-400"
+                        dir="ltr"
+                    >
+                        https://hamidheidarinia.github.io/bootstrap-rtl/
+                    </p>
+                    <p
+                        class="line-clamp-4 text-sm leading-relaxed text-neutral-800 sm:line-clamp-4 md:line-clamp-5 dark:text-slate-200"
+                    >
+                        {t("project.one.description")}
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
 </div>
