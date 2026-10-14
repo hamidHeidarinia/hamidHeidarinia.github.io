@@ -18,7 +18,7 @@ const UNITS = {
         yr: 'yr',
         yrs: 'yrs',
         mo: 'mo',
-        mos: 'mos'
+        mos: 'months'
     },
     az: {
         yr: 'il',
@@ -75,13 +75,14 @@ const SHAMSI_UNITS = {
     },
 };
 
-/* ---------- Hijri (Islamic) ---------- */
+/* ---------- Rumi (Ottoman Mali) ---------- */
 
-const HIJRI_MONTHS = {
-    ota: ['محرم', 'صفر', 'ربیع‌الاول', 'ربیع‌الآخر', 'جمادی‌الاول', 'جمادی‌الآخر', 'رجب', 'شعبان', 'رمضان', 'شوال', 'ذی‌القعده', 'ذی‌الحجه'],
+// ماه‌های رومی از مارس شروع می‌شوند
+const RUMI_MONTHS = {
+    ota: ['مارت', 'نیسان', 'مایس', 'حزیران', 'تموز', 'آغستوس', 'ایلول', 'تشرین اول', 'تشرین ثانی', 'کانون اول', 'کانون ثانی', 'شباط'],
 };
 
-const HIJRI_UNITS = {
+const RUMI_UNITS = {
     ota: {
         year: 'سنه',
         years: 'سنه',
@@ -91,26 +92,50 @@ const HIJRI_UNITS = {
     },
 };
 
-const HIJRI_PRESENT_DEFAULT = 'Present';
+const RUMI_PRESENT_DEFAULT = 'Present';
 
-// ارقام: فارسی برای fa/azarab، عربی-هندی برای ar/ota، لاتین برای بقیه
-const HIJRI_DIGITS = {
+// ارقام عربی-هندی برای ota، لاتین برای بقیه
+const RUMI_DIGITS = {
     ota: toArabicIndic,
 };
 
-const hijriFormatter = new Intl.DateTimeFormat('en-US-u-ca-islamic-umalqura-nu-latn', {
-    year: 'numeric',
-    month: 'numeric',
-    day: 'numeric',
-});
+// میلادی → شمارهٔ روز ژولینی (JDN)
+const gregorianToJdn = (y, m, d) => {
+    const a = Math.floor((14 - m) / 12);
+    const yy = y + 4800 - a;
+    const mm = m + 12 * a - 3;
+    return d + Math.floor((153 * mm + 2) / 5) + 365 * yy + Math.floor(yy / 4) - Math.floor(yy / 100) + Math.floor(yy / 400) - 32045;
+};
 
-const toHijri = (date) => {
-    const parts = hijriFormatter.formatToParts(date);
-    const get = (type) => Number(parts.find((p) => p.type === type).value);
+// JDN → تقویم ژولین
+const jdnToJulian = (jdn) => {
+    const c = jdn + 32082;
+    const d = Math.floor((4 * c + 3) / 1461);
+    const e = c - Math.floor((1461 * d) / 4);
+    const m = Math.floor((5 * e + 2) / 153);
     return {
-        year: get('year'),
-        month: get('month') - 1
-    }; // ماه از ۰ شروع می‌شود
+        year: d - 4800 + Math.floor(m / 10),
+        month: m + 3 - 12 * Math.floor(m / 10), // 1..12
+        day: e - Math.floor((153 * m + 2) / 5) + 1,
+    };
+};
+
+const toRumi = (date) => {
+    let y = date.getFullYear();
+    let m = date.getMonth() + 1;
+
+    // قبل از ۱ مارس ۱۹۱۷ میلادی، تقویم رومی ژولینی بود
+    const isJulianEra = y < 1917 || (y === 1917 && m < 3);
+    if (isJulianEra) {
+        const j = jdnToJulian(gregorianToJdn(y, m, date.getDate()));
+        y = j.year;
+        m = j.month;
+    }
+
+    return {
+        year: m >= 3 ? y - 584 : y - 585,
+        month: (m + 9) % 12 // مارس = ۰ ... فوریه = ۱۱
+    };
 };
 
 /* ---------- Formatters ---------- */
@@ -180,23 +205,23 @@ window.formatShamsiDateRange = (outElement) => {
     element.innerText = `${startFormatted} - ${endFormatted} 🞄 ${durationParts.join(units.and)}`;
 };
 
-window.formatHijriDateRange = (outElement) => {
+window.formatRumiDateRange = (outElement) => {
     const element = document.getElementById(outElement);
     if (!element) return;
 
-    const lang = (element.getAttribute('data-lang') || 'en').split('-')[0];
-    const present = element.getAttribute('data-present') || HIJRI_PRESENT_DEFAULT;
+    const lang = (element.getAttribute('data-lang') || 'ota').split('-')[0];
+    const present = element.getAttribute('data-present') || RUMI_PRESENT_DEFAULT;
     const startDate = element.getAttribute('data-start');
     const endDate = element.getAttribute('data-end') || null;
 
-    const monthNames = HIJRI_MONTHS[lang] ?? HIJRI_MONTHS.en;
-    const units = HIJRI_UNITS[lang] ?? HIJRI_UNITS.en;
-    const digits = HIJRI_DIGITS[lang] ?? ((n) => String(n));
+    const monthNames = RUMI_MONTHS[lang] ?? RUMI_MONTHS.ota;
+    const units = RUMI_UNITS[lang] ?? RUMI_UNITS.ota;
+    const digits = RUMI_DIGITS[lang] ?? ((n) => String(n));
 
-    const start = toHijri(moment(startDate).toDate());
-    const end = toHijri(endDate ? moment(endDate).toDate() : new Date());
+    const start = toRumi(moment(startDate).toDate());
+    const end = toRumi(endDate ? moment(endDate).toDate() : new Date());
 
-    const fmt = (h) => `${monthNames[h.month]} ${digits(h.year)}`;
+    const fmt = (r) => `${monthNames[r.month]} ${digits(r.year)}`;
 
     const startFormatted = fmt(start);
     const endFormatted = endDate ? fmt(end) : present;
@@ -222,8 +247,9 @@ function initDateRanges() {
             case 'shamsi':
                 window.formatShamsiDateRange(el.id);
                 break;
-            case 'hijri':
-                window.formatHijriDateRange(el.id);
+            case 'rumi':
+            case 'hijri': // سازگاری با HTML قدیمی
+                window.formatRumiDateRange(el.id);
                 break;
             default:
                 window.formatDateRange(el.id);
