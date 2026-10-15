@@ -6,7 +6,9 @@ export const IDENTITY = {
         "Hamid Heydary Nia",
         "حمید حیدری‌نیا",
         "حمید حیدری‌ نیا",
+        "حميد حيدرينيا",
         "Həmid Heydərinia",
-        "Hamid Haydarinya"
+        "Hamid Haydarinya",
+        "Һәмид Һејдәриниа"
     ],
 };
