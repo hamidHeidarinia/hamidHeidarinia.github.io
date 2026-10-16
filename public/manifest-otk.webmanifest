@@ -1,16 +1,16 @@
 {
-    "name": "𐰴𐰢𐰓:𐰚𐰀𐰃𐰓𐰺𐰤𐰃𐰀::𐰯𐰺𐰆𐰯𐰃𐰠",
-    "short_name": "𐰴𐰢𐰓:𐰯𐰺𐰆𐰯𐰃𐰠",
+    "name": "𐰴𐰢𐰃𐰓 𐰚𐰃𐰑𐰼𐰤𐰀 — 𐰯𐰺𐰆𐰯𐰃𐰠",
+    "short_name": "𐰴𐰢𐰃𐰓 𐰯𐰺𐰆𐰯𐰃𐰠",
     "categories": [
         "business",
         "education",
         "productivity"
     ],
-    "description": "𐰖𐰔𐰞𐰢:𐰢𐰜𐰦𐰾𐰃:𐰋𐰀:𐰋𐰼𐱅𐰉𐰣𐰃:𐰘𐰇𐰭𐱅𐰱𐰾𐰃:(𐰑𐰉𐰀)⸱ 𐰇𐰠𐰲𐰚𐰠𐰤𐰋𐰠𐰼:𐰖𐰔𐰞𐰢:𐰾𐰃𐰾𐱅𐰢𐰠𐰼𐰃:𐰋𐰀:𐰋𐰼𐱅𐰉𐰣𐰃:𐰲𐰇𐰔𐰢𐰠𐰼𐰤𐰤:𐱃𐰽𐰺𐰞𐰣𐰢𐰽𐰃:𐰏𐰠𐱁𐱅𐰼𐰠𐰢𐰾𐰃:𐰋𐰀:𐰉𐰴𐰢𐰃:𐰞𐰣𐰦𐰀:01:𐰖𐰃𐰞𐰃:𐱁𐰴𐰣:𐰓𐰭𐰘𐰢𐰀:𐰽𐰴𐰯𐱅𐰼⸱",
+    "description": "Backend 𐰆𐰖𐰍𐰞𐰢𐰞𐰺𐰃, API'𐰠𐰼 𐰋𐰀 𐰋𐰼𐰃𐱃𐰉𐰣𐰃 𐰆𐰑𐰴𐰞𐰃 𐰾𐰃𐰾𐱅𐰢𐰠𐰼𐰤 𐱃𐰽𐰺𐰃𐰢𐰃, 𐰏𐰠𐰃𐱁𐱅𐰼𐰠𐰢𐰾𐰃 𐰋𐰀 𐰉𐰴𐰃𐰢𐰃 𐰴𐰆𐰣𐰽𐰦𐰀 10+ 𐰖𐰃𐰞𐰞𐰶 𐰓𐰤𐰘𐰃𐰢𐰀 𐰽𐰚𐰃𐰯 𐰋𐰃𐰼 𐰾𐰤𐰃𐰆𐰺 𐰉𐰲𐰚𐰤𐰓 𐰀𐰤𐰏𐰃𐰤𐰀𐰼'𐰃𐰢.",
     "display": "standalone",
     "theme_color": "#05B4F9",
     "background_color": "#05B4F9",
-    "id": "/?source=pwa",
+    "id": "/otk/",
     "orientation": "natural",
     "prefer_related_applications": false,
     "scope": "/otk/",

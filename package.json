@@ -4,20 +4,22 @@
   "engines": {
     "node": ">=22.12.0"
   },
-  "description": "Software Engineer & Database Administrator (DBA) with 10+ years of experience in designing, developing, and maintaining scalable software systems and database solutions.",
+  "description": "I’m a Senior Backend Engineer with 10+ years of experience designing, building, and maintaining backend applications, APIs, and database-driven systems.",
   "keywords": [
-    "Database",
-    "Administrator",
-    "Backend",
-    "Developer",
-    "Database",
-    "Design",
-    "Development",
+    "Database Administrator",
+    "Backend Developer",
+    "Database Design",
+    "Database Development",
     "SQL",
     "MariaDB",
     "PostgreSQL",
     "MySQL",
-    "SQL"
+    "SQL Server",
+    "Laravel",
+    "ASP.NET MVC",
+    "Python",
+    "Django",
+    "REST APIs"
   ],
   "homepage": "https://github.com/hamidHeidarinia/hamidHeidarinia.github.io",
   "bugs": {

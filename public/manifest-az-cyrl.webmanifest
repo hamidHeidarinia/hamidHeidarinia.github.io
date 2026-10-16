@@ -6,16 +6,16 @@
         "education",
         "productivity"
     ],
-    "description": "Proqram Mühəndisi və Verilənlər Bazası Administratoru (DBA); miqyaslana bilən proqram sistemlərinin və verilənlər bazası həllərinin layihələndirilməsi, hazırlanması və dəstəklənməsi sahəsində 10 ildən artıq təcrübəyə malikdir.",
+    "description": "Мән backend тәтбигләринин, API-ләрин вә вериләнләр базасы әсаслы системләрин дизајны, гурулмасы вә дәстәји саһәсиндә 10+ иллик тәҹрүбәјә малик Senior Backend Engineer-әм.",
     "display": "standalone",
     "theme_color": "#05B4F9",
     "background_color": "#05B4F9",
-    "id": "/?source=pwa",
+    "id": "/az-cyrl/",
     "orientation": "natural",
     "prefer_related_applications": false,
-    "scope": "/az/",
-    "start_url": "/az/",
-    "lang": "az",
+    "scope": "/az-cyrl/",
+    "start_url": "/az-cyrl/",
+    "lang": "az-cyrl",
     "dir": "ltr",
     "icons": [
         {

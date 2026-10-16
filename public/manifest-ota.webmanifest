@@ -6,17 +6,17 @@
         "education",
         "productivity"
     ],
-    "description": "یازلیم مهندسی و وریتابانی یونتجسی (DBA)؛ اولچکلندیریلبیلر یازلیم سیستم لری و وریتابانی چوزوملرینین تصمیمی، گلیشتیرلمسی و باقیمی الاننده ۱۰ یلدن فضلا دنییمه صاحبتیر.",
+    "description": "بن backend تطبيقلرينك، API لرك و معلومات قاعده‌سنه مستند سيستملرك تصميمی، انشاسی و صيانتی حقنده اون سنه‌دن فضله تجربه‌يه مالك بر Senior Backend Engineer'م.",
     "display": "standalone",
     "theme_color": "#05B4F9",
     "background_color": "#05B4F9",
-    "id": "/?source=pwa",
+    "id": "/ota/",
     "orientation": "natural",
     "prefer_related_applications": false,
-    "scope": "/tr/",
-    "start_url": "/tr/",
-    "lang": "tr",
-    "dir": "ltr",
+    "scope": "/ota/",
+    "start_url": "/ota/",
+    "lang": "ota",
+    "dir": "rtl",
     "icons": [
         {
             "src": "./assets/icons/android/hamidHeidarinia-72x72.webp",

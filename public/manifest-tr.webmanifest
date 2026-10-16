@@ -6,11 +6,11 @@
         "education",
         "productivity"
     ],
-    "description": "Yazılım Mühendisi ve Veritabanı Yöneticisi (DBA); ölçeklenebilir yazılım sistemleri ve veritabanı çözümlerinin tasarlanması, geliştirilmesi ve bakımı alanında 10 yılı aşkın deneyime sahiptir.",
+    "description": "Backend uygulamaları, API'ler ve veritabanı odaklı sistemlerin tasarımı, geliştirilmesi ve bakımı konusunda 10+ yıllık deneyime sahip bir Senior Backend Engineer'ım.",
     "display": "standalone",
     "theme_color": "#05B4F9",
     "background_color": "#05B4F9",
-    "id": "/?source=pwa",
+    "id": "/tr/",
     "orientation": "natural",
     "prefer_related_applications": false,
     "scope": "/tr/",

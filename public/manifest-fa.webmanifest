@@ -6,11 +6,11 @@
         "education",
         "productivity"
     ],
-    "description": "مهندس نرم‌افزار و مدیر پایگاه داده (DBA) با بیش از ۱۰ سال تجربه در طراحی، توسعه و نگهداری سیستم‌های نرم‌افزاری مقیاس‌پذیر و راهکارهای پایگاه داده.",
+    "description": "من یک Senior Backend Engineer با بیش از ۱۰ سال تجربه در طراحی، ساخت و نگهداری اپلیکیشن‌های backend، APIها و سیستم‌های مبتنی بر پایگاه داده هستم.",
     "display": "standalone",
     "theme_color": "#05B4F9",
     "background_color": "#05B4F9",
-    "id": "/?source=pwa",
+    "id": "/fa/",
     "orientation": "natural",
     "prefer_related_applications": false,
     "scope": "/fa/",

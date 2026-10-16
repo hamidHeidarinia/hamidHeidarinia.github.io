@@ -6,11 +6,11 @@
         "education",
         "productivity"
     ],
-    "description": "Software Engineer & Database Administrator (DBA) with 10+ years of experience in designing, developing, and maintaining scalable software systems and database solutions.",
+    "description": "I’m a Senior Backend Engineer with 10+ years of experience designing, building, and maintaining backend applications, APIs, and database-driven systems.",
     "display": "standalone",
     "theme_color": "#05B4F9",
     "background_color": "#05B4F9",
-    "id": "/?source=pwa",
+    "id": "/en/",
     "orientation": "natural",
     "prefer_related_applications": false,
     "scope": "/en/",
