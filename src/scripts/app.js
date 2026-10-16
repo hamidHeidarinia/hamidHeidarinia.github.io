@@ -49,7 +49,7 @@ const UNITS = {
 const MONTHS = {
     en: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
     az: ['Yanvar', 'Fevral', 'Mart', 'Aprel', 'May', 'İyun', 'İyul', 'Avqust', 'Sentyabr', 'Oktyabr', 'Noyabr', 'Dekabr'],
-    "az-cyrl": ['Январ', 'Феврал', 'Март', 'Апрел', 'Май', 'Июн', 'Июл', 'Август', 'Сентябр', 'Октябр', 'Ноябр', 'Декабр'],
+    "az-cyrl": ['Јанвар', 'Феврал', 'Март', 'Апрел', 'Мај', 'Ијун', 'Ијул', 'Август', 'Сентјабр', 'Октјабр', 'Нојабр', 'Декабр'],
     tr: ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'],
     otk: ['𐰋𐰃𐰼𐰨 𐰀𐰖', '𐰀𐰚𐰃𐰤𐱅𐰃 𐰀𐰖', '𐰇𐰲𐰨 𐰀𐰖', '𐱅𐰇𐰼𐱅𐰨 𐰀𐰖', '𐰋𐱁𐰃𐰨 𐰀𐰖', '𐰀𐰞𐱃𐰃𐰨 𐰀𐰖', '𐰘𐱅𐰃𐰨 𐰀𐰖', '𐰾𐰚𐰃𐰔𐰨 𐰀𐰖', '𐱃𐰸𐰔𐰨 𐰀𐰖', '𐰆𐰣𐰨 𐰀𐰖', '𐰆𐰣 𐰋𐰃𐰼𐰨 𐰀𐰖', '𐰆𐰣 𐰀𐰚𐰃𐰤𐱅𐰃 𐰀𐰖'],
 };
