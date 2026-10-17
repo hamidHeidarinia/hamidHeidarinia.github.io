@@ -55,7 +55,7 @@ const entries = Object.entries(languages) as [
     x-transition:enter="transition ease-out duration-150"
     x-transition:enter-start="opacity-0 scale-95"
     x-transition:enter-end="opacity-100 scale-100"
-    class="absolute right-0 mt-1 w-24 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md shadow-lg overflow-hidden"
+    class="absolute right-0 mt-1 w-24 max-h-44 overflow-y-auto md:max-h-none md:overflow-visible scrollbars bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md shadow-lg"
   >
     {
       entries.map(([code, meta]) => (
