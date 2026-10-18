@@ -39,7 +39,7 @@ export default defineConfig({
     //     mode: 'standalone',
     // }),
     redirects: {
-        "/": `${BASE_PREFIX}/en/`,
+        "/": `/en/`,
     },
     vite: {
         plugins: [tailwindcss()],
