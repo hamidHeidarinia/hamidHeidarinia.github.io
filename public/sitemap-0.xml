@@ -1,159 +1,260 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <!-- ==================== HOME PAGES ==================== --> <!-- English -->
+  <!-- ==================== HOME PAGES ==================== -->
+  <!-- English -->
   <url>
     <loc>https://hamidheidarinia.github.io/en/</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://hamidheidarinia.github.io/en/" />
     <xhtml:link rel="alternate" hreflang="az-Latn-AZ" href="https://hamidheidarinia.github.io/az/" />
     <xhtml:link rel="alternate" hreflang="az-Arab-IR"
-      href="https://hamidheidarinia.github.io/azarab/" />
+      href="https://hamidheidarinia.github.io/az-arab/" />
+    <xhtml:link rel="alternate" hreflang="az-Cyrl-AZ"
+      href="https://hamidheidarinia.github.io/az-cyrl/" />
     <xhtml:link rel="alternate" hreflang="fa-IR" href="https://hamidheidarinia.github.io/fa/" />
     <xhtml:link rel="alternate" hreflang="tr-TR" href="https://hamidheidarinia.github.io/tr/" />
+    <xhtml:link rel="alternate" hreflang="ota" href="https://hamidheidarinia.github.io/ota/" />
     <xhtml:link rel="alternate" hreflang="otk" href="https://hamidheidarinia.github.io/otk/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hamidheidarinia.github.io/en/" />
-  </url> <!--
-  Azerbaijani Latin -->
+  </url>
+  <!-- Azerbaijani Latin -->
   <url>
     <loc>https://hamidheidarinia.github.io/az/</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://hamidheidarinia.github.io/en/" />
     <xhtml:link rel="alternate" hreflang="az-Latn-AZ" href="https://hamidheidarinia.github.io/az/" />
     <xhtml:link rel="alternate" hreflang="az-Arab-IR"
-      href="https://hamidheidarinia.github.io/azarab/" />
+      href="https://hamidheidarinia.github.io/az-arab/" />
+    <xhtml:link rel="alternate" hreflang="az-Cyrl-AZ"
+      href="https://hamidheidarinia.github.io/az-cyrl/" />
     <xhtml:link rel="alternate" hreflang="fa-IR" href="https://hamidheidarinia.github.io/fa/" />
     <xhtml:link rel="alternate" hreflang="tr-TR" href="https://hamidheidarinia.github.io/tr/" />
+    <xhtml:link rel="alternate" hreflang="ota" href="https://hamidheidarinia.github.io/ota/" />
     <xhtml:link rel="alternate" hreflang="otk" href="https://hamidheidarinia.github.io/otk/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hamidheidarinia.github.io/en/" />
-  </url> <!--
-  Azerbaijani Arabic -->
+  </url>
+  <!-- Azerbaijani Arabic -->
   <url>
-    <loc>https://hamidheidarinia.github.io/azarab/</loc>
+    <loc>https://hamidheidarinia.github.io/az-arab/</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://hamidheidarinia.github.io/en/" />
     <xhtml:link rel="alternate" hreflang="az-Latn-AZ" href="https://hamidheidarinia.github.io/az/" />
     <xhtml:link rel="alternate" hreflang="az-Arab-IR"
-      href="https://hamidheidarinia.github.io/azarab/" />
+      href="https://hamidheidarinia.github.io/az-arab/" />
+    <xhtml:link rel="alternate" hreflang="az-Cyrl-AZ"
+      href="https://hamidheidarinia.github.io/az-cyrl/" />
     <xhtml:link rel="alternate" hreflang="fa-IR" href="https://hamidheidarinia.github.io/fa/" />
     <xhtml:link rel="alternate" hreflang="tr-TR" href="https://hamidheidarinia.github.io/tr/" />
+    <xhtml:link rel="alternate" hreflang="ota" href="https://hamidheidarinia.github.io/ota/" />
     <xhtml:link rel="alternate" hreflang="otk" href="https://hamidheidarinia.github.io/otk/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hamidheidarinia.github.io/en/" />
-  </url> <!--
-  Persian -->
+  </url>
+  <!-- Azerbaijani Cyrillic -->
+  <url>
+    <loc>https://hamidheidarinia.github.io/az-cyrl/</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://hamidheidarinia.github.io/en/" />
+    <xhtml:link rel="alternate" hreflang="az-Latn-AZ" href="https://hamidheidarinia.github.io/az/" />
+    <xhtml:link rel="alternate" hreflang="az-Arab-IR"
+      href="https://hamidheidarinia.github.io/az-arab/" />
+    <xhtml:link rel="alternate" hreflang="az-Cyrl-AZ"
+      href="https://hamidheidarinia.github.io/az-cyrl/" />
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://hamidheidarinia.github.io/fa/" />
+    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://hamidheidarinia.github.io/tr/" />
+    <xhtml:link rel="alternate" hreflang="ota" href="https://hamidheidarinia.github.io/ota/" />
+    <xhtml:link rel="alternate" hreflang="otk" href="https://hamidheidarinia.github.io/otk/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hamidheidarinia.github.io/en/" />
+  </url>
+  <!-- Persian -->
   <url>
     <loc>https://hamidheidarinia.github.io/fa/</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://hamidheidarinia.github.io/en/" />
     <xhtml:link rel="alternate" hreflang="az-Latn-AZ" href="https://hamidheidarinia.github.io/az/" />
     <xhtml:link rel="alternate" hreflang="az-Arab-IR"
-      href="https://hamidheidarinia.github.io/azarab/" />
+      href="https://hamidheidarinia.github.io/az-arab/" />
+    <xhtml:link rel="alternate" hreflang="az-Cyrl-AZ"
+      href="https://hamidheidarinia.github.io/az-cyrl/" />
     <xhtml:link rel="alternate" hreflang="fa-IR" href="https://hamidheidarinia.github.io/fa/" />
     <xhtml:link rel="alternate" hreflang="tr-TR" href="https://hamidheidarinia.github.io/tr/" />
+    <xhtml:link rel="alternate" hreflang="ota" href="https://hamidheidarinia.github.io/ota/" />
     <xhtml:link rel="alternate" hreflang="otk" href="https://hamidheidarinia.github.io/otk/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hamidheidarinia.github.io/en/" />
-  </url> <!--
-  Turkish -->
+  </url>
+  <!-- Turkish -->
   <url>
     <loc>https://hamidheidarinia.github.io/tr/</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://hamidheidarinia.github.io/en/" />
     <xhtml:link rel="alternate" hreflang="az-Latn-AZ" href="https://hamidheidarinia.github.io/az/" />
     <xhtml:link rel="alternate" hreflang="az-Arab-IR"
-      href="https://hamidheidarinia.github.io/azarab/" />
+      href="https://hamidheidarinia.github.io/az-arab/" />
+    <xhtml:link rel="alternate" hreflang="az-Cyrl-AZ"
+      href="https://hamidheidarinia.github.io/az-cyrl/" />
     <xhtml:link rel="alternate" hreflang="fa-IR" href="https://hamidheidarinia.github.io/fa/" />
     <xhtml:link rel="alternate" hreflang="tr-TR" href="https://hamidheidarinia.github.io/tr/" />
+    <xhtml:link rel="alternate" hreflang="ota" href="https://hamidheidarinia.github.io/ota/" />
     <xhtml:link rel="alternate" hreflang="otk" href="https://hamidheidarinia.github.io/otk/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hamidheidarinia.github.io/en/" />
-  </url> <!--
-  old Turkish -->
+  </url>
+  <!-- Ottoman Turkish -->
+  <url>
+    <loc>https://hamidheidarinia.github.io/ota/</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://hamidheidarinia.github.io/en/" />
+    <xhtml:link rel="alternate" hreflang="az-Latn-AZ" href="https://hamidheidarinia.github.io/az/" />
+    <xhtml:link rel="alternate" hreflang="az-Arab-IR"
+      href="https://hamidheidarinia.github.io/az-arab/" />
+    <xhtml:link rel="alternate" hreflang="az-Cyrl-AZ"
+      href="https://hamidheidarinia.github.io/az-cyrl/" />
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://hamidheidarinia.github.io/fa/" />
+    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://hamidheidarinia.github.io/tr/" />
+    <xhtml:link rel="alternate" hreflang="ota" href="https://hamidheidarinia.github.io/ota/" />
+    <xhtml:link rel="alternate" hreflang="otk" href="https://hamidheidarinia.github.io/otk/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hamidheidarinia.github.io/en/" />
+  </url>
+  <!-- Old Turkic -->
   <url>
     <loc>https://hamidheidarinia.github.io/otk/</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://hamidheidarinia.github.io/en/" />
     <xhtml:link rel="alternate" hreflang="az-Latn-AZ" href="https://hamidheidarinia.github.io/az/" />
     <xhtml:link rel="alternate" hreflang="az-Arab-IR"
-      href="https://hamidheidarinia.github.io/azarab/" />
+      href="https://hamidheidarinia.github.io/az-arab/" />
+    <xhtml:link rel="alternate" hreflang="az-Cyrl-AZ"
+      href="https://hamidheidarinia.github.io/az-cyrl/" />
     <xhtml:link rel="alternate" hreflang="fa-IR" href="https://hamidheidarinia.github.io/fa/" />
     <xhtml:link rel="alternate" hreflang="tr-TR" href="https://hamidheidarinia.github.io/tr/" />
+    <xhtml:link rel="alternate" hreflang="ota" href="https://hamidheidarinia.github.io/ota/" />
     <xhtml:link rel="alternate" hreflang="otk" href="https://hamidheidarinia.github.io/otk/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hamidheidarinia.github.io/en/" />
-  </url> 
-  <!--  ==================== SKILLS PAGES ==================== --> 
-  <!--  English Skills -->
+  </url>
+  <!-- ==================== SKILLS PAGES ==================== -->
+  <!-- English -->
   <url>
     <loc>https://hamidheidarinia.github.io/en/skills/</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://hamidheidarinia.github.io/en/skills/" />
     <xhtml:link rel="alternate" hreflang="az-Latn-AZ"
       href="https://hamidheidarinia.github.io/az/skills/" />
     <xhtml:link rel="alternate" hreflang="az-Arab-IR"
-      href="https://hamidheidarinia.github.io/azarab/skills/" />
+      href="https://hamidheidarinia.github.io/az-arab/skills/" />
+    <xhtml:link rel="alternate" hreflang="az-Cyrl-AZ"
+      href="https://hamidheidarinia.github.io/az-cyrl/skills/" />
     <xhtml:link rel="alternate" hreflang="fa-IR" href="https://hamidheidarinia.github.io/fa/skills/" />
     <xhtml:link rel="alternate" hreflang="tr-TR" href="https://hamidheidarinia.github.io/tr/skills/" />
+    <xhtml:link rel="alternate" hreflang="ota" href="https://hamidheidarinia.github.io/ota/skills/" />
     <xhtml:link rel="alternate" hreflang="otk" href="https://hamidheidarinia.github.io/otk/skills/" />
     <xhtml:link rel="alternate" hreflang="x-default"
       href="https://hamidheidarinia.github.io/en/skills/" />
   </url>
-  <!-- Azerbaijani Latin Skills -->
+  <!-- Azerbaijani Latin -->
   <url>
     <loc>https://hamidheidarinia.github.io/az/skills/</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://hamidheidarinia.github.io/en/skills/" />
     <xhtml:link rel="alternate" hreflang="az-Latn-AZ"
       href="https://hamidheidarinia.github.io/az/skills/" />
     <xhtml:link rel="alternate" hreflang="az-Arab-IR"
-      href="https://hamidheidarinia.github.io/azarab/skills/" />
+      href="https://hamidheidarinia.github.io/az-arab/skills/" />
+    <xhtml:link rel="alternate" hreflang="az-Cyrl-AZ"
+      href="https://hamidheidarinia.github.io/az-cyrl/skills/" />
     <xhtml:link rel="alternate" hreflang="fa-IR" href="https://hamidheidarinia.github.io/fa/skills/" />
     <xhtml:link rel="alternate" hreflang="tr-TR" href="https://hamidheidarinia.github.io/tr/skills/" />
+    <xhtml:link rel="alternate" hreflang="ota" href="https://hamidheidarinia.github.io/ota/skills/" />
     <xhtml:link rel="alternate" hreflang="otk" href="https://hamidheidarinia.github.io/otk/skills/" />
     <xhtml:link rel="alternate" hreflang="x-default"
       href="https://hamidheidarinia.github.io/en/skills/" />
   </url>
-   <!-- Azerbaijani Arabic Skills -->
+  <!-- Azerbaijani Arabic -->
   <url>
-    <loc>https://hamidheidarinia.github.io/azarab/skills/</loc>
+    <loc>https://hamidheidarinia.github.io/az-arab/skills/</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://hamidheidarinia.github.io/en/skills/" />
     <xhtml:link rel="alternate" hreflang="az-Latn-AZ"
       href="https://hamidheidarinia.github.io/az/skills/" />
     <xhtml:link rel="alternate" hreflang="az-Arab-IR"
-      href="https://hamidheidarinia.github.io/azarab/skills/" />
+      href="https://hamidheidarinia.github.io/az-arab/skills/" />
+    <xhtml:link rel="alternate" hreflang="az-Cyrl-AZ"
+      href="https://hamidheidarinia.github.io/az-cyrl/skills/" />
     <xhtml:link rel="alternate" hreflang="fa-IR" href="https://hamidheidarinia.github.io/fa/skills/" />
     <xhtml:link rel="alternate" hreflang="tr-TR" href="https://hamidheidarinia.github.io/tr/skills/" />
+    <xhtml:link rel="alternate" hreflang="ota" href="https://hamidheidarinia.github.io/ota/skills/" />
     <xhtml:link rel="alternate" hreflang="otk" href="https://hamidheidarinia.github.io/otk/skills/" />
     <xhtml:link rel="alternate" hreflang="x-default"
       href="https://hamidheidarinia.github.io/en/skills/" />
   </url>
-   <!-- Persian Skills -->
+  <!-- Azerbaijani Cyrillic -->
+  <url>
+    <loc>https://hamidheidarinia.github.io/az-cyrl/skills/</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://hamidheidarinia.github.io/en/skills/" />
+    <xhtml:link rel="alternate" hreflang="az-Latn-AZ"
+      href="https://hamidheidarinia.github.io/az/skills/" />
+    <xhtml:link rel="alternate" hreflang="az-Arab-IR"
+      href="https://hamidheidarinia.github.io/az-arab/skills/" />
+    <xhtml:link rel="alternate" hreflang="az-Cyrl-AZ"
+      href="https://hamidheidarinia.github.io/az-cyrl/skills/" />
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://hamidheidarinia.github.io/fa/skills/" />
+    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://hamidheidarinia.github.io/tr/skills/" />
+    <xhtml:link rel="alternate" hreflang="ota" href="https://hamidheidarinia.github.io/ota/skills/" />
+    <xhtml:link rel="alternate" hreflang="otk" href="https://hamidheidarinia.github.io/otk/skills/" />
+    <xhtml:link rel="alternate" hreflang="x-default"
+      href="https://hamidheidarinia.github.io/en/skills/" />
+  </url>
+  <!-- Persian -->
   <url>
     <loc>https://hamidheidarinia.github.io/fa/skills/</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://hamidheidarinia.github.io/en/skills/" />
     <xhtml:link rel="alternate" hreflang="az-Latn-AZ"
       href="https://hamidheidarinia.github.io/az/skills/" />
     <xhtml:link rel="alternate" hreflang="az-Arab-IR"
-      href="https://hamidheidarinia.github.io/azarab/skills/" />
+      href="https://hamidheidarinia.github.io/az-arab/skills/" />
+    <xhtml:link rel="alternate" hreflang="az-Cyrl-AZ"
+      href="https://hamidheidarinia.github.io/az-cyrl/skills/" />
     <xhtml:link rel="alternate" hreflang="fa-IR" href="https://hamidheidarinia.github.io/fa/skills/" />
     <xhtml:link rel="alternate" hreflang="tr-TR" href="https://hamidheidarinia.github.io/tr/skills/" />
+    <xhtml:link rel="alternate" hreflang="ota" href="https://hamidheidarinia.github.io/ota/skills/" />
     <xhtml:link rel="alternate" hreflang="otk" href="https://hamidheidarinia.github.io/otk/skills/" />
     <xhtml:link rel="alternate" hreflang="x-default"
       href="https://hamidheidarinia.github.io/en/skills/" />
-  </url> 
-  <!-- Turkish Skills -->
+  </url>
+  <!-- Turkish -->
   <url>
     <loc>https://hamidheidarinia.github.io/tr/skills/</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://hamidheidarinia.github.io/en/skills/" />
     <xhtml:link rel="alternate" hreflang="az-Latn-AZ"
       href="https://hamidheidarinia.github.io/az/skills/" />
     <xhtml:link rel="alternate" hreflang="az-Arab-IR"
-      href="https://hamidheidarinia.github.io/azarab/skills/" />
+      href="https://hamidheidarinia.github.io/az-arab/skills/" />
+    <xhtml:link rel="alternate" hreflang="az-Cyrl-AZ"
+      href="https://hamidheidarinia.github.io/az-cyrl/skills/" />
     <xhtml:link rel="alternate" hreflang="fa-IR" href="https://hamidheidarinia.github.io/fa/skills/" />
     <xhtml:link rel="alternate" hreflang="tr-TR" href="https://hamidheidarinia.github.io/tr/skills/" />
+    <xhtml:link rel="alternate" hreflang="ota" href="https://hamidheidarinia.github.io/ota/skills/" />
     <xhtml:link rel="alternate" hreflang="otk" href="https://hamidheidarinia.github.io/otk/skills/" />
     <xhtml:link rel="alternate" hreflang="x-default"
       href="https://hamidheidarinia.github.io/en/skills/" />
-  </url> 
-  <!-- old Turkish Skills -->
+  </url>
+  <!-- Ottoman Turkish -->
+  <url>
+    <loc>https://hamidheidarinia.github.io/ota/skills/</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://hamidheidarinia.github.io/en/skills/" />
+    <xhtml:link rel="alternate" hreflang="az-Latn-AZ"
+      href="https://hamidheidarinia.github.io/az/skills/" />
+    <xhtml:link rel="alternate" hreflang="az-Arab-IR"
+      href="https://hamidheidarinia.github.io/az-arab/skills/" />
+    <xhtml:link rel="alternate" hreflang="az-Cyrl-AZ"
+      href="https://hamidheidarinia.github.io/az-cyrl/skills/" />
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://hamidheidarinia.github.io/fa/skills/" />
+    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://hamidheidarinia.github.io/tr/skills/" />
+    <xhtml:link rel="alternate" hreflang="ota" href="https://hamidheidarinia.github.io/ota/skills/" />
+    <xhtml:link rel="alternate" hreflang="otk" href="https://hamidheidarinia.github.io/otk/skills/" />
+    <xhtml:link rel="alternate" hreflang="x-default"
+      href="https://hamidheidarinia.github.io/en/skills/" />
+  </url>
+  <!-- Old Turkic -->
   <url>
     <loc>https://hamidheidarinia.github.io/otk/skills/</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://hamidheidarinia.github.io/en/skills/" />
     <xhtml:link rel="alternate" hreflang="az-Latn-AZ"
       href="https://hamidheidarinia.github.io/az/skills/" />
     <xhtml:link rel="alternate" hreflang="az-Arab-IR"
-      href="https://hamidheidarinia.github.io/azarab/skills/" />
+      href="https://hamidheidarinia.github.io/az-arab/skills/" />
+    <xhtml:link rel="alternate" hreflang="az-Cyrl-AZ"
+      href="https://hamidheidarinia.github.io/az-cyrl/skills/" />
     <xhtml:link rel="alternate" hreflang="fa-IR" href="https://hamidheidarinia.github.io/fa/skills/" />
     <xhtml:link rel="alternate" hreflang="tr-TR" href="https://hamidheidarinia.github.io/tr/skills/" />
+    <xhtml:link rel="alternate" hreflang="ota" href="https://hamidheidarinia.github.io/ota/skills/" />
     <xhtml:link rel="alternate" hreflang="otk" href="https://hamidheidarinia.github.io/otk/skills/" />
     <xhtml:link rel="alternate" hreflang="x-default"
       href="https://hamidheidarinia.github.io/en/skills/" />
