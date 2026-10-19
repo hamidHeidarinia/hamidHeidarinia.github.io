@@ -81,7 +81,7 @@ export default defineConfig({
                     const rest = pathname.replace(`/${locale}/`, "");
 
                     // 1) اضافه کردن x-default (به نسخه‌ی انگلیسی)
-                    const links = item.links ?? [];
+                    const links = item.links ? ? [];
                     if (!links.some((l) => l.lang === "x-default")) {
                         links.push({
                             url: `${LIVE_URL}/${DEFAULT_LOCALE}/${rest}`,
@@ -98,6 +98,19 @@ export default defineConfig({
                             caption: "Profile photo of Hamid Heidarinia",
                         }];
                     }
+
+                    // // ویدیوی هر زبان (فقط صفحه‌ی intro)
+                    // if (parts.length === 2 && parts[1] === "intro") {
+                    //     const meta = VIDEO_META[locale];
+                    //     item.video = [{
+                    //         title: meta.title,
+                    //         description: meta.description,
+                    //         thumbnail_loc: `${LIVE_URL}/video/${locale}/intro-thumb.jpg`,
+                    //         content_loc: `${LIVE_URL}/video/${locale}/intro.mp4`,
+                    //         duration: 120,
+                    //         publication_date: "2026-10-19",
+                    //     }];
+                    // }
                 }
 
                 return item;
