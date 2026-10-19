@@ -4,6 +4,7 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 const currentLocale = Astro.currentLocale;
 interface Props {
     locale: Locale;
+    currentPath: string;
 }
 const { locale } = Astro.props;
 const t = useTranslations(locale);
@@ -513,7 +514,7 @@ const skillsUrl = getRelativeLocaleUrl(currentLocale, "skills");
                                     </p>
                                 </div>
                             </div>
-                            
+
                             <!-- Skill Item 3 -->
                             <div class="pb-2" x-data="{ open: false }">
                                 <div

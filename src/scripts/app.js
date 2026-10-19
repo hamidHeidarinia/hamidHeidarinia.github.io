@@ -77,7 +77,6 @@ const SHAMSI_UNITS = {
 
 /* ---------- Rumi (Ottoman Mali) ---------- */
 
-// ماه‌های رومی از مارس شروع می‌شوند
 const RUMI_MONTHS = {
     ota: ['مارت', 'نیسان', 'مایس', 'حزیران', 'تموز', 'آغستوس', 'ایلول', 'تشرین اول', 'تشرین ثانی', 'کانون اول', 'کانون ثانی', 'شباط'],
 };
@@ -94,12 +93,10 @@ const RUMI_UNITS = {
 
 const RUMI_PRESENT_DEFAULT = 'Present';
 
-// ارقام عربی-هندی برای ota، لاتین برای بقیه
 const RUMI_DIGITS = {
     ota: toArabicIndic,
 };
 
-// میلادی → شمارهٔ روز ژولینی (JDN)
 const gregorianToJdn = (y, m, d) => {
     const a = Math.floor((14 - m) / 12);
     const yy = y + 4800 - a;
@@ -107,7 +104,6 @@ const gregorianToJdn = (y, m, d) => {
     return d + Math.floor((153 * mm + 2) / 5) + 365 * yy + Math.floor(yy / 4) - Math.floor(yy / 100) + Math.floor(yy / 400) - 32045;
 };
 
-// JDN → تقویم ژولین
 const jdnToJulian = (jdn) => {
     const c = jdn + 32082;
     const d = Math.floor((4 * c + 3) / 1461);
@@ -124,7 +120,6 @@ const toRumi = (date) => {
     let y = date.getFullYear();
     let m = date.getMonth() + 1;
 
-    // قبل از ۱ مارس ۱۹۱۷ میلادی، تقویم رومی ژولینی بود
     const isJulianEra = y < 1917 || (y === 1917 && m < 3);
     if (isJulianEra) {
         const j = jdnToJulian(gregorianToJdn(y, m, date.getDate()));
@@ -134,7 +129,7 @@ const toRumi = (date) => {
 
     return {
         year: m >= 3 ? y - 584 : y - 585,
-        month: (m + 9) % 12 // مارس = ۰ ... فوریه = ۱۱
+        month: (m + 9) % 12 
     };
 };
 
@@ -226,7 +221,6 @@ window.formatRumiDateRange = (outElement) => {
     const startFormatted = fmt(start);
     const endFormatted = endDate ? fmt(end) : present;
 
-    // مثل نسخه‌های دیگر، ماه آخر هم حساب می‌شود (+1)
     const totalMonths = (end.year - start.year) * 12 + (end.month - start.month) + 1;
     const years = Math.floor(totalMonths / 12);
     const months = totalMonths % 12;
@@ -248,7 +242,7 @@ function initDateRanges() {
                 window.formatShamsiDateRange(el.id);
                 break;
             case 'rumi':
-            case 'hijri': // سازگاری با HTML قدیمی
+            case 'hijri': 
                 window.formatRumiDateRange(el.id);
                 break;
             default:

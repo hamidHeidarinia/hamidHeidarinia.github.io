@@ -12,6 +12,7 @@ import { useTranslations } from "../i18n/utils";
 
 interface Props {
     locale: Locale;
+    currentPath: string;
 }
 
 const { locale } = Astro.props;
@@ -40,7 +41,6 @@ const ogLocales = {
     otk: "en_US",
     fa: "fa_IR",
 };
-// مسیر بدون پیشوند زبان
 const path = Astro.url.pathname.replace(/^\/[^/]+/, "");
 ---
 
