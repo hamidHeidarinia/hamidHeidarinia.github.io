@@ -27,6 +27,9 @@ const BASE_PREFIX = BASE_PATH.replace(/\/$/, "");
 const SITE_LOCALES = ["en", "az-arab", "az", "az-cyrl", "tr", "ota", "otk", "fa"];
 const DEFAULT_LOCALE = "en";
 
+// عکس پروفایل (فایل باید در public/profile.jpg باشد)
+const PROFILE_IMAGE = `${LIVE_URL}/profile.webp`;
+
 // https://astro.build/config
 export default defineConfig({
     compressHTML: true,
@@ -64,6 +67,40 @@ export default defineConfig({
                     ota: "ota",
                     otk: "otk",
                 },
+            },
+
+            serialize(item) {
+                const {
+                    pathname
+                } = new URL(item.url);
+                const parts = pathname.split("/").filter(Boolean);
+                const locale = parts[0];
+
+                if (SITE_LOCALES.includes(locale)) {
+                    // بقیه‌ی مسیر بعد از زبان، مثلا "" یا "skills/"
+                    const rest = pathname.replace(`/${locale}/`, "");
+
+                    // 1) اضافه کردن x-default (به نسخه‌ی انگلیسی)
+                    const links = item.links ?? [];
+                    if (!links.some((l) => l.lang === "x-default")) {
+                        links.push({
+                            url: `${LIVE_URL}/${DEFAULT_LOCALE}/${rest}`,
+                            lang: "x-default",
+                        });
+                    }
+                    item.links = links;
+
+                    // 2) عکس پروفایل فقط برای صفحه‌های خانه (/en/ ، /az/ ، ...)
+                    if (parts.length === 1) {
+                        item.img = [{
+                            url: PROFILE_IMAGE,
+                            title: "Hamid Heidarinia",
+                            caption: "Profile photo of Hamid Heidarinia",
+                        }];
+                    }
+                }
+
+                return item;
             },
         }),
     ],
