@@ -1,6 +1,6 @@
 export const languages = {
   en: { label: "en", native: "English", dir: "ltr", htmlLang: "en" },
-  "az-arab": { label: "az-arab", native: "تورکجه", dir: "rtl", htmlLang: "az-Arab-IR" },
+  "az-ir": { label: "az-ir", native: "تورکجه", dir: "rtl", htmlLang: "az-ir-IR" },
   "az": { label: "az", native: "türkcə", dir: "ltr", htmlLang: "az" },
   "az-cyrl": { label: "az-cyrl", native: "түркҹә", dir: "ltr", htmlLang: "az-Cyrl" },
   tr: { label: "tr", native: "Türkçe", dir: "ltr", htmlLang: "tr" },
@@ -179,7 +179,7 @@ export const ui = {
     "skill.otherCompany": " other company",
   },
   // https://kocurge.vercel.app/
-  "az-arab": {
+  "az-ir": {
     "site.name": "حمید حیدری‌نیا",
     "site.tagline": "پروفایل",
     "theme.toggle": "تمی دَییشدیر",

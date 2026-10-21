@@ -24,7 +24,7 @@ const BASE_PATH = isBuild ? LIVE_BASE : "/";
 
 const BASE_PREFIX = BASE_PATH.replace(/\/$/, "");
 
-const SITE_LOCALES = ["en", "az-arab", "az", "az-cyrl", "tr", "ota", "otk", "fa"];
+const SITE_LOCALES = ["en", "az-ir", "az", "az-cyrl", "tr", "ota", "otk", "fa"];
 const DEFAULT_LOCALE = "en";
 
 const PROFILE_IMAGE = `${LIVE_URL}/profile.webp`;
@@ -58,9 +58,9 @@ export default defineConfig({
                 defaultLocale: DEFAULT_LOCALE,
                 locales: {
                     en: "en-US",
-                    az: "az-Latn-AZ",
-                    "az-arab": "az-Arab-IR",
-                    "az-cyrl": "az-Cyrl-AZ",
+                    az: "az-AZ",
+                    "az-ir": "az-IR",
+                    "az-cyrl": "az-Cyrl",
                     fa: "fa-IR",
                     tr: "tr-TR",
                     ota: "ota",

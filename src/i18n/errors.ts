@@ -1,8 +1,8 @@
-export const locales = ['en', 'az-arab', 'az', 'az-cyrl', 'tr', 'ota', 'otk', 'fa'] as const;
+export const locales = ['en', 'az-ir', 'az', 'az-cyrl', 'tr', 'ota', 'otk', 'fa'] as const;
 export type Locale = (typeof locales)[number];
 
 export const defaultLocale: Locale = 'en';
-export const rtlLocales: Locale[] = ['fa', 'az-arab', 'ota', 'otk'];
+export const rtlLocales: Locale[] = ['fa', 'az-ir', 'ota', 'otk'];
 
 type Strings = {
     '404': { title: string; text: string };
@@ -19,7 +19,7 @@ export const errors: Record<Locale, Strings> = {
         '500': { title: 'Server error', text: 'Something went wrong. Please try again later.' },
         home: 'Back to home', back: 'Go back', retry: 'Try again', skills: 'Skills',
     },
-    'az-arab': {
+    'az-ir': {
         '404': { title: 'صحیفه تاپیلمادی', text: 'آختاردیغینیز صحیفه موجود دئیل.' },
         '500': { title: 'سرور خطاسی', text: 'خطا باش وئردی. زحمت اولماسا سونرا یئنیدن جهد ائدین.' },
         home: 'آنا صحیفه‌یه قایيت', back: 'گئری', retry: 'یئنیدن جهد ائت', skills: 'باجاریقلار',

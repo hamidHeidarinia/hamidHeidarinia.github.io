@@ -27,18 +27,22 @@ const manifest = `/manifest-${lang}.webmanifest`;
 
 const hreflangs = {
     en: "en-US",
-    az: "az-Latn-AZ",
-    azarab: "az-Arab-IR",
+    az: "az-AZ",
+    "az-ir": "az-IR",
+    "az-cyrl": "az-Cyrl",
     tr: "tr-TR",
+    ota: "ota",
     otk: "otk",
     fa: "fa-IR",
 };
 const ogLocales = {
     en: "en_US",
     az: "az_AZ",
-    azarab: "az_IR",
+    "az-ir": "az_IR",
+    "az-cyrl": "az_Cyrl",
     tr: "tr_TR",
-    otk: "en_US",
+    ota: "ota",
+    otk: "otk",
     fa: "fa_IR",
 };
 const path = Astro.url.pathname.replace(/^\/[^/]+/, "");
